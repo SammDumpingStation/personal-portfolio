@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/Header";
+import { ModeToggle } from "@/components/ModeToggle";
+import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,16 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" className={`${poppins.variable}`} suppressHydrationWarning>
       <head />
-      <body className="antialiased font-poppins">
+      <body className="antialiased font-poppins relative min-h-[100vh]">
+        <div className="grid-background"></div>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
+          <Header />
           {children}
+          <ModeToggle />
         </ThemeProvider>
       </body>
     </html>
