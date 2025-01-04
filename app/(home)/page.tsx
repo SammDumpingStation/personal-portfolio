@@ -5,6 +5,7 @@ import Companies from "./components/Companies";
 import Approach from "./components/Approach";
 import Passion from "./components/Passion";
 import Portfolio from "./components/Portfolio";
+import ToolBox from "./components/ToolBox";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Approach />
       <Passion />
       <Portfolio />
+      <ToolBox />
     </main>
   );
 }
