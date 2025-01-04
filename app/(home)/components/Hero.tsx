@@ -9,7 +9,7 @@ const Hero = () => {
         <Badge variant={"outline"}>UI/UX Design</Badge>
         <Badge variant={"outline"}>Web Design</Badge>
       </div>
-      <h1 className="h1">
+      <h1 className="h1 text-center">
         <span className="text-ugray-500">Hello! </span>
         Samm Caagbay, Full Stack Web Developer, Based in Philippines
       </h1>

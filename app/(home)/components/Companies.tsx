@@ -5,8 +5,8 @@ import Image from "next/image";
 const Companies = () => {
   return (
     <section className="w-full min-h-[465px]">
-      <div className="h-[221px] flex justify-center flex-col">
-        <h2 className="h2">Companies I've Worked With</h2>
+      <div className="h-[221px] flex justify-center items-center flex-col">
+        <h3 className="h3">Companies I've Worked With</h3>
         <p className="p">
           Helping leading companies innovate and succeed through impactful
           design solutions

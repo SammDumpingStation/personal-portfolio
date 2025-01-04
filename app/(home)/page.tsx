@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import { ScreenSlider } from "./components/ScreenSlider";
 import Companies from "./components/Companies";
+import Approach from "./components/Approach";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <ScreenSlider />
       <Companies />
+      <Approach />
     </main>
   );
 }
