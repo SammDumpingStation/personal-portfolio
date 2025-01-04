@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import { ModeToggle } from "@/components/ModeToggle";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Navbar />
           <Header />
           {children}
+          <Footer />
           <ModeToggle />
         </ThemeProvider>
       </body>
