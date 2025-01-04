@@ -15,8 +15,7 @@ export default function Home() {
       <Hero
         title="Hello!"
         highlightedTitle="Samm Caagbay, Full Stack Web Developer, Based in Philippines"
-        subtitle="8+ Years of Experience Designing Stunning Products and Transforming
-        Ideas into Reality"
+        subtitle="8+ Years of Experience Designing Stunning Products and Transforming Ideas into Reality"
         otherStyles="min-h-[475px]"
         badges={badgeData.skillTags}
       />

@@ -12,7 +12,7 @@ const Contact = () => {
         subtitle="Whether you're looking to discuss a new project, seek advice, or
         collaborate, I'm always excited to connect and explore new
         possibilities."
-        otherStyles="min-h-[356px] justify-end"
+        otherStyles=""
       />
       <div className="flex items-center justify-center space-x-4">
         <span className="flex-grow border-t border-ugray-200 max-w-[338px]"></span>
