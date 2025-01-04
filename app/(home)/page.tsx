@@ -4,6 +4,7 @@ import { ScreenSlider } from "./components/ScreenSlider";
 import Companies from "./components/Companies";
 import Approach from "./components/Approach";
 import Passion from "./components/Passion";
+import Portfolio from "./components/Portfolio";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Companies />
       <Approach />
       <Passion />
+      <Portfolio />
     </main>
   );
 }

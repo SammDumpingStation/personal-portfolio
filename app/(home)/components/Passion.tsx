@@ -12,7 +12,7 @@ const Passion = () => {
         className="max-h-[560px]"
       />
       <div className="flex flex-col justify-center gap-10 h-[560px] w-[400px]">
-        <h2 className="h2 text-start text-background">
+        <h2 className="h3 text-start text-background">
           A Passion for Design and Innovation
         </h2>
         <p className="font-medium text-[18px] text-background">
@@ -22,7 +22,7 @@ const Passion = () => {
           developing platforms that have generated $20 million in revenue and
           attracted over 10,000 users
         </p>
-        <CTA customLabel="Contact Me" />
+        <CTA customLabel="Learn More" icon={false} />
       </div>
     </section>
   );

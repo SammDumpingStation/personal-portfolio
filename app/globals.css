@@ -78,10 +78,16 @@ body {
     @apply font-bold text-[59px];
   }
   .h2 {
-    @apply font-bold text-[38px];
+    @apply font-semibold text-5xl;
   }
   .h3 {
+    @apply font-bold text-[38px];
+  }
+  .h4 {
     @apply font-semibold text-[32px];
+  }
+  .h5 {
+    @apply font-bold text-2xl;
   }
   .p {
     @apply font-medium text-[18px] text-ugray-500;
