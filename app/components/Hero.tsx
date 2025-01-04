@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Hero = () => {
   return (
-    <section className="py-[50px] text-center space-y-6">
+    <section className="flex justify-center items-center flex-col min-h-[70vh] gap-6">
       <div className=" space-x-2">
         <Badge variant={"outline"}>Product Design</Badge>
         <Badge variant={"outline"}>UI/UX Design</Badge>
@@ -13,8 +13,8 @@ const Hero = () => {
         <span className="text-ugray-500">Hello! </span>
         Samm Caagbay, Full Stack Web Developer, Based in Philippines
       </h1>
-      <p className="">
-        8+ Years of Experience Designing Stunning Products and Transforming
+      <p className="p">
+        "8+ Years of Experience Designing Stunning Products and Transforming
         Ideas into Reality”
       </p>
       <CTA customLabel="Contact Me" />
