@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         ugray: {
+          "25": "#FCFCFD",
           "50": "#F9FAFB",
           "100": "#F2F4F7",
           "200": "#E4E7EC",

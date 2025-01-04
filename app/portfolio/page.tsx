@@ -1,5 +1,16 @@
-const Portfolio = () => {
-  return <div>Portfolio</div>;
-}
+import Hero from "@/components/Hero";
 
-export default Portfolio
+const Portfolio = () => {
+  return (
+    <section className="">
+      {" "}
+      <Hero
+        title="My Design"
+        highlightedTitle="Portfolio"
+        subtitle="Explore the apps, websites, and digital products I've crafted for businesses and startups"
+      />
+    </section>
+  );
+};
+
+export default Portfolio;
