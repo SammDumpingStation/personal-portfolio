@@ -31,7 +31,9 @@ export default function GrowingTextArea() {
 
   return (
     <div className="space-y-2">
-      <Label htmlFor="subject">Subject</Label>
+      <Label htmlFor="subject" className="text-ugray-500 dark:text-ugray-100">
+        Subject
+      </Label>
       <Textarea
         id="subject"
         placeholder="Design Discussion"

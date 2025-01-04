@@ -1,7 +1,7 @@
 import CTA from "@/components/CTA";
 import Hero from "@/components/Hero";
 import { Badge } from "@/components/ui/badge";
-import FormInput from "./components/FormInput";
+import ContactInput from "./components/ContactInput";
 
 const Contact = () => {
   return (
@@ -19,7 +19,7 @@ const Contact = () => {
         <span className="text-lg font-semibold">Or</span>
         <span className="flex-grow border-t border-ugray-200 max-w-[338px]"></span>
       </div>
-      <FormInput />
+      <ContactInput />
     </section>
   );
 };
