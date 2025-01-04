@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import { ScreenSlider } from "./components/ScreenSlider";
 import Companies from "./components/Companies";
 import Approach from "./components/Approach";
+import Passion from "./components/Passion";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ScreenSlider />
       <Companies />
       <Approach />
+      <Passion />
     </main>
   );
 }
