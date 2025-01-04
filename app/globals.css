@@ -93,6 +93,12 @@ body {
     @apply font-medium text-[18px] text-ugray-500 max-w-[90ch];
   }
   .main-container {
-    @apply flex justify-center items-center flex-col min-h-[70vh] gap-6;
+    @apply flex items-center flex-col;
+  }
+  .profile-shadows {
+    box-shadow: 
+      0px 0px 1.81px rgba(0, 0, 0, 0.3),
+      0px 3.82px 54.32px rgba(0, 0, 0, 0.08), 
+      0px 0px 27.16px rgba(0, 0, 0, 0.03);
   }
 }
