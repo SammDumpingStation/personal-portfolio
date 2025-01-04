@@ -1,5 +1,5 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
-import screenSliderImages from "@/lib/screen-slider-images";
+import screenSliderImages from "@/lib/slider-images";
 import Image from "next/image";
 
 export function ScreenSlider() {
@@ -21,12 +21,12 @@ export function ScreenSlider() {
   return (
     <section className="space-y-6">
       <InfiniteSlider gap={24} reverse>
-        {screenSliderImages.imageRow1.map((image) => (
+        {screenSliderImages.screenSlider1.map((image) => (
           <Inner image={image} key={image.id} />
         ))}
       </InfiniteSlider>
       <InfiniteSlider gap={24}>
-        {screenSliderImages.imageRow2.map((image) => (
+        {screenSliderImages.screenSlider2.map((image) => (
           <Inner image={image} key={image.id} />
         ))}
       </InfiniteSlider>

@@ -1,4 +1,4 @@
-const imageRow1 = [
+const screenSlider1 = [
   {
     id: 1,
     url: "/images/1st.png",
@@ -29,7 +29,7 @@ const imageRow1 = [
   },
 ];
 
-const imageRow2 = [
+const screenSlider2 = [
   {
     id: 8,
     url: "/images/8th.png",
@@ -64,4 +64,35 @@ const imageRow2 = [
   },
 ];
 
-export default { imageRow1, imageRow2 };
+const screenSlider3 = [
+  {
+    id: 1,
+    url: "/company-logos/wealthlink.png",
+  },
+  {
+    id: 2,
+    url: "/company-logos/finrise.png",
+  },
+  {
+    id: 3,
+    url: "/company-logos/wealthlink.png",
+  },
+  {
+    id: 4,
+    url: "/company-logos/vaultpay.png",
+  },
+  {
+    id: 5,
+    url: "/company-logos/clearcoin.png",
+  },
+  {
+    id: 6,
+    url: "/company-logos/moneymesh.png",
+  },
+  {
+    id: 7,
+    url: "/company-logos/vaultpay.png",
+  },
+];
+
+export default { screenSlider1, screenSlider2, screenSlider3 };
