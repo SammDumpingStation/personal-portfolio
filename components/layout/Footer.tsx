@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 
 const Footer = () => {
   return (
-    <footer className=" bg-ugray-25">
-      <div className="h-[500px] max-w-[1036px] mx-auto flex flex-col items-center justify-around">
+    <footer className=" bg-ugray-25 px-4">
+      <div className="h-[500px] w-full max-w-[1036px] mx-auto flex flex-col items-center justify-around">
         <h1 className="font-bold text-2xl">
           Samm <span className="text-ugray-500">Caag.</span>
         </h1>
@@ -16,7 +16,7 @@ const Footer = () => {
           conversation going.
         </p>
         <CTA />
-        <div className="border-t border-ugray-200 pt-10 flex justify-between w-full">
+        <div className="border-t border-ugray-200 pt-10 items-center gap-4 flex max-md:flex-col  md:justify-between w-full">
           <span>© 2024 Gridbox. All rights reserved.</span>
           <div className="flex gap-6">
             <Image

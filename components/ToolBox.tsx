@@ -13,7 +13,7 @@ const ToolBox = () => {
           bring ideas to life
         </p>
       </div>
-      <div className="h-[230px] w-[924px] flex gap-11 flex-wrap justify-center">
+      <div className="h-[230px] lg:w-[924px] flex lg:gap-11 flex-wrap justify-center">
         {icons.development.map((icon) => (
           <Image
             src={icon.url}

@@ -14,12 +14,14 @@ const Contact = () => {
         possibilities."
         otherStyles=""
       />
-      <div className="flex items-center justify-center space-x-4">
+      <div className="flex items-center justify-center space-x-4 px-4">
         <span className="flex-grow border-t border-ugray-200 max-w-[338px]"></span>
         <span className="text-lg font-semibold">Or</span>
         <span className="flex-grow border-t border-ugray-200 max-w-[338px]"></span>
       </div>
-      <ContactInput />
+      <div className="w-full px-4">
+        <ContactInput />
+      </div>
     </section>
   );
 };

@@ -76,7 +76,7 @@
     @apply font-bold max-[1199px]:text-[42px] min-[1200px]:text-[58px];
   }
   .h2 {
-    @apply font-semibold text-5xl;
+    @apply font-semibold text-3xl md:text-4xl lg:text-5xl;
   }
   .h3 {
     @apply font-bold max-lg:text-center text-[38px];
@@ -91,7 +91,7 @@
     @apply font-medium lg:text-[18px] text-ugray-500 max-w-[90ch] mx-auto;
   }
   .main-container {
-    @apply flex items-center flex-col;
+    @apply flex items-center flex-col px-4;
   }
   .about-me-container {
     @apply max-w-[960px] w-full flex justify-between gap-16 py-16;
