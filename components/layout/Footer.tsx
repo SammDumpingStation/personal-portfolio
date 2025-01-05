@@ -1,6 +1,6 @@
 import Image from "next/image";
-import CTA from "./CTA";
-import { Card } from "./ui/card";
+import CTA from "@/components/CTA";
+import { Card } from "@/components/ui/card";
 
 const Footer = () => {
   return (

@@ -1,4 +1,4 @@
-import CTA from "./CTA";
+import CTA from "@/components/CTA";
 
 const Header = () => {
   return (

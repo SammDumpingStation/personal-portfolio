@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import CTA from "./CTA";
-import { Badge } from "./ui/badge";
+import CTA from "@/components/CTA";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
 type HeroProps = {

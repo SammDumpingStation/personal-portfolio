@@ -1,7 +1,7 @@
 import CTA from "@/components/CTA";
-import Hero from "@/components/Hero";
+import Hero from "@/components/layout/Hero";
 import { Badge } from "@/components/ui/badge";
-import ContactInput from "./components/ContactInput";
+import ContactInput from "./sections/ContactInput";
 
 const Contact = () => {
   return (

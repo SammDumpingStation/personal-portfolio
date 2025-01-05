@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { ScreenSlider } from "./components/ScreenSlider";
-import Companies from "./components/Companies";
-import Approach from "./components/Approach";
-import Passion from "./components/Passion";
-import Portfolio from "./components/Portfolio";
-import ToolBox from "./components/ToolBox";
-import Snapshots from "./components/Snapshots";
-import Hero from "@/components/Hero";
+import { ScreenSlider } from "./sections/ScreenSlider";
+import Companies from "./sections/Companies";
+import Approach from "./sections/Approach";
+import Passion from "./sections/Passion";
+import Portfolio from "./sections/Portfolio";
+import ToolBox from "../../components/ToolBox";
+import Snapshots from "../../components/Snapshots";
+import Hero from "@/components/layout/Hero";
 import badgeData from "@/lib/badge-data";
 
 export default function Home() {

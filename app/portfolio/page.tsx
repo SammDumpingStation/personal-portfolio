@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/layout/Hero";
 import badgeData from "@/lib/badge-data";
 import Image from "next/image";
 

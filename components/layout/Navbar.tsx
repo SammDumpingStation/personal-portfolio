@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
