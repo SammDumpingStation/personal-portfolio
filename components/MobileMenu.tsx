@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const MobileMenu = () => {
   return (
-    <Button className="navbar-lg:hidden" variant={"outline"} size={"icon"}>
+    <Button className="min-[1200px]:hidden" variant={"outline"} size={"icon"}>
       <Menu className="h-6 w-6" />
     </Button>
   );

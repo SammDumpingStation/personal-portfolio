@@ -65,7 +65,7 @@ const Hero = ({
         </h1>
         <p className="p text-center">{subtitle}</p>
       </div>
-      <CTA customLabel="Contact Me" />
+      <CTA customLabel="Contact Me" otherStyles="" />
     </div>
   );
 };
