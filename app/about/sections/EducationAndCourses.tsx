@@ -4,8 +4,8 @@ const EducationAndCourses = () => {
   return (
     <div className="about-me-container">
       <h3 className="h3">
-        Education
-        <span className="block">
+        Education {" "}
+        <span className="lg:block">
           & <span className="text-ugray-500">Courses</span>
         </span>
       </h3>

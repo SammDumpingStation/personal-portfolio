@@ -94,11 +94,11 @@
     @apply flex items-center flex-col px-4;
   }
   .about-me-container {
-    @apply max-w-[960px] w-full flex max-lg:flex-col justify-between gap-16 py-16 px-4;
+    @apply max-w-[960px] w-full flex justify-between gap-10 py-10 lg:gap-16 lg:py-16 px-4 max-lg:flex-col max-lg:items-center;
   }
 
   .my-journey-p {
-    @apply text-[#5C5F5D] text-base;
+    @apply text-[#5C5F5D] text-base ;
   }
 
   .about-details-container {
