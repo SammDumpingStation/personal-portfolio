@@ -4,6 +4,8 @@ import MyJourney from "./sections/MyJourney";
 import WorkHistory from "./sections/WorkHistory";
 import EducationAndCourses from "./sections/EducationAndCourses";
 import SkillSet from "./sections/SkillSet";
+import ToolBox from "@/components/ToolBox";
+import Portfolio from "@/components/Portfolio";
 
 const AboutMe = () => {
   return (
@@ -18,12 +20,14 @@ const AboutMe = () => {
         profilePicture={true}
         badges={badgeData.skillTags}
       />
-      <section className="min-h-[2461px] flex flex-col items-center ">
+      <section className="flex flex-col items-center ">
         <MyJourney />
         <WorkHistory />
         <EducationAndCourses />
         <SkillSet />
       </section>
+      <ToolBox />
+      <Portfolio />
     </section>
   );
 };

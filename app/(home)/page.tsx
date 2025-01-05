@@ -3,7 +3,7 @@ import { ScreenSlider } from "./sections/ScreenSlider";
 import Companies from "./sections/Companies";
 import Approach from "./sections/Approach";
 import Passion from "./sections/Passion";
-import Portfolio from "./sections/Portfolio";
+import Portfolio from "../../components/Portfolio";
 import ToolBox from "../../components/ToolBox";
 import Snapshots from "../../components/Snapshots";
 import Hero from "@/components/layout/Hero";
