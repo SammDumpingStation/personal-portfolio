@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Passion = () => {
   return (
-    <section className="min-h-[680px] bg-foreground flex justify-around items-center">
+    <section className="min-h-[680px] bg-foreground flex max-lg:flex-col justify-around items-center">
       <Image
         src={"/images/profile-small.png"}
         height={560}
@@ -11,11 +11,11 @@ const Passion = () => {
         alt="Profile Picture"
         className="max-h-[560px]"
       />
-      <div className="flex flex-col justify-center gap-10 h-[560px] w-[400px]">
+      <div className="flex flex-col justify-center gap-10 h-[560px] w-[400px] max-lg:items-center">
         <h2 className="h3 text-start text-background">
           A Passion for Design and Innovation
         </h2>
-        <p className="font-medium text-[18px] text-background">
+        <p className="font-medium text-[18px] text-background max-lg:text-center">
           With over 8 years of experience, I've had the opportunity to lead and
           scale multiple platforms, transforming innovative ideas into fully
           operational products. From working with a YC-backed startup to

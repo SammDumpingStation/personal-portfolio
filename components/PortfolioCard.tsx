@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 
 const PortfolioCard = () => {
   return (
-    <Card className="min-h-[660px] py-6 px-[18px] flex flex-col gap-4">
+    <Card className="min-h-[660px] max-w-[500px] py-6 px-[18px] flex flex-col gap-4">
       <Card className="p-[10px]">
         <Image
           src={"/images/luxbrew.png"}
