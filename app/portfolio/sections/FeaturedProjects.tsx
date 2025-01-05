@@ -3,7 +3,7 @@ import Snapshots from "@/components/Snapshots";
 
 const FeaturedProjects = () => {
   return (
-    <div className="flex flex-col justify-around items-center space-y-10 py-10">
+    <div className="flex flex-col w-full justify-around items-center space-y-10 py-10">
       <h3 className="h3">
         Featured <span className="text-ugray-500">Projects</span>
       </h3>

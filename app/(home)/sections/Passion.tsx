@@ -11,7 +11,7 @@ const Passion = () => {
         alt="Profile Picture"
         className="max-h-[560px]"
       />
-      <div className="flex flex-col justify-center gap-10 h-[560px] w-[400px] max-lg:items-center">
+      <div className="flex flex-col justify-center gap-10 h-[560px] w-full max-w-[400px] max-lg:items-center px-4">
         <h2 className="h3 text-start text-background">
           A Passion for Design and Innovation
         </h2>

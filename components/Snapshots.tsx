@@ -3,7 +3,7 @@ import { InfiniteSlider } from "./ui/infinite-slider";
 
 const Snapshots = () => {
   return (
-    <section className="min-h-[620px] flex flex-col items-center justify-around ">
+    <section className="min-h-[620px] flex flex-col items-center justify-around w-full ">
       <div className="text-center space-y-6">
         <h2 className="h2">A Handpicked Snapshots</h2>
         <p className="p">Curated selection of design highlights</p>

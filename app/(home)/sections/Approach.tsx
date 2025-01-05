@@ -5,7 +5,7 @@ import React from "react";
 const Approach = () => {
   return (
     <section className="flex items-center max-lg:flex-col-reverse lg:justify-around min-h-[680px]">
-      <div className="flex flex-col justify-center gap-10 h-[560px] w-[400px] max-lg:items-center">
+      <div className="flex flex-col justify-center gap-10 h-[560px] w-full max-w-[400px] max-lg:items-center">
         <h2 className="h3 text-start">
           Turning Data into <span className="text-ugray-500">Design</span>
         </h2>
