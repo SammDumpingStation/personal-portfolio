@@ -16,8 +16,8 @@ const Passion = () => {
           A Passion for Design and Innovation
         </h2>
         <p className="font-medium text-[18px] text-background max-lg:text-center">
-          With over 8 years of experience, I've had the opportunity to lead and
-          scale multiple platforms, transforming innovative ideas into fully
+          With over 8 years of experience, I&apos;ve had the opportunity to lead
+          and scale multiple platforms, transforming innovative ideas into fully
           operational products. From working with a YC-backed startup to
           developing platforms that have generated $20 million in revenue and
           attracted over 10,000 users

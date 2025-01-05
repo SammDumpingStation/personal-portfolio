@@ -95,4 +95,5 @@ const screenSlider3 = [
   },
 ];
 
-export default { screenSlider1, screenSlider2, screenSlider3 };
+export const sliderImages = { screenSlider1, screenSlider2, screenSlider3 };
+export default sliderImages;

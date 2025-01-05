@@ -84,4 +84,8 @@ const uxDesign = [
   },
 ];
 
-export default { productDesign, uxDesign };
+export const skillSets = {
+  productDesign,
+  uxDesign,
+};
+export default skillSets;

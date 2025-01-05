@@ -1,10 +1,7 @@
 "use client";
-import { useTheme } from "next-themes";
 import React from "react";
 
 const Github = () => {
-  const { setTheme } = useTheme();
-  const [isDark, setIsDark] = React.useState(false);
   return (
     <svg
       width="24"

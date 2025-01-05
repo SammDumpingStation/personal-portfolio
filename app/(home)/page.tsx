@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ScreenSlider } from "./sections/ScreenSlider";
 import Companies from "./sections/Companies";
 import Approach from "./sections/Approach";

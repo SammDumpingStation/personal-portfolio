@@ -12,5 +12,8 @@ const skillTags = [
     title: "Web Design",
   },
 ];
+export const badgeData = {
+  skillTags,
+};
 
-export default { skillTags };
+export default badgeData;

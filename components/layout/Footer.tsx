@@ -1,6 +1,5 @@
 import Image from "next/image";
 import CTA from "@/components/CTA";
-import { Card } from "@/components/ui/card";
 
 const Footer = () => {
   return (
@@ -9,10 +8,10 @@ const Footer = () => {
         <h1 className="font-bold text-2xl">
           Samm <span className="text-ugray-500">Caag.</span>
         </h1>
-        <h4 className="h4">Let's Stay Connected</h4>
+        <h4 className="h4">Let&apos;s Stay Connected</h4>
         <p className="p text-center">
           Interested in discussing design, sharing ideas, or exploring
-          innovations in product design? Feel free to reach out—let's keep the
+          innovations in product design? Feel free to reach out—let&apos;s keep the
           conversation going.
         </p>
         <CTA />

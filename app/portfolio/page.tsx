@@ -1,6 +1,6 @@
 import Hero from "@/components/layout/Hero";
 import badgeData from "@/lib/badge-data";
-import Image from "next/image";
+import FeaturedProjects from "./sections/FeaturedProjects";
 
 const Portfolio = () => {
   return (
@@ -12,6 +12,7 @@ const Portfolio = () => {
         badges={badgeData.skillTags}
         otherStyles="min-h-[400px]"
       />
+      <FeaturedProjects />
     </section>
   );
 };

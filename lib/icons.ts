@@ -44,5 +44,7 @@ const development = [
     url: "/icons/xd.png",
   },
 ];
-
-export default { development };
+export const icons = {
+  development,
+};
+export default icons;
