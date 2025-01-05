@@ -73,7 +73,7 @@
     @apply absolute inset-0 h-full w-full bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:96px_96px] -z-50;
   }
   .h1 {
-    @apply font-bold text-[59px];
+    @apply font-bold max-navbar-lg:text-[42px] navbar-lg:text-[58px] ;
   }
   .h2 {
     @apply font-semibold text-5xl;

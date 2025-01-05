@@ -7,8 +7,8 @@ const Github = () => {
   const [isDark, setIsDark] = React.useState(false);
   return (
     <svg
-      width="100%"
-      height="100%"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const Github = () => {
       </g>
       <defs>
         <clipPath id="clip0_5016_2079">
-          <rect width="100%" height="100%" fill="none" />
+          <rect width="24" height="24" fill="none" />
         </clipPath>
       </defs>
     </svg>

@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "navbar-lg": "1200px", // Add your custom breakpoint here
+        "max-navbar-lg": {max: "1199px"},
+      },
       colors: {
         ugray: {
           "25": "#FCFCFD",

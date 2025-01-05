@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`} suppressHydrationWarning>
       <head />
-      <body className="antialiased relative min-h-[100vh] pt-[50px]">
+      <body className="antialiased relative min-h-[100vh] navbar-lg:pt-[50px] max-navbar-lg:pt-32">
         <div className="grid-background" />
         <ThemeProvider
           attribute="class"
