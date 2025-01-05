@@ -7,12 +7,12 @@ const Companies = () => {
     <section className="w-full min-h-[465px]">
       <div className="h-[221px] flex justify-center items-center flex-col">
         <h3 className="h4">Companies I've Worked With</h3>
-        <p className="p">
+        <p className="p text-center">
           Helping leading companies innovate and succeed through impactful
           design solutions
         </p>
       </div>
-      <InfiniteSlider>
+      <InfiniteSlider className="">
         {sliderImages.screenSlider3.map((image) => (
           <Image
             key={image.id}
