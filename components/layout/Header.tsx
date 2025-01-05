@@ -10,15 +10,15 @@ const Header = () => {
 
   return (
     //px-20 flex justify-between  for big screens
-    <header className="w-full z-50 mx-auto  border-border max-[1199px]:fixed max-[1199px]:bg-background max-[1199px]:top-0 max-[1199px]:p-6 max-[1199px]:border-b min-[1200px]:border-0 min-[1200px]:px-20 min-[1200px]:mb-10 min-[1200px]:min-h-[106px]">
-      <div className="flex  justify-between">
+    <header className="w-full  z-50 mx-auto  border-border max-lg:fixed max-lg:bg-background max-lg:top-0 max-lg:p-6 max-lg:border-b lg:border-0 lg:px-20 lg:mb-10 lg:min-h-[106px]">
+      <div className="flex  justify-between w-full">
         <h1 className="font-bold text-2xl">
           Samm <span className="text-ugray-500">Caag.</span>
         </h1>
-        <CTA otherStyles="max-[1199px]:hidden" />
-        <div>
+        <CTA otherStyles="max-lg:hidden" />
+        <div className="lg:hidden">
           <Button
-            className="min-[1200px]:hidden"
+            className="lg:hidden"
             variant={"outline"}
             size={"icon"}
             onClick={() => setShowLink((prev) => !prev)}
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
       </div>
       {showLink && (
-        <div className="flex flex-col p-10 pb-0 gap-6 min-[1200px]:hidden">
+        <div className="flex flex-col p-10 pb-0 gap-6 lg:hidden">
           <NavLink href="/" title="Home" />
           <NavLink href="/portfolio" title="Portfolio" />
           <NavLink href="/about" title="About Me" />

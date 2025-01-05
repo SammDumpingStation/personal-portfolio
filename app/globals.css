@@ -73,7 +73,7 @@
     @apply absolute inset-0 h-full w-full bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:96px_96px] -z-50;
   }
   .h1 {
-    @apply font-bold max-[1199px]:text-[42px] min-[1200px]:text-[58px];
+    @apply font-bold max-lg:text-[42px] lg:text-[58px];
   }
   .h2 {
     @apply font-semibold text-3xl md:text-4xl lg:text-5xl;
@@ -98,7 +98,7 @@
   }
 
   .my-journey-p {
-    @apply text-[#5C5F5D] text-base ;
+    @apply text-[#5C5F5D] text-base;
   }
 
   .about-details-container {
