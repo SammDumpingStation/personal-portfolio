@@ -1,19 +1,17 @@
 import Hero from "@/pages/home/components/Hero";
-import GrokSkills from "@/pages/home/components/grok-skills";
-import Contact from "@/pages/home/components/contact";
-import Footer from "@/pages/home/components/footer";
-import Feature from "@/pages/home/components/feature";
 import MainSkills from "@/pages/home/components/MainSkills";
-import About from "@/pages/home/components/About";
+import AboutMe from "@/pages/home/components/AboutMe";
+import Feature from "@/pages/home/components/Feature";
+import Contact from "@/pages/home/components/Contact";
+import Footer from "@/pages/home/components/Footer";
 
 export default function Home() {
   return (
     <main className="">
       <Hero />
       <MainSkills />
-      <About />
+      <AboutMe />
       <Feature />
-      <GrokSkills />
       <Contact />
       <Footer />
     </main>

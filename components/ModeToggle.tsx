@@ -13,7 +13,7 @@ export function ModeToggle() {
     <Button
       variant="ghost"
       size={"icon"}
-      className="cursor-pointer"
+      className="hover:bg-transparent dark:hover:bg-transparent"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] transition-all dark:hidden" />

@@ -7,7 +7,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Code, Palette, Monitor } from "lucide-react";
+import { ArrowRight, Code, Palette, Monitor, CodeXml } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectHighlight {
@@ -42,7 +42,7 @@ const projectHighlights: ProjectHighlight[] = [
   },
 ];
 
-const PortfolioSection = () => {
+const Feature = () => {
   return (
     <section className="bg-background antialiased">
       <div className="container mx-auto py-8 sm:py-16 lg:py-24">
@@ -116,7 +116,7 @@ const PortfolioSection = () => {
         <div className="mt-12 text-center">
           <Button variant="outline" className="gap-2">
             View All Projects
-            <Code className="h-4 w-4" />
+            <CodeXml className="h-4 w-4" />
           </Button>
         </div>
       </div>
@@ -124,4 +124,4 @@ const PortfolioSection = () => {
   );
 };
 
-export default PortfolioSection;
+export default Feature;

@@ -75,12 +75,10 @@ export default function Hero() {
           <div className="z-10 flex max-w-5xl flex-col gap-6">
             <Badge
               variant="outline"
-              className="text-green-500 bg-green-200 border-green-500 "
+              className="text-green-500 bg-green-200 dark:bg-green-700 border-green-500 "
             >
               <Circle fill="currentColor" />
-              <span className="text-foreground ml-2 dark:text-background">
-                Available for work
-              </span>
+              <span className="text-foreground ml-2">Available for work</span>
             </Badge>
             <div className="flex flex-col">
               <span className="text-3xl font-semibold ml-1">Hi, I am</span>

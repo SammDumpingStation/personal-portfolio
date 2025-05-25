@@ -3,14 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Check, ArrowRight, Star } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import {
   Form,
@@ -21,175 +14,117 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-import Image from "next/image";
+import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 
 // Define the type for the form data
 interface FormData {
-  fullName: string;
-  company: string;
-  phone: string;
+  name: string;
   email: string;
-  country: string;
-  companySize: string;
-  referral: string;
+  subject: string;
+  message: string;
 }
 
-export default function Contact1() {
+export default function Contact() {
   const form = useForm<FormData>({
     defaultValues: {
-      fullName: "",
-      company: "",
-      phone: "",
+      name: "",
       email: "",
-      country: "",
-      companySize: "",
-      referral: "",
+      subject: "",
+      message: "",
     },
   });
 
-  // Apply the FormData type to the onSubmit function
   const onSubmit = (data: FormData) => {
-    console.log(data);
+    const { name, email, subject, message } = data;
+    const mailtoLink = `mailto:your.email@gmail.com?subject=${encodeURIComponent(
+      `${subject} - ${name} (${email})`
+    )}&body=${encodeURIComponent(message)}`;
+    
+    window.open(mailtoLink, '_blank');
   };
 
   return (
-    <section className="relative py-32">
+    <section id="contact" className="relative py-20">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-background"></div>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,hsl(var(--primary)/20%),transparent_80%)]"></div>
-      <div className="container mx-auto grid w-full grid-cols-1 gap-x-32 overflow-hidden lg:grid-cols-2">
-        <div className="w-full pb-10 md:space-y-10 md:pb-0">
-          <div className="space-y-4 md:max-w-[40rem]">
-            <h1 className="bg-clip-text text-4xl font-bold lg:text-5xl">
-              Transform Your Workflow
-            </h1>
-            <div className="text-muted-foreground md:text-base lg:text-lg lg:leading-7">
-              Experience a personalized demonstration of our cutting-edge
-              platform. Discover how we can streamline your processes, boost
-              productivity, and drive innovation in your business.
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <div className="space-y-16 pb-20 lg:pb-0">
-              <div className="space-y-6">
-                <div className="mt-16 flex flex-col space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                      <Star className="size-5" />
-                    </div>
-                    <div className="text-lg font-semibold">
-                      4.9/5 Average Rating
-                    </div>
-                  </div>
-                  <div className="flex space-x-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className="size-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Based on 1000+ customer reviews
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-lg font-semibold">
-                    Why choose our solution?
-                  </p>
-                  <div className="flex items-center space-x-2.5">
-                    <Check className="size-5 shrink-0 text-primary" />
-                    <p className="text-sm">Boost productivity by up to 40%</p>
-                  </div>
-                  <div className="flex items-center space-x-2.5">
-                    <Check className="size-5 shrink-0 text-primary" />
-                    <p className="text-sm">
-                      Seamless integration with your existing tools
-                    </p>
-                  </div>
-                  <div className="flex items-center space-x-2.5">
-                    <Check className="size-5 shrink-0 text-primary" />
-                    <p className="text-sm">24/7 expert support and guidance</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <p className="text-lg font-semibold">
-                  Trusted by industry leaders:
-                </p>
-                <div className="grid grid-cols-3 gap-4">
-                  <Image
-                    src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                    alt="TechCorp logo"
-                    width={120}
-                    height={40}
-                    className="h-10 opacity-70 transition-opacity hover:opacity-100"
-                  />
-                  <Image
-                    src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                    alt="InnovateCo logo"
-                    width={120}
-                    height={40}
-                    className="h-10 opacity-70 transition-opacity hover:opacity-100"
-                  />
-                  <Image
-                    src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                    alt="FutureTech logo"
-                    width={120}
-                    height={40}
-                    className="h-10 opacity-70 transition-opacity hover:opacity-100"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl font-bold">Get In Touch</h2>
+          <p className="mt-4 text-muted-foreground">
+            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+          </p>
         </div>
-        <div className="x flex w-full justify-center lg:mt-2.5">
-          <Card className="relative flex w-full min-w-80 max-w-[30rem] flex-col items-center overflow-visible border-primary/10 shadow-lg md:min-w-96">
+        
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">Let's work together</h3>
+              <p className="text-muted-foreground">
+                I'm currently open to new opportunities, interesting projects, and networking. 
+                Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Mail className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Email me at</p>
+                  <a 
+                    href="mailto:your.email@gmail.com" 
+                    className="hover:text-primary hover:underline"
+                  >
+                    your.email@gmail.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex space-x-6 pt-4">
+                <a 
+                  href="https://linkedin.com/in/yourprofile" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="size-6" />
+                </a>
+                <a 
+                  href="https://github.com/yourusername" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github className="size-6" />
+                </a>
+                <a 
+                  href="https://twitter.com/yourusername" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="size-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <Card className="border-primary/10 p-6 shadow-lg">
             <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="w-full space-y-8"
-              >
-                <div className="space-y-6 rounded-lg bg-background p-6">
-                  <h2 className="mb-6 text-center text-2xl font-semibold">
-                    Schedule Your Demo
-                  </h2>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <h3 className="text-xl font-semibold">Send me a message</h3>
+                <div className="space-y-4">
                   <FormField
                     control={form.control}
-                    name="fullName"
+                    name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Full name</FormLabel>
+                        <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Company</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your Company" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone number</FormLabel>
-                        <FormControl>
-                          <Input placeholder="+1 (555) 000-0000" {...field} />
+                          <Input placeholder="Your name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -201,12 +136,12 @@ export default function Contact1() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Business email</FormLabel>
+                        <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input
-                            type="email"
-                            placeholder="you@yourcompany.com"
-                            {...field}
+                          <Input 
+                            type="email" 
+                            placeholder="your.email@example.com" 
+                            {...field} 
                           />
                         </FormControl>
                         <FormMessage />
@@ -216,29 +151,13 @@ export default function Contact1() {
 
                   <FormField
                     control={form.control}
-                    name="country"
+                    name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Country</FormLabel>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select your country" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="us">United States</SelectItem>
-                            <SelectItem value="uk">United Kingdom</SelectItem>
-                            <SelectItem value="ca">Canada</SelectItem>
-                            <SelectItem value="au">Australia</SelectItem>
-                            <SelectItem value="de">Germany</SelectItem>
-                            <SelectItem value="fr">France</SelectItem>
-                            <SelectItem value="jp">Japan</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl>
+                          <Input placeholder="What's this about?" {...field} />
+                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -246,104 +165,25 @@ export default function Contact1() {
 
                   <FormField
                     control={form.control}
-                    name="companySize"
+                    name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Company size</FormLabel>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select company size" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="1-10">1-10 employees</SelectItem>
-                            <SelectItem value="11-50">
-                              11-50 employees
-                            </SelectItem>
-                            <SelectItem value="51-200">
-                              51-200 employees
-                            </SelectItem>
-                            <SelectItem value="201-500">
-                              201-500 employees
-                            </SelectItem>
-                            <SelectItem value="501-1000">
-                              501-1000 employees
-                            </SelectItem>
-                            <SelectItem value="1000+">
-                              1000+ employees
-                            </SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Hi there! I'd like to chat about..." 
+                            rows={5} 
+                            {...field} 
+                          />
+                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
 
-                  <FormField
-                    control={form.control}
-                    name="referral"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          How did you hear about us?{" "}
-                          <span className="text-muted-foreground">
-                            (Optional)
-                          </span>
-                        </FormLabel>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select source" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="search">
-                              Search Engine
-                            </SelectItem>
-                            <SelectItem value="social">Social Media</SelectItem>
-                            <SelectItem value="friend">
-                              Friend/Colleague
-                            </SelectItem>
-                            <SelectItem value="conference">
-                              Conference/Event
-                            </SelectItem>
-                            <SelectItem value="advertisement">
-                              Advertisement
-                            </SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <div className="flex w-full flex-col justify-end space-y-3 pt-2">
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90"
-                    >
-                      Book Your Demo <ArrowRight className="ml-2 size-4" />
-                    </Button>
-                    <div className="text-xs text-muted-foreground">
-                      By submitting this form, you agree to our{" "}
-                      <a href="#" className="underline">
-                        terms of service
-                      </a>{" "}
-                      and{" "}
-                      <a href="#" className="underline">
-                        privacy policy
-                      </a>
-                      .
-                    </div>
-                  </div>
+                  <Button type="submit" className="w-full">
+                    Send Message <Mail className="ml-2 size-4" />
+                  </Button>
                 </div>
               </form>
             </Form>
