@@ -1,56 +1,13 @@
-import {
-  ArrowDownRight,
-  Cpu,
-  TrendingUp,
-  PlayCircle,
-  Download,
-  Phone,
-  LucideDownload,
-  ArrowDownToLine,
-  BaggageClaim,
-  BriefcaseBusiness,
-  Dot,
-  Circle,
-  Plane,
-} from "lucide-react";
+import { Phone, ArrowDownToLine, Circle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
-
-const logos = [
-  {
-    src: "/logos/shadcn-ui.svg",
-    alt: "Shadcn UI logo",
-    height: "h-7",
-  },
-  {
-    src: "/logos/vercel.svg",
-    alt: "Vercel logo",
-    height: "h-8",
-  },
-  {
-    src: "/logos/nextjs.svg",
-    alt: "React logo",
-    height: "h-7",
-  },
-  {
-    src: "/logos/supabase.svg",
-    alt: "Supabase logo",
-    height: "h-7",
-  },
-  {
-    src: "/logos/tailwind.svg",
-    alt: "Tailwind logo",
-    height: "h-4",
-  },
-];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex">
       <div className="absolute right-0 top-0 h-full w-3/4 overflow-hidden">
-        <div className="absolute right-0 top-0 h-[141%] w-[141%] origin-top-right -rotate-45 transform bg-primary/10" />
+        <div className="absolute right-0 top-0 h-[141%] w-[141%] origin-top-right -rotate-45 transform bg-foreground" />
       </div>
       <div className="container my-auto mx-auto grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col">
@@ -118,22 +75,25 @@ export default function Hero() {
           <div className="z-10 flex max-w-5xl flex-col gap-6">
             <Badge
               variant="outline"
-              className="text-green-500 bg-green-200 border-green-500"
+              className="text-green-500 bg-green-200 border-green-500 "
             >
               <Circle fill="currentColor" />
-              <span className="text-foreground ml-2">Available for work</span>
+              <span className="text-foreground ml-2 dark:text-background">
+                Available for work
+              </span>
             </Badge>
             <div className="flex flex-col">
               <span className="text-3xl font-semibold ml-1">Hi, I am</span>
               <h1 className="mb-6 text-4xl font-bold lg:text-6xl mt-1">
                 Samm Caagbay
-                <span className="font-normal mt-2 block text-4xl text-muted-foreground">
+                <span className="font-normal block text-4xl text-muted-foreground">
                   A Software Engineer
                 </span>
               </h1>
               <p className="text-muted-foreground lg:text-xl max-w-[40ch]">
-                Transforming data into actionable insights. Streamline your
-                workflow and enhance productivity with cutting-edge AI tools.
+                Creating modern web applications that solve real problems. I
+                specialize in building efficient, user-friendly software that
+                helps businesses grow and succeed.
               </p>
             </div>
             <div className="mt-8 flex gap-3">
@@ -152,13 +112,6 @@ export default function Hero() {
           <div className="relative w-full max-w-md">
             <div className="aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
               <Skeleton className="w-full h-[600px] " />
-              {/* <Image
-                src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                alt="Designing Interfaces: A User-Centered Approach"
-                width={480}
-                height={600}
-                className="object-cover"
-              /> */}
             </div>
           </div>
         </div>

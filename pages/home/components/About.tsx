@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Star, Users, Award, ThumbsUp } from "lucide-react";
 import Image from "next/image";
 
-export default function Hero14() {
+export default function About() {
   return (
     <section className="bg-background py-12 md:py-24">
       <div className="container mx-auto">
