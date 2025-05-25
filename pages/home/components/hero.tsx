@@ -123,11 +123,11 @@ export default function Hero() {
               <Circle fill="currentColor" />
               <span className="text-foreground ml-2">Available for work</span>
             </Badge>
-            <div className="flex">
+            <div className="flex flex-col">
               <span className="text-3xl font-semibold ml-1">Hi, I am</span>
-              <h1 className="mb-6 text-4xl font-bold lg:text-6xl">
+              <h1 className="mb-6 text-4xl font-bold lg:text-6xl mt-1">
                 Samm Caagbay
-                <span className="font-normal block text-4xl text-muted-foreground">
+                <span className="font-normal mt-2 block text-4xl text-muted-foreground">
                   A Software Engineer
                 </span>
               </h1>
@@ -136,7 +136,7 @@ export default function Hero() {
                 workflow and enhance productivity with cutting-edge AI tools.
               </p>
             </div>
-            <div className="mt-8 flex gap-2">
+            <div className="mt-8 flex gap-3">
               <Button size="lg" className="gap-2">
                 <ArrowDownToLine />
                 Download CVT
