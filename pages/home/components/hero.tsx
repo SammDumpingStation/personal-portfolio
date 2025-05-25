@@ -1,7 +1,22 @@
-import { ArrowDownRight, Cpu, TrendingUp, PlayCircle } from "lucide-react";
+import {
+  ArrowDownRight,
+  Cpu,
+  TrendingUp,
+  PlayCircle,
+  Download,
+  Phone,
+  LucideDownload,
+  ArrowDownToLine,
+  BaggageClaim,
+  BriefcaseBusiness,
+  Dot,
+  Circle,
+  Plane,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const logos = [
   {
@@ -33,11 +48,11 @@ const logos = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-32 min-h-screen">
+    <section className="relative overflow-hidden min-h-screen flex">
       <div className="absolute right-0 top-0 h-full w-3/4 overflow-hidden">
         <div className="absolute right-0 top-0 h-[141%] w-[141%] origin-top-right -rotate-45 transform bg-primary/10" />
       </div>
-      <div className="container mx-auto grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="container my-auto mx-auto grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,9 +116,12 @@ export default function Hero() {
           </svg>
 
           <div className="z-10 flex max-w-5xl flex-col gap-6">
-            <Badge variant="outline" className="text-foreground">
-              AI-Powered Insights
-              <ArrowDownRight className="ml-2 size-4" />
+            <Badge
+              variant="outline"
+              className="text-green-500 bg-green-200 border-green-500"
+            >
+              <Circle fill="currentColor" />
+              <span className="text-foreground ml-2">Available for work</span>
             </Badge>
             <div className="">
               <span className="text-3xl font-semibold ml-1">Hi, I am</span>
@@ -113,37 +131,19 @@ export default function Hero() {
                   A Software Engineer
                 </span>
               </h1>
-              <p className="text-muted-foreground lg:text-xl">
+              <p className="text-muted-foreground lg:text-xl max-w-[40ch]">
                 Transforming data into actionable insights. Streamline your
                 workflow and enhance productivity with cutting-edge AI tools.
               </p>
             </div>
-
-            <div className="flex flex-col gap-4">
-              <p className=" text-muted-foreground lg:text-left">
-                Empowering the next generation of digital innovations
-              </p>
-              <div className="flex flex-wrap justify-center gap-8">
-                {logos.map((logo, index) => (
-                  <Image
-                    key={index}
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={100}
-                    height={100}
-                    className={`${logo.height} transition-transform hover:scale-110 dark:invert`}
-                  />
-                ))}
-              </div>
-            </div>
             <div className="mt-8 flex gap-2">
               <Button size="lg" className="gap-2">
-                <PlayCircle className="size-5" />
-                Watch Demo
+                <ArrowDownToLine />
+                Download CVT
               </Button>
               <Button size="lg" variant="outline" className="gap-2">
-                <TrendingUp className="size-5" />
-                Features
+                <Phone />
+                Contact Me
               </Button>
             </div>
           </div>
@@ -151,13 +151,14 @@ export default function Hero() {
         <div className="flex items-center justify-center">
           <div className="relative w-full max-w-md">
             <div className="aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
-              <Image
+              <Skeleton className="w-full h-[600px] " />
+              {/* <Image
                 src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
                 alt="Designing Interfaces: A User-Centered Approach"
                 width={480}
                 height={600}
                 className="object-cover"
-              />
+              /> */}
             </div>
           </div>
         </div>

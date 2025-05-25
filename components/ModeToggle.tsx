@@ -11,15 +11,13 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant="default"
-      size={"lg"}
-      className="rounded-full"
+      variant="ghost"
+      size={"icon"}
+      className="cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] transition-all dark:hidden" />
       <Moon className="h-[1.2rem] w-[1.2rem] transition-all hidden dark:block" />
-      <span className="hidden dark:block">Dark Mode</span>
-      <span className="block dark:hidden">Light Mode</span>
     </Button>
   );
 }

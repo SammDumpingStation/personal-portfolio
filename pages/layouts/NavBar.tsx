@@ -22,8 +22,8 @@ export default function NavBar() {
             <Button
               asChild
               key={link.title}
-              className="rounded-full w-32 h-10"
-              variant={index === 0 ? "secondary" : "link"}
+              size={"lg"}
+              variant={index === 0 ? "default" : "link"}
             >
               <Link href={link.link}>{link.title}</Link>
             </Button>
