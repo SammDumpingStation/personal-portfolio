@@ -12,7 +12,7 @@ export default function NavBar() {
     { title: "CONTACT ME", link: "/contact" },
   ];
   return (
-    <nav className="flex items-center justify-between md:px-[5%] py-6">
+    <nav className="fixed top-0 left-0 right-0 flex items-center justify-between md:px-[5%] py-6 z-50">
       <div className="text-foreground">
         <Logo className="w-10 h-10" />
       </div>
