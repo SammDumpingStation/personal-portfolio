@@ -7,27 +7,27 @@ export default function AboutMe() {
     {
       icon: Users,
       description:
-        "Founded in 2010 with a small team of passionate innovators dedicated to solving complex business challenges.",
+        "Began my web development journey 2+ years ago, focusing on building practical, user-friendly applications through academic and personal projects.",
     },
     {
       icon: Rocket,
       description:
-        "Launched our flagship product in 2015, revolutionizing the industry with cutting-edge AI-driven solutions.",
+        "Developed KOSHI, a React Native application that helps users find their perfect car, earning 2nd place in a competitive university competition.",
     },
     {
       icon: Globe,
       description:
-        "Expanded globally in 2018, establishing offices in 5 countries and serving clients across 3 continents.",
+        "Contributed to digitizing a university clinic by building the foundation of their management system using Laravel.",
     },
     {
       icon: Award,
       description:
-        "Recognized as industry leaders in 2023, with multiple awards for innovation and customer satisfaction.",
+        "Led development of a comprehensive Online Catering Reservation System, implementing web, mobile, and real-time API solutions.",
     },
     {
       icon: Cpu,
       description:
-        "Developed proprietary AI algorithms in 2020, enhancing our product capabilities and delivering unparalleled performance.",
+        "Currently developing STELLA, a lending system for AFP retirees, focusing on creating meaningful impact through technology.",
     },
   ];
 
@@ -53,8 +53,10 @@ export default function AboutMe() {
                   About Me
                 </span>
                 <span className="max-w-80 text-sm text-muted-foreground sm:text-base">
-                  Our team of experts is dedicated to pushing the boundaries of
-                  technology, delivering solutions that drive real-world impact.
+                  Transforming business challenges into elegant web solutions. I
+                  specialize in Next.js development, creating intuitive digital
+                  experiences that bridge the gap between technical excellence
+                  and business value.
                 </span>
               </div>
             </div>
@@ -67,12 +69,15 @@ export default function AboutMe() {
                 About <span className="text-primary">Me</span>
               </h1>
               <p className="text-base text-muted-foreground sm:text-lg">
-                At TechNova, we&apos;re on a mission to transform businesses
-                through innovative technology solutions. Our journey is defined
-                by continuous growth, relentless innovation, and a commitment to
-                excellence. From humble beginnings to global recognition, we
-                strive to empower organizations with the tools they need to
-                thrive in a rapidly evolving digital landscape.
+                As a Next.js developer with 2+ years of hands-on experience, I
+                thrive on building applications that make a tangible difference.
+                My journey in tech has taught me the power of understanding both
+                code and business objectives to create solutions that truly
+                serve their purpose. I excel at translating complex requirements
+                into clean, efficient applications, with a particular talent for
+                modernizing manual processes. What excites me most is seeing how
+                the right technology can transform operations and create
+                meaningful impact.
               </p>
             </div>
 
@@ -80,15 +85,15 @@ export default function AboutMe() {
               {milestones.map((milestone, index) => (
                 <div key={index} className="relative flex gap-4">
                   <div className="relative group">
-                    <div className="flex size-12 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden bg-card border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors ">
+                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden bg-card border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors ">
                       <milestone.icon className="size-5 text-primary sm:size-6 " />
                     </div>
                     {index !== milestones.length - 1 && (
-                      <div className="absolute left-1/2 top-12 h-12 w-px -translate-x-1/2 bg-primary/30 sm:top-12 sm:h-10" />
+                      <div className="absolute left-1/2 top-12 h-14 w-px -translate-x-1/2 bg-primary/30 sm:top-12" />
                     )}
                   </div>
-                  <div className="flex-1 pt-1 sm:pt-2">
-                    <p className="text-sm text-muted-foreground sm:text-base">
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground sm:text-base min-h-[72px]">
                       {milestone.description}
                     </p>
                   </div>

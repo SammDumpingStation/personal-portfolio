@@ -9,6 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Palette, Monitor, CodeXml } from "lucide-react";
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface ProjectHighlight {
   organization: string;
@@ -20,25 +21,28 @@ interface ProjectHighlight {
 
 const projectHighlights: ProjectHighlight[] = [
   {
-    organization: "Alphabet Inc.",
-    projectTitle: "Corporate Website Redesign",
-    projectSummary: "Revamped global web presence with modern design system",
-    techStack: ["React", "TypeScript", "Tailwind", "Figma"],
-    imageUrl: "https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg",
+    organization: "Five Star Finance Inc.",
+    projectTitle: "STELLA",
+    projectSummary:
+      "A comprehensive lending system for AFP retirees, streamlining loan applications and benefit disbursements",
+    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    imageUrl: "/projects/stella-preview.jpg",
   },
   {
-    organization: "Microsoft Corp.",
-    projectTitle: "Operations Dashboard",
-    projectSummary: "Enterprise resource planning interface overhaul",
-    techStack: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
-    imageUrl: "https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg",
+    organization: "Application Development",
+    projectTitle: "Food Sentinel",
+    projectSummary:
+      "Full-stack platform for managing catering services with real-time order tracking and payment processing",
+    techStack: ["Next.js", "Express", "MongoDB", "WebSocket"],
+    imageUrl: "/projects/food-sentinel-preview.jpg",
   },
   {
-    organization: "Adobe Inc.",
-    projectTitle: "Brand Identity Refresh",
-    projectSummary: "Complete visual identity system modernization",
-    techStack: ["Illustrator", "After Effects", "Blender", "WebGL"],
-    imageUrl: "https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg",
+    organization: "Software Engineering",
+    projectTitle: "KOSHI",
+    projectSummary:
+      "Award-winning mobile application helping users find their ideal vehicle match (2nd place in competition)",
+    techStack: ["React Native", "Firebase"],
+    imageUrl: "/projects/koshi-preview.jpg",
   },
 ];
 
@@ -52,11 +56,12 @@ const Feature = () => {
             Featured Work
           </Badge>
           <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            Engineering Digital Excellence
+            Crafting Digital Solutions
+            <span className="text-primary block"> That Deliver Impact</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Transformative solutions powering industry leaders&apos; digital
-            evolution
+            Building practical, user-focused applications that solve real
+            business challenges with modern technology
           </p>
         </div>
 
@@ -67,12 +72,13 @@ const Feature = () => {
               className="group relative overflow-hidden transition-all hover:shadow-xl"
             >
               <div className="relative aspect-video overflow-hidden">
-                <Image
+                {/* <Image
                   src={project.imageUrl}
                   alt={project.projectTitle}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                /> */}
+                <Skeleton className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
 
               <CardHeader className="pb-2">
@@ -105,7 +111,7 @@ const Feature = () => {
 
               <CardFooter className="pt-2">
                 <Button className="w-full gap-2">
-                  Case Study
+                  Showcase
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </CardFooter>

@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { socialLinks } from "@/data/links";
 
-// Define the type for the form data
 interface FormData {
   name: string;
   email: string;
@@ -36,7 +36,7 @@ export default function Contact() {
 
   const onSubmit = (data: FormData) => {
     const { name, email, subject, message } = data;
-    const mailtoLink = `mailto:your.email@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:${socialLinks.email}?subject=${encodeURIComponent(
       `${subject} - ${name} (${email})`
     )}&body=${encodeURIComponent(message)}`;
     
@@ -72,17 +72,17 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Email me at</p>
                   <a 
-                    href="mailto:your.email@gmail.com" 
+                    href={`mailto:${socialLinks.email}`} 
                     className="hover:text-primary hover:underline"
                   >
-                    your.email@gmail.com
+                    {socialLinks.email}
                   </a>
                 </div>
               </div>
               
               <div className="flex space-x-6 pt-4">
                 <a 
-                  href="https://linkedin.com/in/yourprofile" 
+                  href={socialLinks.linkedin} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -91,7 +91,7 @@ export default function Contact() {
                   <Linkedin className="size-6" />
                 </a>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href={socialLinks.github} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -100,7 +100,7 @@ export default function Contact() {
                   <Github className="size-6" />
                 </a>
                 <a 
-                  href="https://twitter.com/yourusername" 
+                  href={socialLinks.twitter} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
