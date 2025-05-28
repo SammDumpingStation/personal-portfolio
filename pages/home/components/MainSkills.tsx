@@ -34,7 +34,7 @@ const logos = [
 export default function Logo6() {
   return (
     <section className="py-32">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <div className="flex flex-col gap-20 md:flex-row md:justify-between ">
           <div className="mb-8 md:mb-0 md:w-1/3">
             <h2 className="text-pretty text-2xl font-bold lg:text-4xl">

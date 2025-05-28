@@ -10,13 +10,15 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Palette, Monitor, CodeXml } from "lucide-react";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 
 interface ProjectHighlight {
   organization: string;
   projectTitle: string;
   projectSummary: string;
   techStack: string[];
-  imageUrl: string;
+  imageUrl?: string;
+  imageUrlDark?: string;
 }
 
 const projectHighlights: ProjectHighlight[] = [
@@ -26,7 +28,8 @@ const projectHighlights: ProjectHighlight[] = [
     projectSummary:
       "A comprehensive lending system for AFP retirees, streamlining loan applications and benefit disbursements",
     techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    imageUrl: "/projects/stella-preview.jpg",
+    imageUrl: "/images/stella-light.webp",
+    imageUrlDark: "/images/stella-dark.webp",
   },
   {
     organization: "Application Development",
@@ -34,7 +37,8 @@ const projectHighlights: ProjectHighlight[] = [
     projectSummary:
       "Full-stack platform for managing catering services with real-time order tracking and payment processing",
     techStack: ["Next.js", "Express", "MongoDB", "WebSocket"],
-    imageUrl: "/projects/food-sentinel-preview.jpg",
+    imageUrl: "/images/food-sentinel-light.webp",
+    imageUrlDark: "/images/food-sentinel-dark.webp",
   },
   {
     organization: "Software Engineering",
@@ -42,7 +46,7 @@ const projectHighlights: ProjectHighlight[] = [
     projectSummary:
       "Award-winning mobile application helping users find their ideal vehicle match (2nd place in competition)",
     techStack: ["React Native", "Firebase"],
-    imageUrl: "/projects/koshi-preview.jpg",
+    imageUrl: "/images/koshi.webp",
   },
 ];
 
@@ -69,16 +73,30 @@ const Feature = () => {
           {projectHighlights.map((project, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden transition-all hover:shadow-xl"
+              className="group relative overflow-hidden transition-all hover:shadow-xl pt-0"
             >
               <div className="relative aspect-video overflow-hidden">
-                {/* <Image
-                  src={project.imageUrl}
-                  alt={project.projectTitle}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                /> */}
-                <Skeleton className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                {project.imageUrl ? (
+                  <>
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.projectTitle}
+                      fill
+                      className={cn(
+                        "object-cover transition-transform duration-300 scale-105 group-hover:scale-110",
+                        { "dark:hidden": project.imageUrlDark }
+                      )}
+                    />
+                    <Image
+                      src={project.imageUrlDark!}
+                      alt={project.projectTitle}
+                      fill
+                      className="object-cover hidden dark:block transition-transform duration-300 scale-105 group-hover:scale-110"
+                    />
+                  </>
+                ) : (
+                  <Skeleton className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                )}
               </div>
 
               <CardHeader className="pb-2">
@@ -92,7 +110,7 @@ const Feature = () => {
                 <h3 className="mb-2 text-xl font-bold text-foreground">
                   {project.projectTitle}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground min-h-[72px]">
                   {project.projectSummary}
                 </p>
 
@@ -110,7 +128,7 @@ const Feature = () => {
               </CardContent>
 
               <CardFooter className="pt-2">
-                <Button className="w-full gap-2">
+                <Button className="w-full gap-2 ">
                   Showcase
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>

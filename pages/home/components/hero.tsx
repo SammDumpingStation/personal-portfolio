@@ -82,13 +82,13 @@ export default function Hero() {
             </Badge>
             <div className="flex flex-col">
               <span className="text-3xl font-semibold ml-1">Hi, I am</span>
-              <h1 className="mb-6 text-4xl font-bold lg:text-6xl mt-1">
+              <h1 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl mb-6">
                 Samm Caagbay
                 <span className="font-normal block text-4xl text-muted-foreground">
                   A Software Engineer
                 </span>
               </h1>
-              <p className="text-muted-foreground lg:text-xl max-w-[40ch]">
+              <p className="text-muted-foreground lg:text-xl">
                 Creating modern web applications that solve real problems. I
                 specialize in building efficient, user-friendly software that
                 helps businesses grow and succeed.
