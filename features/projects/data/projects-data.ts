@@ -2,6 +2,7 @@ import { ProjectProps } from "../types/project-type";
 
 const projectHighlights: ProjectProps[] = [
   {
+    id: "1",
     organization: "Five Star Finance Inc.",
     projectTitle: "STELLA",
     projectSummary:
@@ -11,6 +12,7 @@ const projectHighlights: ProjectProps[] = [
     imageUrlDark: "/images/stella-dark.webp",
   },
   {
+    id: "2",
     organization: "Application Development",
     projectTitle: "Food Sentinel",
     projectSummary:
@@ -20,6 +22,7 @@ const projectHighlights: ProjectProps[] = [
     imageUrlDark: "/images/food-sentinel-dark.webp",
   },
   {
+    id: "3",
     organization: "Software Engineering",
     projectTitle: "KOSHI",
     projectSummary:
@@ -32,6 +35,7 @@ const projectHighlights: ProjectProps[] = [
 
 const projects: ProjectProps[] = [
   {
+    id: "1",
     organization: "Five Star Finance Inc.",
     projectTitle: "STELLA",
     projectSummary:
@@ -41,6 +45,7 @@ const projects: ProjectProps[] = [
     imageUrlDark: "/images/stella-dark.webp",
   },
   {
+    id: "2",
     organization: "Application Development",
     projectTitle: "Food Sentinel",
     projectSummary:
@@ -50,6 +55,7 @@ const projects: ProjectProps[] = [
     imageUrlDark: "/images/food-sentinel-dark.webp",
   },
   {
+    id: "3",
     organization: "Software Engineering",
     projectTitle: "KOSHI",
     projectSummary:

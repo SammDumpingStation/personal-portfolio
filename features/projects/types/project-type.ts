@@ -1,4 +1,5 @@
 export interface ProjectProps {
+  id: string;
   organization: string;
   projectTitle: string;
   projectSummary: string;

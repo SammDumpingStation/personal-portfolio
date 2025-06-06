@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Card,
@@ -13,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ProjectProps } from "@/features/projects/types/project-type";
+import { useRouter } from "next/navigation";
 
 export default function ProjectCard({
   project,
@@ -21,8 +23,10 @@ export default function ProjectCard({
   project: ProjectProps;
   index: number;
 }) {
+  const router = useRouter();
   return (
     <Card
+      onClick={() => router.push(`/projects/${project.id}`)}
       key={index}
       className="group relative overflow-hidden transition-all hover:shadow-xl pt-0"
     >

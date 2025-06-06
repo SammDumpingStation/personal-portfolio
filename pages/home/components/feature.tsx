@@ -33,8 +33,9 @@ const Feature = () => {
 
         <div className="mt-12 text-center">
           <Button variant="outline" className="gap-2" asChild>
-            <Link href="/projects">View All Projects</Link>
-            <CodeXml className="h-4 w-4" />
+            <Link href="/projects">
+              View All Projects <CodeXml className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>
