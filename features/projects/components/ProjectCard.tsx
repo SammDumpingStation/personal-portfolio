@@ -37,16 +37,18 @@ export default function ProjectCard({
               alt={project.title}
               fill
               className={cn(
-                "object-cover transition-transform duration-300 scale-105 group-hover:scale-110",
+                "object-cover object-top transition-transform duration-300 scale-105 group-hover:scale-110",
                 { "dark:hidden": project.images.dark }
               )}
             />
-            <Image
-              src={project.images.dark}
-              alt={project.title}
-              fill
-              className="object-cover hidden dark:block transition-transform duration-300 scale-105 group-hover:scale-110"
-            />
+            {project.images.dark && (
+              <Image
+                src={project.images.dark}
+                alt={project.title}
+                fill
+                className="object-cover object-top hidden dark:block transition-transform duration-300 scale-105 group-hover:scale-110"
+              />
+            )}
           </>
         ) : (
           <Skeleton className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />

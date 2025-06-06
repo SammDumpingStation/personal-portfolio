@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Code, Globe, PenTool, Database, Layers } from "lucide-react";
+import { ProjectCategory } from "../types/project-type";
 
 type CategoryIconProps = {
   [key: string]: React.ComponentType<{ className?: string }>;
@@ -16,9 +17,17 @@ const categoryIcons: CategoryIconProps = {
   Backend: Database,
 };
 
+const categories = [
+  "All",
+  "Full Stack",
+  "Frontend",
+  "Web App",
+  "Mobile",
+  "Backend",
+];
+
 export default function CategoryFilter() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Full Stack", "Frontend", "Web App", "Mobile", "Backend"];
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All");
   return (
     <div className="flex flex-wrap justify-center gap-3 mb-12">
       {categories.map((category) => {
@@ -32,7 +41,7 @@ export default function CategoryFilter() {
             variant={isActive ? "default" : "outline"}
             size="sm"
             className={`rounded-full px-4 ${isActive ? "" : "hover:bg-muted"}`}
-            onClick={() => setActiveCategory(category)}
+            onClick={() => setActiveCategory(category as ProjectCategory)}
           >
             {IconComponent && <IconComponent className="mr-2 h-4 w-4" />}
             {category}

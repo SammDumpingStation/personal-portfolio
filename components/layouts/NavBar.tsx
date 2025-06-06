@@ -26,7 +26,7 @@ export default function NavBar() {
             size={"sm"}
             variant={"link"}
             className={cn({
-              "underline underline-offset-4": pathname === link.link,
+              "underline underline-offset-4": pathname === link.link || pathname.startsWith(`${link.link}/`),
             })}
           >
             <Link href={link.link}>{link.title}</Link>

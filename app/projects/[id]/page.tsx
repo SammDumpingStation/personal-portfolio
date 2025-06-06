@@ -95,17 +95,19 @@ export default async function Project({
                     width={2880}
                     height={1800}
                     className={cn(
-                      "object-cover transition-transform duration-300 group-hover:scale-105",
+                      "object-cover object-top transition-transform duration-300 group-hover:scale-105",
                       { "dark:hidden": project.images.dark }
                     )}
                   />
-                  <Image
-                    src={project.images.dark}
-                    alt={project.title}
-                    width={2880}
-                    height={1800}
-                    className="object-cover hidden dark:block transition-transform duration-300 group-hover:scale-105"
-                  />
+                  {project.images.dark && (
+                    <Image
+                      src={project.images.dark}
+                      alt={project.title}
+                      width={2880}
+                      height={1800}
+                      className="object-cover object-top hidden dark:block transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
                 </>
               ) : (
                 <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">

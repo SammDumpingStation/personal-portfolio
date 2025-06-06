@@ -22,9 +22,9 @@ export default function Component() {
     location: "San Francisco, CA",
     experience: "3+ Years",
     education: "Computer Science, UC Berkeley",
-    bio: "I&apos;m a passionate full-stack developer with a keen eye for design and user experience. I love creating digital solutions that not only function flawlessly but also delight users. When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or capturing moments through photography.",
+    bio: "I'm a passionate full-stack developer with a keen eye for design and user experience. I love creating digital solutions that not only function flawlessly but also delight users. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or capturing moments through photography.",
     extendedBio:
-      "My journey in tech started during college when I built my first web application for a local nonprofit. Since then, I&apos;ve worked with startups and established companies, helping them bring their digital visions to life. I believe in writing clean, maintainable code and creating intuitive user interfaces that solve real-world problems.",
+      "My journey in tech started during college when I built my first web application for a local nonprofit. Since then, I've worked with startups and established companies, helping them bring their digital visions to life. I believe in writing clean, maintainable code and creating intuitive user interfaces that solve real-world problems.",
     interests: [
       "Photography",
       "Coffee Brewing",

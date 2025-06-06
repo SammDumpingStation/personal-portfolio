@@ -4,9 +4,9 @@ const projectHighlights: ProjectCardProps[] = [
   {
     id: "1",
     organization: "Five Star Finance Inc.",
-    title: "STELLA",
+    title: "S.T.E.L.L.A.",
     subtitle:
-      "A comprehensive lending system for AFP retirees, streamlining loan applications and benefit disbursements",
+      "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: [
       {
         id: "logo-1",
@@ -30,16 +30,17 @@ const projectHighlights: ProjectCardProps[] = [
       },
     ],
     images: {
-      light: "/images/stella-light.webp",
-      dark: "/images/stella-dark.webp",
+      light: "/images/stella/hero-light.webp",
+      dark: "/images/stella/hero-dark.webp",
     },
+    category: "Web App",
   },
   {
     id: "2",
     organization: "Application Development",
     title: "Food Sentinel",
     subtitle:
-      "Full-stack platform for managing catering services with real-time order tracking and payment processing",
+      "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: [
       {
         id: "logo-1",
@@ -63,16 +64,17 @@ const projectHighlights: ProjectCardProps[] = [
       },
     ],
     images: {
-      light: "/images/food-sentinel-light.webp",
-      dark: "/images/food-sentinel-dark.webp",
+      light: "/images/food-sentinel/hero-light.webp",
+      dark: "/images/food-sentinel/hero-dark.webp",
     },
+    category: "Full Stack",
   },
   {
     id: "3",
     organization: "Software Engineering",
     title: "KOSHI",
     subtitle:
-      "Award-winning mobile application helping users find their ideal vehicle match (2nd place in competition)",
+      "I created a mobile app to help users find their perfect car, earning 2nd place in a university competition.",
     techStack: [
       {
         id: "logo-1",
@@ -87,8 +89,8 @@ const projectHighlights: ProjectCardProps[] = [
     ],
     images: {
       light: "/images/koshi.webp",
-      dark: "/images/koshi.webp",
     },
+    category: "Mobile",
   },
 ];
 
@@ -98,7 +100,7 @@ const projects: ProjectCardProps[] = [
     organization: "Five Star Finance Inc.",
     title: "STELLA",
     subtitle:
-      "A comprehensive lending system for AFP retirees, streamlining loan applications and benefit disbursements",
+      "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: [
       {
         id: "logo-1",
@@ -122,16 +124,17 @@ const projects: ProjectCardProps[] = [
       },
     ],
     images: {
-      light: "/images/stella-light.webp",
-      dark: "/images/stella-dark.webp",
+      light: "/images/stella/hero-light.webp",
+      dark: "/images/stella/hero-dark.webp",
     },
+    category: "Web App",
   },
   {
     id: "2",
     organization: "Application Development",
     title: "Food Sentinel",
     subtitle:
-      "Full-stack platform for managing catering services with real-time order tracking and payment processing",
+      "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: [
       {
         id: "logo-1",
@@ -155,16 +158,17 @@ const projects: ProjectCardProps[] = [
       },
     ],
     images: {
-      light: "/images/food-sentinel-light.webp",
-      dark: "/images/food-sentinel-dark.webp",
+      light: "/images/food-sentinel/hero-light.webp",
+      dark: "/images/food-sentinel/hero-dark.webp",
     },
+    category: "Full Stack",
   },
   {
     id: "3",
     organization: "Software Engineering",
     title: "KOSHI",
     subtitle:
-      "Award-winning mobile application helping users find their ideal vehicle match (2nd place in competition)",
+      "I created a mobile app to help users find their perfect car, earning 2nd place in a university competition.",
     techStack: [
       {
         id: "logo-1",
@@ -179,9 +183,54 @@ const projects: ProjectCardProps[] = [
     ],
     images: {
       light: "/images/koshi.webp",
-      dark: "/images/koshi.webp",
     },
+    category: "Mobile",
   },
+  {
+    id: "4",
+    organization: "Web Systems",
+    title: "Flicks: Movie Ticketing Booking System ",
+    subtitle:
+      "I built a movie ticketing system with a ChatGPT-inspired interface, making it easy for users to book tickets through a user-friendly design.",
+    techStack: [
+      {
+        id: "1",
+        title: "PHP",
+        image: "/logos/php-small.svg",
+      },
+      {
+        id: "2",
+        title: "TailwindCSS",
+        image: "/logos/tailwind-small.svg",
+      },
+      {
+        id: "3",
+        title: "MySQL",
+        image: "/logos/mysql-small.svg",
+      },
+      {
+        id: "4",
+        title: "Laravel",
+        image: "/logos/laravel-small.svg",
+      },
+    ],
+    images: {
+      light: "/images/flicks/hero.webp",
+    },
+    category: "Web App",
+  },
+  // {
+  //   id: "5",
+  //   organization: "Web Systems",
+  //   title: "",
+  //   subtitle: "",
+  //   techStack: [],
+  //   images: {
+  //     light: "",
+  //     dark: "",
+  //   },
+  //   category: "Web App",
+  // },
 ];
 
 export { projectHighlights, projects };

@@ -1,3 +1,4 @@
+import { Logo } from "@/features/tech-stack/types/logos-type";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -8,11 +9,7 @@ export const HoverEffect = ({
   items,
   className,
 }: {
-  items: {
-    id: string;
-    title: string;
-    image: string;
-  }[];
+  items: Logo[];
   className?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -54,7 +51,7 @@ export const HoverEffect = ({
               alt={`${item.title} Logo`}
               width={200}
               height={48}
-              className="h-12 dark:invert "
+              className={cn("h-12", item.invert && "dark:invert")}
             />
             <CardTitle className="text-foreground">{item.title}</CardTitle>
             {/* <CardDescription>{item.description}</CardDescription> */}
