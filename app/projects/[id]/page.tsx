@@ -3,11 +3,9 @@ import React from "react";
 export default async function Project({
   params,
 }: {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
   console.log(id);
   return <div>{id}</div>;
 }

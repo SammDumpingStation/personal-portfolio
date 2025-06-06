@@ -12,6 +12,7 @@ import {
   Mail,
   ExternalLink,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Component() {
   // Personal information - easily customizable
@@ -21,9 +22,9 @@ export default function Component() {
     location: "San Francisco, CA",
     experience: "3+ Years",
     education: "Computer Science, UC Berkeley",
-    bio: "I'm a passionate full-stack developer with a keen eye for design and user experience. I love creating digital solutions that not only function flawlessly but also delight users. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or capturing moments through photography.",
+    bio: "I&apos;m a passionate full-stack developer with a keen eye for design and user experience. I love creating digital solutions that not only function flawlessly but also delight users. When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or capturing moments through photography.",
     extendedBio:
-      "My journey in tech started during college when I built my first web application for a local nonprofit. Since then, I've worked with startups and established companies, helping them bring their digital visions to life. I believe in writing clean, maintainable code and creating intuitive user interfaces that solve real-world problems.",
+      "My journey in tech started during college when I built my first web application for a local nonprofit. Since then, I&apos;ve worked with startups and established companies, helping them bring their digital visions to life. I believe in writing clean, maintainable code and creating intuitive user interfaces that solve real-world problems.",
     interests: [
       "Photography",
       "Coffee Brewing",
@@ -70,7 +71,7 @@ export default function Component() {
                 {/* Profile Photo */}
                 <div className="relative mb-6">
                   <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                    <img
+                    <Image
                       src="/placeholder.svg?height=192&width=192"
                       alt={personalInfo.name}
                       className="w-full h-full rounded-full object-cover bg-white"
@@ -157,7 +158,7 @@ export default function Component() {
             <Card>
               <CardContent className="p-8">
                 <h4 className="text-xl font-semibold mb-6">
-                  When I'm Not Coding
+                  When I&apos;m Not Coding
                 </h4>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {personalInfo.interests.map((interest, index) => {

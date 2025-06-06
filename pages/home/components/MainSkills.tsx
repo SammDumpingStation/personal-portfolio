@@ -1,7 +1,5 @@
 "use client";
-import { Card, CardTitle } from "@/components/ui/card";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CodeXml } from "lucide-react";
 const logos = [
@@ -41,7 +39,7 @@ export default function Logo6() {
               My Tech Stack
             </h2>
             <p className="mt-2 text-muted-foreground min-w-max">
-              Technologies I'm currently working with
+              Technologies I&apos;m currently working with
             </p>
             <Button variant="outline" className="mt-6 !w-full" size={"lg"}>
               View All

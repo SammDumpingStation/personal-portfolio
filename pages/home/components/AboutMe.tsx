@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Users, Rocket, Globe, Award, Cpu, ChartBar } from "lucide-react";
+// import Image from "next/image";
+import { Users, Rocket, Globe, Award, Cpu } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function AboutMe() {
@@ -7,27 +7,27 @@ export default function AboutMe() {
     {
       icon: Users,
       description:
-        "Began my web development journey 2+ years ago, focusing on building practical, user-friendly applications through academic and personal projects.",
+        "Started web development over two years ago, building practical, user-friendly apps through school and personal projects.",
     },
     {
       icon: Rocket,
       description:
-        "Developed KOSHI, a React Native application that helps users find their perfect car, earning 2nd place in a competitive university competition.",
+        "Built KOSHI, a React Native app to help users find their ideal car, winning 2nd place in a university competition.",
     },
     {
       icon: Globe,
       description:
-        "Contributed to digitizing a university clinic by building the foundation of their management system using Laravel.",
+        "Helped a university clinic go digital by creating the foundation of their management system with Laravel.",
     },
     {
       icon: Award,
       description:
-        "Led development of a comprehensive Online Catering Reservation System, implementing web, mobile, and real-time API solutions.",
+        "Led the creation of an Online Catering Reservation System, building web, mobile, and real-time API features.",
     },
     {
       icon: Cpu,
       description:
-        "Currently developing STELLA, a lending system for AFP retirees, focusing on creating meaningful impact through technology.",
+        "Working on STELLA, a lending system for AFP retirees, to make a real difference through tech.",
     },
   ];
 
@@ -35,10 +35,9 @@ export default function AboutMe() {
     <section className="bg-background py-12 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 border-b pb-6 md:grid-cols-2 md:gap-16">
-          {/* Left Column: Text and Milestones */}
-
-          <div className="relative">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+          <div className="relative flex ">
+            {/* Right Column: Image */}
+            <div className="relative flex-1  overflow-hidden rounded-lg">
               <Skeleton className="w-full h-full" />
               {/* <Image
                 src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
@@ -53,31 +52,30 @@ export default function AboutMe() {
                   About Me
                 </span>
                 <span className="max-w-80 text-sm text-muted-foreground sm:text-base">
-                  Transforming business challenges into elegant web solutions. I
-                  specialize in Next.js development, creating intuitive digital
-                  experiences that bridge the gap between technical excellence
-                  and business value.
+                  I turn business challenges into clear, user-friendly web
+                  solutions, specializing in Next.js to build digital
+                  experiences that balance technical quality with real-world
+                  impact.
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Image */}
-          <div className="space-y-8">
+          {/* Left Column: Text and Milestones */}
+          <div className="space-y-8 ">
             <div className="space-y-6">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 About <span className="text-primary">Me</span>
               </h1>
               <p className="text-base text-muted-foreground sm:text-lg">
-                As a Next.js developer with 2+ years of hands-on experience, I
-                thrive on building applications that make a tangible difference.
-                My journey in tech has taught me the power of understanding both
-                code and business objectives to create solutions that truly
-                serve their purpose. I excel at translating complex requirements
-                into clean, efficient applications, with a particular talent for
-                modernizing manual processes. What excites me most is seeing how
-                the right technology can transform operations and create
-                meaningful impact.
+                I&apos;m a Next.js developer with over two years of experience
+                building apps that make a real difference. I love turning
+                complex ideas into simple, efficient web solutions that help
+                businesses grow. By blending my coding skills with an
+                understanding of what businesses need, I create user-friendly
+                applications, often modernizing old processes. What drives me is
+                seeing how the right tech can transform operations and create
+                lasting impact.
               </p>
             </div>
 

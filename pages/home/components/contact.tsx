@@ -36,11 +36,13 @@ export default function Contact() {
 
   const onSubmit = (data: FormData) => {
     const { name, email, subject, message } = data;
-    const mailtoLink = `mailto:${socialLinks.email}?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:${
+      socialLinks.email
+    }?subject=${encodeURIComponent(
       `${subject} - ${name} (${email})`
     )}&body=${encodeURIComponent(message)}`;
-    
-    window.open(mailtoLink, '_blank');
+
+    window.open(mailtoLink, "_blank");
   };
 
   return (
@@ -50,20 +52,24 @@ export default function Contact() {
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold">Get In Touch</h2>
           <p className="mt-4 text-muted-foreground">
-            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+            Have a project in mind or want to discuss potential opportunities?
+            I&apos;d love to hear from you!
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Let's work together</h3>
+              <h3 className="text-2xl font-semibold">
+                Let&apos;s work together
+              </h3>
               <p className="text-muted-foreground">
-                I'm currently open to new opportunities, interesting projects, and networking. 
-                Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+                I&apos;m currently open to new opportunities, interesting
+                projects, and networking. Whether you have a question or just
+                want to say hi, I&apos;ll get back to you as soon as possible!
               </p>
             </div>
-            
+
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -71,37 +77,37 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email me at</p>
-                  <a 
-                    href={`mailto:${socialLinks.email}`} 
+                  <a
+                    href={`mailto:${socialLinks.email}`}
                     className="hover:text-primary hover:underline"
                   >
                     {socialLinks.email}
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex space-x-6 pt-4">
-                <a 
-                  href={socialLinks.linkedin} 
-                  target="_blank" 
+                <a
+                  href={socialLinks.linkedin}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="size-6" />
                 </a>
-                <a 
-                  href={socialLinks.github} 
-                  target="_blank" 
+                <a
+                  href={socialLinks.github}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="size-6" />
                 </a>
-                <a 
-                  href={socialLinks.twitter} 
-                  target="_blank" 
+                <a
+                  href={socialLinks.twitter}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label="Twitter"
@@ -111,10 +117,13 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          
+
           <Card className="border-primary/10 p-6 shadow-lg">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <h3 className="text-xl font-semibold">Send me a message</h3>
                 <div className="space-y-4">
                   <FormField
@@ -138,10 +147,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input 
-                            type="email" 
-                            placeholder="your.email@example.com" 
-                            {...field} 
+                          <Input
+                            type="email"
+                            placeholder="your.email@example.com"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />
@@ -170,10 +179,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Hi there! I'd like to chat about..." 
-                            rows={5} 
-                            {...field} 
+                          <Textarea
+                            placeholder="Hi there! I'd like to chat about..."
+                            rows={5}
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />

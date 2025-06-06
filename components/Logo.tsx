@@ -1,7 +1,5 @@
-import React from 'react';
-
 interface LogoProps extends React.SVGProps<SVGSVGElement> {
-  // You can extend with additional props if needed
+  className?: string;
 }
 
 export function Logo({ className, ...props }: LogoProps) {

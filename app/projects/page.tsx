@@ -7,11 +7,9 @@ export default function Projects() {
   return (
     <main className="lg:mt-24 container mx-auto">
       <div className="text-center">
-        <h2 className="heading">
-          Project Showcase
-        </h2>
+        <h2 className="heading">Project Showcase</h2>
         <p className="sub-heading">
-          Here are some of the projects I've worked on
+          Here are some of the projects I&apos;ve worked on
         </p>
       </div>
       {/* Category Filter */}
