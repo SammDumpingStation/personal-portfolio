@@ -1,9 +1,9 @@
-import Hero from "@/pages/home/components/Hero";
-import MainSkills from "@/pages/home/components/MainSkills";
-import AboutMe from "@/pages/home/components/AboutMe";
-import Feature from "@/pages/home/components/Feature";
-import Contact from "@/pages/home/components/Contact";
-import Footer from "@/pages/home/components/Footer";
+import MainSkills from "@/features/tech-stack/components/MainSkills";
+import AboutMe from "@/features/personal-info/components/AboutMe";
+import Feature from "@/features/projects/components/Feature";
+import Contact from "@/features/personal-info/components/Contact";
+import Footer from "@/components/layouts/Footer";
+import Hero from "@/features/personal-info/components/Hero";
 
 export default function Home() {
   return (

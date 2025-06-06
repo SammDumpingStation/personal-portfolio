@@ -13,38 +13,37 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ProjectProps } from "@/features/projects/types/project-type";
+import { ProjectCardProps } from "@/features/projects/types/project-type";
 import { useRouter } from "next/navigation";
 
 export default function ProjectCard({
   project,
   index,
 }: {
-  project: ProjectProps;
+  project: ProjectCardProps;
   index: number;
 }) {
   const router = useRouter();
   return (
     <Card
-      onClick={() => router.push(`/projects/${project.id}`)}
       key={index}
       className="group relative overflow-hidden transition-all hover:shadow-xl pt-0"
     >
       <div className="relative aspect-video overflow-hidden">
-        {project.imageUrl ? (
+        {project.images ? (
           <>
             <Image
-              src={project.imageUrl}
-              alt={project.projectTitle}
+              src={project.images.light}
+              alt={project.title}
               fill
               className={cn(
                 "object-cover transition-transform duration-300 scale-105 group-hover:scale-110",
-                { "dark:hidden": project.imageUrlDark }
+                { "dark:hidden": project.images.dark }
               )}
             />
             <Image
-              src={project.imageUrlDark}
-              alt={project.projectTitle}
+              src={project.images.dark}
+              alt={project.title}
               fill
               className="object-cover hidden dark:block transition-transform duration-300 scale-105 group-hover:scale-110"
             />
@@ -63,11 +62,9 @@ export default function ProjectCard({
 
       <CardContent className="pb-4">
         <h3 className="mb-2 text-xl font-bold text-foreground">
-          {project.projectTitle}
+          {project.title}
         </h3>
-        <p className="text-muted-foreground min-h-[72px]">
-          {project.projectSummary}
-        </p>
+        <p className="text-muted-foreground min-h-[72px]">{project.subtitle}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.techStack.map((tech, techIndex) => (
@@ -76,15 +73,18 @@ export default function ProjectCard({
               variant="outline"
               className="text-xs font-normal"
             >
-              {tech}
+              {tech.title}
             </Badge>
           ))}
         </div>
       </CardContent>
 
       <CardFooter className="pt-2">
-        <Button className="w-full gap-2 ">
-          Showcase
+        <Button
+          className="w-full gap-2 "
+          onClick={() => router.push(`/projects/${project.id}`)}
+        >
+          View Details
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Button>
       </CardFooter>

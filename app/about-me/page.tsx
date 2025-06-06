@@ -74,6 +74,7 @@ export default function Component() {
                     <Image
                       src="/placeholder.svg?height=192&width=192"
                       alt={personalInfo.name}
+                      fill
                       className="w-full h-full rounded-full object-cover bg-white"
                     />
                   </div>

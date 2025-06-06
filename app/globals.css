@@ -120,10 +120,10 @@
     @apply bg-background text-foreground;
   }
   main {
-    @apply max-w-[2560px];
+    @apply max-w-[2560px] lg:mt-24;
   }
   .container {
-    @apply px-[2%]
+    @apply px-[2%];
   }
   .heading {
     @apply text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl;
