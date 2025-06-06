@@ -55,7 +55,7 @@ export default function ProjectCard({
         )}
       </div>
 
-      <CardHeader className="pb-2">
+      <CardHeader className="">
         <Badge variant="secondary" className="w-fit gap-2">
           <Monitor className="h-4 w-4" />
           {project.organization}

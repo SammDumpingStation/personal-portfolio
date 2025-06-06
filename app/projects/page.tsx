@@ -5,7 +5,7 @@ import CategoryFilter from "@/features/projects/components/CategoryFilter";
 
 export default function Projects() {
   return (
-    <main className="lg:mt-24 container mx-auto">
+    <main className="container mx-auto">
       <div className="text-center mb-12">
         <h2 className="heading">Project Showcase</h2>
         <p className="sub-heading">

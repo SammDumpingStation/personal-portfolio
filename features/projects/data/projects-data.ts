@@ -6,7 +6,7 @@ const projectHighlights: ProjectCardProps[] = [
     organization: "Five Star Finance Inc.",
     title: "S.T.E.L.L.A.",
     subtitle:
-      "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
+      "I helped build a lending system for AFP retirees, focusing on a user-friendly interface for fast loan applications.",
     techStack: [
       {
         id: "logo-1",
@@ -40,7 +40,7 @@ const projectHighlights: ProjectCardProps[] = [
     organization: "Application Development",
     title: "Food Sentinel",
     subtitle:
-      "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
+      "I collaborated on a catering platform, developing real-time order tracking for a smooth user experience.",
     techStack: [
       {
         id: "logo-1",
