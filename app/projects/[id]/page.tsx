@@ -17,7 +17,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { projects } from "@/features/projects/data/projects-data";
+import { projectsCards } from "@/features/projects/data/projects-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -29,7 +29,7 @@ export default async function Project({
 }) {
   const { id } = await params;
 
-  const project = projects.find((project) => project.id === id);
+  const project = projectsCards.find((project) => project.id === id);
 
   if (!project) {
     return notFound();
@@ -72,16 +72,16 @@ export default async function Project({
             <p className="sub-heading">{project?.subtitle}</p>
 
             {/* Action Buttons */}
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center my-12">
               <Button size="lg" className="gap-2">
                 <ExternalLink className="h-4 w-4" />
                 View Live Demo
               </Button>
-              <Button variant="outline" size="lg" className="gap-2">
+              {/* <Button variant="outline" size="lg" className="gap-2">
                 <Github className="h-4 w-4" />
                 View Source Code
-              </Button>
-            </div> */}
+              </Button> */}
+            </div>
           </div>
 
           {/* Project Image */}

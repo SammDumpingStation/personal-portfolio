@@ -1,4 +1,5 @@
 import { Logo } from "@/features/tech-stack/types/logos-type";
+import { LucideIcon } from "lucide-react";
 
 export type ProjectCategory =
   | "All"
@@ -28,10 +29,10 @@ export interface ProjectProps extends ProjectCardProps {
   timeline: string;
   role: string;
   teamSize: string;
-  status: string;
-  description: string;
+  status: "Completed" | "Ongoing";
+  about: string;
   features: {
-    icon: React.ReactNode;
+    icon: LucideIcon;
     title: string;
     description: string;
   }[];
@@ -39,4 +40,5 @@ export interface ProjectProps extends ProjectCardProps {
     light: string;
     dark: string;
   }[];
+  liveDemoLink?: string;
 }

@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20">
+    <section id="contact" className="relative pt-20">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-background"></div>
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">

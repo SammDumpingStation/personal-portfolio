@@ -4,7 +4,7 @@ import { Logo } from "@/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="w-full border border-t bg-background text-foreground">
+    <footer className="w-full mt-20 border border-t bg-background text-foreground">
       <div className="container mx-auto py-8">
         <div className="mb-6 flex flex-col items-center">
           <Link href="/" className="mb-4 gap-2 flex items-center">
