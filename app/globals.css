@@ -131,4 +131,7 @@
   .sub-heading {
     @apply mx-auto mt-4 max-w-2xl text-lg text-muted-foreground;
   }
+  .section-container {
+    @apply py-20;
+  }
 }

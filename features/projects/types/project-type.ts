@@ -6,6 +6,7 @@ export type ProjectCategory =
   | "Full Stack"
   | "Frontend"
   | "Web App"
+  | "Desktop App"
   | "Mobile"
   | "Backend";
 
@@ -20,7 +21,6 @@ export interface ProjectCardProps {
     dark?: string;
   };
   isFeatured?: boolean;
-  isNew?: boolean;
   onGoing?: boolean;
   category: ProjectCategory;
 }
@@ -30,7 +30,12 @@ export interface ProjectProps extends ProjectCardProps {
   role: string;
   teamSize: string;
   status: "Completed" | "Ongoing";
-  about: string;
+  overview: {
+    description: string;
+    background: string;
+    challenge: string;
+    goal: string[];
+  };
   features: {
     icon: LucideIcon;
     title: string;
@@ -38,7 +43,7 @@ export interface ProjectProps extends ProjectCardProps {
   }[];
   gallery: {
     light: string;
-    dark: string;
+    dark?: string;
   }[];
   liveDemoLink?: string;
 }
