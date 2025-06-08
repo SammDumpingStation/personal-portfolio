@@ -6,6 +6,7 @@ import Link from "next/link";
 import { navLinks } from "@/data/links";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -26,7 +27,8 @@ export default function NavBar() {
             size={"sm"}
             variant={"link"}
             className={cn({
-              "underline underline-offset-4": pathname === link.link || pathname.startsWith(`${link.link}/`),
+              "underline underline-offset-4":
+                pathname === link.link || pathname.startsWith(`${link.link}/`),
             })}
           >
             <Link href={link.link}>{link.title}</Link>
@@ -35,7 +37,10 @@ export default function NavBar() {
       </nav>
 
       <div className="flex items-center gap-6">
-        <ModeToggle />
+        <Button className="rounded-full group !px-6 !py-5">
+          Hire Me
+          <ArrowRight className="ml-3 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </Button>
       </div>
     </header>
   );

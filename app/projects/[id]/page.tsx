@@ -16,6 +16,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import ProjectImageCarousel from "@/features/projects/components/ProjectImageCarousel";
+import CTA from "@/components/CTA";
 
 export default async function Project({
   params,
@@ -47,7 +49,9 @@ export default async function Project({
             size="lg"
             variant={project.liveDemoLink ? "default" : "secondary"}
             disabled={!project.liveDemoLink}
-            className="gap-2"
+            className={cn("gap-2 cursor-pointer", {
+              "cursor-not-allowed": !project.liveDemoLink,
+            })}
             asChild={!!project.liveDemoLink}
           >
             {project.liveDemoLink ? (
@@ -69,7 +73,7 @@ export default async function Project({
 
   const ProjectImage = () => {
     return (
-      <div className="mb-16 max-w-6xl  mx-auto ">
+      <div className="mb-16 max-w-6xl mx-auto ">
         <Card className="overflow-hidden w-full h-full group p-0">
           {project.images ? (
             <>
@@ -235,57 +239,13 @@ export default async function Project({
           <FeaturesSection />
           {/* Tech Stack */}
           {/* Carousel Screenshots */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">
-              More Screenshots
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-2 bg-white/20 rounded-lg flex items-center justify-center">
-                      <Users className="h-8 w-8" />
-                    </div>
-                    <p className="font-medium">Dashboard View</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-2 bg-white/20 rounded-lg flex items-center justify-center">
-                      <Globe className="h-8 w-8" />
-                    </div>
-                    <p className="font-medium">Mobile Interface</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
+          <section className="section-container">
+            <SectionHeader title="Screenshots" />
+            <ProjectImageCarousel gallery={project.gallery} />
+          </section>
 
           {/* Footer */}
-          <Card className="text-center bg-slate-900">
-            <CardContent className="py-12">
-              <h2 className="text-2xl font-bold mb-4 text-background">
-                Interested in This Project?
-              </h2>
-              <p className=" mb-6 max-w-2xl mx-auto text-background">
-                Feel free to explore the live demo or check out the source code.
-                I'm always open to discussing the technical details and design
-                decisions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="secondary" size="lg" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  Try Live Demo
-                </Button>
-                <Button variant="outline" size="lg" className="">
-                  <Github className="h-4 w-4" />
-                  View on GitHub
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <CTA />
         </div>
       </div>
     </main>
