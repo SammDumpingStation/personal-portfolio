@@ -1,7 +1,7 @@
 import React from "react";
 import { projectsCards } from "@/features/projects/data/projects-data";
 import ProjectCard from "@/features/projects/components/ProjectCard";
-import CategoryFilter from "@/features/projects/components/CategoryFilter";
+import ProjectList from "@/features/projects/components/ProjectList";
 
 export default function Projects() {
   return (
@@ -13,12 +13,7 @@ export default function Projects() {
         </p>
       </div>
       {/* Category Filter */}
-      <CategoryFilter />
-      <div className="mt-12 grid gap-8 sm:mt-16 md:grid-cols-2 lg:grid-cols-3">
-        {projectsCards.map((project, index) => (
-          <ProjectCard key={index} project={project} index={index} />
-        ))}
-      </div>
+      <ProjectList />
     </main>
   );
 }
