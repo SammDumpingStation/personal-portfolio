@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from "@/components/layouts/NavBar";
 import Footer from "@/components/layouts/Footer";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className={`antialiased ${poppins.className}`}>
+        <body className={`antialiased  ${poppins.className}`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
@@ -34,6 +35,7 @@ export default function RootLayout({
             <NavBar />
             {children}
             <Footer />
+            <ModeToggle />
           </ThemeProvider>
         </body>
       </html>

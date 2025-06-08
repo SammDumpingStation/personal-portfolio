@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Calendar,
+  Check,
   ExternalLink,
   Github,
   Globe,
@@ -137,7 +138,6 @@ export default async function Project({
   const ProjectDetails = () => {
     return (
       <section className="section-container">
-        {/* Technologies Used */}
         <SectionHeader title="Project Overview" />
         <div className="grid gap-12 md:grid-cols-2">
           <Card>
@@ -149,10 +149,10 @@ export default async function Project({
               <div className="">
                 <h2 className="mb-6 text-2xl font-bold">Project Goals</h2>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  {project.overview.goal.map((service, index) => (
+                  {project.overview.goal.map((goal, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="size-2 rounded-full bg-primary" />
-                      <span>{service}</span>
+                      <Check className="text-green-500" />
+                      <span>{goal}</span>
                     </div>
                   ))}
                 </div>
@@ -160,8 +160,8 @@ export default async function Project({
             </CardContent>
           </Card>
 
-          <section className="space-y-8">
-            <Card>
+          <section className="space-y-8 flex flex-col">
+            <Card className="flex-1">
               <CardContent>
                 <h2 className="mb-4 text-2xl font-bold">Background</h2>
                 <p className="text-muted-foreground">
@@ -169,7 +169,7 @@ export default async function Project({
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="flex-1">
               <CardContent>
                 <h2 className="mb-4 text-2xl font-bold">The challenge</h2>
                 <p className="text-muted-foreground">
@@ -179,24 +179,6 @@ export default async function Project({
             </Card>
           </section>
         </div>
-        {/* <Card>
-                <CardHeader>
-                  <CardTitle>Technologies Used</CardTitle>
-                  <CardDescription>
-                    Modern tech stack for optimal performance and developer
-                    experience
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech) => (
-                      <Badge key={tech.id} variant="secondary">
-                        {tech.title}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card> */}
       </section>
     );
   };
@@ -207,7 +189,7 @@ export default async function Project({
         <SectionHeader title="Key Features" />
         <div
           className={cn("grid  gap-6 md:grid-cols-3", {
-            "md:grid-cols-2": project.features.length > 3,
+            "md:grid-cols-2": project.features.length === 4,
           })}
         >
           {project.features.map(({ icon: Icon, title, description }, index) => (
@@ -238,13 +220,25 @@ export default async function Project({
           <ProjectDetails />
           <FeaturesSection />
           {/* Tech Stack */}
+          <section className="section-container">
+            <SectionHeader title="Technology Stack" />
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {project.techStack.map((tech, index) => (
+                <Card key={index}>
+                  <CardContent>
+                    <h2 className="text-xl font-bold">{tech.title}</h2>
+                  </CardContent>
+                </Card>
+              ))}
+            </div> */}
+          </section>
           {/* Carousel Screenshots */}
           <section className="section-container">
             <SectionHeader title="Screenshots" />
             <ProjectImageCarousel gallery={project.gallery} />
           </section>
 
-          {/* Footer */}
+          {/* CTA */}
           <CTA />
         </div>
       </div>

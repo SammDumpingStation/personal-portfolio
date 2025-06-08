@@ -11,13 +11,13 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant="ghost"
+      variant="default"
       size={"icon"}
-      className="hover:bg-transparent dark:hover:bg-transparent"
+      className="fixed bottom-8 right-8 border-0 z-50"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] transition-all dark:hidden" />
-      <Moon className="h-[1.2rem] w-[1.2rem] transition-all hidden dark:block" />
+      <Sun className="h-[1.2rem] w-[1.2rem] transition-all hidden dark:block" />
+      <Moon className="h-[1.2rem] w-[1.2rem] transition-all dark:hidden" />
     </Button>
   );
 }

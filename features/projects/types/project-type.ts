@@ -15,7 +15,11 @@ export interface ProjectCardProps {
   organization: string;
   title: string;
   subtitle: string;
-  techStack: Logo[];
+  techStack: {
+    frontend: Logo[],
+    backend?: Logo[],
+    infrastructure?: Logo[],
+  };
   images: {
     light: string;
     dark?: string;

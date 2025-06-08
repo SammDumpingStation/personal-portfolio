@@ -33,28 +33,63 @@ const projectHighlights: ProjectCardProps[] = [
     title: "S.T.E.L.L.A.",
     subtitle:
       "I helped build a lending system for AFP retirees, focusing on a user-friendly interface for fast loan applications.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "TypeScript",
-        image: "/logos/typescript-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "Prisma",
-        image: "/logos/prisma-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "PostgreSQL",
-        image: "/logos/postgresql-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-2",
+          title: "MongoDB",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Mongoose",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/websocket.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/stella/hero-light.webp",
       dark: "/images/stella/hero-dark.webp",
@@ -67,28 +102,63 @@ const projectHighlights: ProjectCardProps[] = [
     title: "Food Sentinel",
     subtitle:
       "I collaborated on a catering platform, developing real-time order tracking for a smooth user experience.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Express",
-        image: "/logos/express-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "MongoDB",
-        image: "/logos/mongodb-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "WebSocket",
-        image: "/logos/websocket-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-2",
+          title: "MongoDB",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Mongoose",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/websocket.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/food-sentinel/hero-light.webp",
       dark: "/images/food-sentinel/hero-dark.webp",
@@ -101,18 +171,49 @@ const projectHighlights: ProjectCardProps[] = [
     title: "KOSHI",
     subtitle:
       "I created a mobile app to help users find their perfect car, earning 2nd place in a university competition.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "React Native",
-        image: "/logos/react-native-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Firebase",
-        image: "/logos/firebase-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "logo-1",
+          title: "React Native",
+          image: "/logos/react-native.svg",
+        },
+        {
+          id: "logo-2",
+          title: "React Native Reusables",
+          image: "/logos/react-native-reusables.png",
+        },
+        {
+          id: "logo-3",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-5",
+          title: "NativewindCSS",
+          image: "https://v2.nativewind.dev/img/logo.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "Expo",
+          image: "/logos/expo.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/koshi.webp",
     },
@@ -127,28 +228,70 @@ const projectsCards: ProjectCardProps[] = [
     title: "STELLA",
     subtitle:
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "TypeScript",
-        image: "/logos/typescript-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "Prisma",
-        image: "/logos/prisma-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "PostgreSQL",
-        image: "/logos/postgresql-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "PostgreSQL",
+          image: "/logos/postgresql.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/socket-io.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "DigitalOcean",
+          image: "/logos/digital-ocean.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Docker",
+          image: "/logos/docker.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/stella/hero-light.webp",
       dark: "/images/stella/hero-dark.webp",
@@ -161,28 +304,63 @@ const projectsCards: ProjectCardProps[] = [
     title: "Food Sentinel",
     subtitle:
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Express",
-        image: "/logos/express-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "MongoDB",
-        image: "/logos/mongodb-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "WebSocket",
-        image: "/logos/websocket-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-2",
+          title: "MongoDB",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Mongoose",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/websocket.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/food-sentinel/hero-light.webp",
       dark: "/images/food-sentinel/hero-dark.webp",
@@ -195,18 +373,49 @@ const projectsCards: ProjectCardProps[] = [
     title: "KOSHI",
     subtitle:
       "I created a mobile app to help users find their perfect car, earning 2nd place in a university competition.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "React Native",
-        image: "/logos/react-native-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Firebase",
-        image: "/logos/firebase-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "logo-1",
+          title: "React Native",
+          image: "/logos/react-native.svg",
+        },
+        {
+          id: "logo-2",
+          title: "React Native Reusables",
+          image: "/logos/react-native-reusables.png",
+        },
+        {
+          id: "logo-3",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-5",
+          title: "NativewindCSS",
+          image: "https://v2.nativewind.dev/img/logo.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "Expo",
+          image: "/logos/expo.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/koshi.webp",
     },
@@ -218,28 +427,32 @@ const projectsCards: ProjectCardProps[] = [
     title: "Flicks: Movie Ticketing Booking System ",
     subtitle:
       "I built a movie ticketing system with a ChatGPT-inspired interface, making it easy for users to book tickets through a user-friendly design.",
-    techStack: [
-      {
-        id: "1",
-        title: "PHP",
-        image: "/logos/php-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-      {
-        id: "4",
-        title: "Laravel",
-        image: "/logos/laravel-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "PHP",
+          image: "/logos/php.svg",
+        },
+        {
+          id: "2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "4",
+          title: "XAMPP",
+          image: "/logos/xampp.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/flicks/hero.webp",
     },
@@ -251,38 +464,42 @@ const projectsCards: ProjectCardProps[] = [
     title: "NBSC Hospital Management System",
     subtitle:
       "I built a hospital management system for NBSC, simplifying patient record management and appointment scheduling.",
-    techStack: [
-      {
-        id: "1",
-        title: "PHP",
-        image: "/logos/php-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-      {
-        id: "4",
-        title: "Laravel",
-        image: "/logos/laravel-small.svg",
-      },
-      {
-        id: "5",
-        title: "Livewire",
-        image: "/logos/livewire-small.svg",
-      },
-      {
-        id: "6",
-        title: "Flowbite",
-        image: "/logos/flowbite-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "logo-1",
+          title: "PHP",
+          image: "/logos/php.svg",
+        },
+        {
+          id: "logo-2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Livewire",
+          image: "/logos/livewire.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Flowbite",
+          image: "/logos/flowbite.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Laravel",
+          image: "/logos/laravel.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/nbsc-hos/hero.webp",
     },
@@ -294,23 +511,32 @@ const projectsCards: ProjectCardProps[] = [
     title: "Kaamulan Blog",
     subtitle:
       "I developed a blog platform for Kaamulan festival, showcasing Bukidnon's culture with an engaging and accessible design.",
-    techStack: [
-      {
-        id: "1",
-        title: "HTML",
-        image: "/logos/html-small.svg",
-      },
-      {
-        id: "2",
-        title: "CSS",
-        image: "/logos/css-small.svg",
-      },
-      {
-        id: "3",
-        title: "JavaScript",
-        image: "/logos/javascript-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "HTML",
+          image: "/logos/html.svg",
+        },
+        {
+          id: "2",
+          title: "CSS",
+          image: "/logos/css.svg",
+        },
+        {
+          id: "3",
+          title: "JavaScript",
+          image: "/logos/js.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "",
+          title: "Vercel",
+          image: "/logos/vercel.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/kaamulan/hero.webp",
     },
@@ -322,28 +548,43 @@ const projectsCards: ProjectCardProps[] = [
     title: "Joyce Gallery",
     subtitle:
       "I crafted a gallery website for my mother Joyce's 50th birthday, beautifully displaying her life's cherished memories.",
-    techStack: [
-      {
-        id: "1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "Typescript",
-        image: "/logos/typescript-small.svg",
-      },
-      {
-        id: "4",
-        title: "Shadcn UI",
-        image: "/logos/shadcn-ui-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+        },
+        {
+          id: "2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "3",
+          title: "Typescript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "4",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+      ],
+      backend: [],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "Cloudinary",
+          image: "/logos/cloudinary.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Vercel",
+          image: "/logos/vercel.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/joyce-gallery/hero.webp",
     },
@@ -355,23 +596,34 @@ const projectsCards: ProjectCardProps[] = [
     title: "Maharlika Banking Solutions",
     subtitle:
       "I developed a banking platform for Maharlika, streamlining financial transactions with an intuitive Java-based interface.",
-    techStack: [
-      {
-        id: "1",
-        title: "Java",
-        image: "/logos/java-small.svg",
-      },
-      {
-        id: "2",
-        title: "JavaFX",
-        image: "/logos/javafx-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "Java",
+          image: "/logos/java.svg",
+        },
+        {
+          id: "2",
+          title: "JavaFX",
+          image: "/logos/javafx.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "4",
+          title: "XAMPP",
+          image: "/logos/xampp.svg",
+        },
+      ],
+      infrastructure: [],
+    },
+
     images: {
       light: "/images/MBS/hero.webp",
     },
@@ -386,28 +638,71 @@ const projects: ProjectProps[] = [
     title: "STELLA",
     subtitle:
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "TypeScript",
-        image: "/logos/typescript-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "Prisma",
-        image: "/logos/prisma-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "PostgreSQL",
-        image: "/logos/postgresql-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "PostgreSQL",
+          image: "/logos/postgresql.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/socket-io.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "DigitalOcean",
+          image: "/logos/digital-ocean.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Docker",
+          image: "/logos/docker.svg",
+        },
+      ],
+    },
+
     images: {
       light: "/images/stella/hero-light.webp",
       dark: "/images/stella/hero-dark.webp",
@@ -489,28 +784,64 @@ const projects: ProjectProps[] = [
     title: "Food Sentinel",
     subtitle:
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Express",
-        image: "/logos/express-small.svg",
-      },
-      {
-        id: "logo-3",
-        title: "MongoDB",
-        image: "/logos/mongodb-small.svg",
-      },
-      {
-        id: "logo-4",
-        title: "WebSocket",
-        image: "/logos/websocket-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        {
+          id: "logo-2",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Prisma",
+          image: "/logos/prisma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Express",
+          image: "/logos/express.svg",
+        },
+        {
+          id: "logo-2",
+          title: "MongoDB",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-3",
+          title: "Mongoose",
+          image: "/logos/mongodb.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Socket.io",
+          image: "/logos/websocket.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Node.js",
+          image: "/logos/node-js.svg",
+        },
+      ],
+    },
+
     images: {
       light: "/images/food-sentinel/hero-light.webp",
       dark: "/images/food-sentinel/hero-dark.webp",
@@ -589,18 +920,49 @@ const projects: ProjectProps[] = [
     title: "KOSHI",
     subtitle:
       "I created a mobile app to help users find their perfect car, earning 2nd place in a university competition.",
-    techStack: [
-      {
-        id: "logo-1",
-        title: "React Native",
-        image: "/logos/react-native-small.svg",
-      },
-      {
-        id: "logo-2",
-        title: "Firebase",
-        image: "/logos/firebase-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "logo-1",
+          title: "React Native",
+          image: "/logos/react-native.svg",
+        },
+        {
+          id: "logo-2",
+          title: "React Native Reusables",
+          image: "/logos/react-native-reusables.png",
+        },
+        {
+          id: "logo-3",
+          title: "Figma",
+          image: "/logos/figma.svg",
+        },
+        {
+          id: "logo-4",
+          title: "TypeScript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "logo-5",
+          title: "NativewindCSS",
+          image: "https://v2.nativewind.dev/img/logo.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-1",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "Expo",
+          image: "/logos/expo.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/koshi.webp",
     },
@@ -656,28 +1018,32 @@ const projects: ProjectProps[] = [
     title: "Flicks: Movie Ticketing Booking System ",
     subtitle:
       "I built a movie ticketing system with a ChatGPT-inspired interface, making it easy for users to book tickets through a user-friendly design.",
-    techStack: [
-      {
-        id: "1",
-        title: "PHP",
-        image: "/logos/php-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-      {
-        id: "4",
-        title: "Laravel",
-        image: "/logos/laravel-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "PHP",
+          image: "/logos/php.svg",
+        },
+        {
+          id: "2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "4",
+          title: "XAMPP",
+          image: "/logos/xampp.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/flicks/hero.webp",
     },
@@ -744,38 +1110,42 @@ const projects: ProjectProps[] = [
     title: "NBSC Hospital Management System",
     subtitle:
       "I built a hospital management system for NBSC, simplifying patient record management and appointment scheduling.",
-    techStack: [
-      {
-        id: "1",
-        title: "PHP",
-        image: "/logos/php-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-      {
-        id: "4",
-        title: "Laravel",
-        image: "/logos/laravel-small.svg",
-      },
-      {
-        id: "5",
-        title: "Livewire",
-        image: "/logos/livewire-small.svg",
-      },
-      {
-        id: "6",
-        title: "Flowbite",
-        image: "/logos/flowbite-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "logo-1",
+          title: "PHP",
+          image: "/logos/php.svg",
+        },
+        {
+          id: "logo-2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "logo-5",
+          title: "Livewire",
+          image: "/logos/livewire.svg",
+        },
+        {
+          id: "logo-6",
+          title: "Flowbite",
+          image: "/logos/flowbite.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "logo-3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "logo-4",
+          title: "Laravel",
+          image: "/logos/laravel.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/nbsc-hos/hero.webp",
     },
@@ -849,23 +1219,32 @@ const projects: ProjectProps[] = [
     title: "Kaamulan Blog",
     subtitle:
       "I developed a blog platform for Kaamulan festival, showcasing Bukidnon's culture with an engaging and accessible design.",
-    techStack: [
-      {
-        id: "1",
-        title: "HTML",
-        image: "/logos/html-small.svg",
-      },
-      {
-        id: "2",
-        title: "CSS",
-        image: "/logos/css-small.svg",
-      },
-      {
-        id: "3",
-        title: "JavaScript",
-        image: "/logos/javascript-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "HTML",
+          image: "/logos/html.svg",
+        },
+        {
+          id: "2",
+          title: "CSS",
+          image: "/logos/css.svg",
+        },
+        {
+          id: "3",
+          title: "JavaScript",
+          image: "/logos/js.svg",
+        },
+      ],
+      infrastructure: [
+        {
+          id: "",
+          title: "Vercel",
+          image: "/logos/vercel.svg",
+        },
+      ],
+    },
     images: {
       light: "/images/kaamulan/hero.webp",
     },
@@ -930,28 +1309,44 @@ const projects: ProjectProps[] = [
     title: "Joyce Gallery",
     subtitle:
       "I crafted a gallery website for my mother Joyce's 50th birthday, beautifully displaying her life's cherished memories.",
-    techStack: [
-      {
-        id: "1",
-        title: "Next.js",
-        image: "/logos/nextjs-small.svg",
-      },
-      {
-        id: "2",
-        title: "TailwindCSS",
-        image: "/logos/tailwind-small.svg",
-      },
-      {
-        id: "3",
-        title: "Typescript",
-        image: "/logos/typescript-small.svg",
-      },
-      {
-        id: "4",
-        title: "Shadcn UI",
-        image: "/logos/shadcn-ui-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+        },
+        {
+          id: "2",
+          title: "TailwindCSS",
+          image: "/logos/tailwind.svg",
+        },
+        {
+          id: "3",
+          title: "Typescript",
+          image: "/logos/typescript.svg",
+        },
+        {
+          id: "4",
+          title: "Shadcn UI",
+          image: "/logos/shadcn-ui.svg",
+        },
+      ],
+      backend: [],
+      infrastructure: [
+        {
+          id: "logo-1",
+          title: "Cloudinary",
+          image: "/logos/cloudinary.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Vercel",
+          image: "/logos/vercel.svg",
+        },
+      ],
+    },
+
     images: {
       light: "/images/joyce-gallery/hero.webp",
     },
@@ -1015,23 +1410,34 @@ const projects: ProjectProps[] = [
     title: "Maharlika Banking Solutions",
     subtitle:
       "I developed a banking platform for Maharlika, streamlining financial transactions with an intuitive Java-based interface.",
-    techStack: [
-      {
-        id: "1",
-        title: "Java",
-        image: "/logos/java-small.svg",
-      },
-      {
-        id: "2",
-        title: "JavaFX",
-        image: "/logos/javafx-small.svg",
-      },
-      {
-        id: "3",
-        title: "MySQL",
-        image: "/logos/mysql-small.svg",
-      },
-    ],
+    techStack: {
+      frontend: [
+        {
+          id: "1",
+          title: "Java",
+          image: "/logos/java.svg",
+        },
+        {
+          id: "2",
+          title: "JavaFX",
+          image: "/logos/javafx.svg",
+        },
+      ],
+      backend: [
+        {
+          id: "3",
+          title: "MySQL",
+          image: "/logos/mysql.svg",
+        },
+        {
+          id: "4",
+          title: "XAMPP",
+          image: "/logos/xampp.svg"
+        }
+      ],
+      infrastructure: [],
+    },
+
     images: {
       light: "/images/MBS/hero.webp",
     },
