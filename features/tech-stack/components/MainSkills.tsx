@@ -1,4 +1,3 @@
-"use client";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { Button } from "@/components/ui/button";
 import { CodeXml } from "lucide-react";

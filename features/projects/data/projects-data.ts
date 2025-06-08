@@ -6,7 +6,6 @@ import {
   Edit,
   FileText,
   Filter,
-  Globe,
   Image,
   Layout,
   Lock,
@@ -35,7 +34,7 @@ const projectHighlights: ProjectCardProps[] = [
       "I helped build a lending system for AFP retirees, focusing on a user-friendly interface for fast loan applications.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -45,6 +44,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -55,11 +55,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -67,6 +63,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-1",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-2",
@@ -81,7 +78,8 @@ const projectHighlights: ProjectCardProps[] = [
         {
           id: "logo-4",
           title: "Socket.io",
-          image: "/logos/websocket.svg",
+          image: "/logos/socket-io.svg",
+          invert: true
         },
         {
           id: "logo-5",
@@ -104,7 +102,7 @@ const projectHighlights: ProjectCardProps[] = [
       "I collaborated on a catering platform, developing real-time order tracking for a smooth user experience.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -114,6 +112,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -124,11 +123,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -136,6 +131,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-1",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-2",
@@ -145,12 +141,13 @@ const projectHighlights: ProjectCardProps[] = [
         {
           id: "logo-3",
           title: "Mongoose",
-          image: "/logos/mongodb.svg",
+          image: "/logos/mongoose.svg",
         },
         {
           id: "logo-4",
           title: "Socket.io",
-          image: "/logos/websocket.svg",
+          image: "/logos/socket-io.svg",
+          invert: true
         },
         {
           id: "logo-5",
@@ -176,17 +173,12 @@ const projectHighlights: ProjectCardProps[] = [
         {
           id: "logo-1",
           title: "React Native",
-          image: "/logos/react-native.svg",
+          image: "/logos/reactjs.svg",
         },
         {
           id: "logo-2",
           title: "React Native Reusables",
           image: "/logos/react-native-reusables.png",
-        },
-        {
-          id: "logo-3",
-          title: "Figma",
-          image: "/logos/figma.svg",
         },
         {
           id: "logo-4",
@@ -230,7 +222,7 @@ const projectsCards: ProjectCardProps[] = [
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -240,6 +232,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -250,11 +243,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -267,6 +256,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-2",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-3",
@@ -277,6 +267,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
+          invert: true
         },
       ],
       infrastructure: [
@@ -306,7 +297,7 @@ const projectsCards: ProjectCardProps[] = [
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -316,6 +307,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -326,11 +318,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -338,6 +326,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-1",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-2",
@@ -347,12 +336,13 @@ const projectsCards: ProjectCardProps[] = [
         {
           id: "logo-3",
           title: "Mongoose",
-          image: "/logos/mongodb.svg",
+          image: "/logos/mongoose.svg",
         },
         {
           id: "logo-4",
           title: "Socket.io",
-          image: "/logos/websocket.svg",
+          image: "/logos/socket-io.svg",
+          invert: true
         },
         {
           id: "logo-5",
@@ -378,17 +368,12 @@ const projectsCards: ProjectCardProps[] = [
         {
           id: "logo-1",
           title: "React Native",
-          image: "/logos/react-native.svg",
+          image: "/logos/reactjs.svg",
         },
         {
           id: "logo-2",
           title: "React Native Reusables",
           image: "/logos/react-native-reusables.png",
-        },
-        {
-          id: "logo-3",
-          title: "Figma",
-          image: "/logos/figma.svg",
         },
         {
           id: "logo-4",
@@ -534,6 +519,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "",
           title: "Vercel",
           image: "/logos/vercel.svg",
+          invert: true
         },
       ],
     },
@@ -553,7 +539,7 @@ const projectsCards: ProjectCardProps[] = [
         {
           id: "1",
           title: "Next.js",
-          image: "/logos/nextjs.svg",
+          image: "/logos/nextjs.svg", invert: true,
         },
         {
           id: "2",
@@ -569,9 +555,9 @@ const projectsCards: ProjectCardProps[] = [
           id: "4",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
+          invert: true,
         },
       ],
-      backend: [],
       infrastructure: [
         {
           id: "logo-1",
@@ -582,6 +568,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-2",
           title: "Vercel",
           image: "/logos/vercel.svg",
+          invert: true
         },
       ],
     },
@@ -606,7 +593,7 @@ const projectsCards: ProjectCardProps[] = [
         {
           id: "2",
           title: "JavaFX",
-          image: "/logos/javafx.svg",
+          image: "/logos/java.svg",
         },
       ],
       backend: [
@@ -621,7 +608,6 @@ const projectsCards: ProjectCardProps[] = [
           image: "/logos/xampp.svg",
         },
       ],
-      infrastructure: [],
     },
 
     images: {
@@ -640,7 +626,7 @@ const projects: ProjectProps[] = [
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -650,6 +636,7 @@ const projects: ProjectProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -660,11 +647,7 @@ const projects: ProjectProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -677,6 +660,7 @@ const projects: ProjectProps[] = [
           id: "logo-2",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-3",
@@ -687,6 +671,7 @@ const projects: ProjectProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
+          invert: true
         },
       ],
       infrastructure: [
@@ -786,7 +771,7 @@ const projects: ProjectProps[] = [
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg" },
+        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -796,6 +781,7 @@ const projects: ProjectProps[] = [
           id: "logo-3",
           title: "Prisma",
           image: "/logos/prisma.svg",
+          invert: true,
         },
         {
           id: "logo-4",
@@ -806,11 +792,7 @@ const projects: ProjectProps[] = [
           id: "logo-5",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
-        },
-        {
-          id: "logo-6",
-          title: "Figma",
-          image: "/logos/figma.svg",
+          invert: true,
         },
       ],
       backend: [
@@ -818,6 +800,7 @@ const projects: ProjectProps[] = [
           id: "logo-1",
           title: "Express",
           image: "/logos/express.svg",
+          invert: true,
         },
         {
           id: "logo-2",
@@ -827,12 +810,13 @@ const projects: ProjectProps[] = [
         {
           id: "logo-3",
           title: "Mongoose",
-          image: "/logos/mongodb.svg",
+          image: "/logos/mongoose.svg",
         },
         {
           id: "logo-4",
           title: "Socket.io",
-          image: "/logos/websocket.svg",
+          image: "/logos/socket-io.svg",
+          invert: true
         },
         {
           id: "logo-5",
@@ -925,17 +909,12 @@ const projects: ProjectProps[] = [
         {
           id: "logo-1",
           title: "React Native",
-          image: "/logos/react-native.svg",
+          image: "/logos/reactjs.svg",
         },
         {
           id: "logo-2",
           title: "React Native Reusables",
           image: "/logos/react-native-reusables.png",
-        },
-        {
-          id: "logo-3",
-          title: "Figma",
-          image: "/logos/figma.svg",
         },
         {
           id: "logo-4",
@@ -1242,6 +1221,7 @@ const projects: ProjectProps[] = [
           id: "",
           title: "Vercel",
           image: "/logos/vercel.svg",
+          invert: true
         },
       ],
     },
@@ -1290,16 +1270,16 @@ const projects: ProjectProps[] = [
         light: "/images/kaamulan/1.webp",
       },
       {
-        light: "/images/kaamulan/1.webp",
+        light: "/images/kaamulan/2.webp",
       },
       {
-        light: "/images/kaamulan/1.webp",
+        light: "/images/kaamulan/3.webp",
       },
       {
-        light: "/images/kaamulan/1.webp",
+        light: "/images/kaamulan/4.webp",
       },
       {
-        light: "/images/kaamulan/1.webp",
+        light: "/images/kaamulan/5.webp",
       },
     ],
   },
@@ -1314,7 +1294,7 @@ const projects: ProjectProps[] = [
         {
           id: "1",
           title: "Next.js",
-          image: "/logos/nextjs.svg",
+          image: "/logos/nextjs.svg", invert: true,
         },
         {
           id: "2",
@@ -1330,9 +1310,9 @@ const projects: ProjectProps[] = [
           id: "4",
           title: "Shadcn UI",
           image: "/logos/shadcn-ui.svg",
+          invert: true,
         },
       ],
-      backend: [],
       infrastructure: [
         {
           id: "logo-1",
@@ -1343,6 +1323,7 @@ const projects: ProjectProps[] = [
           id: "logo-2",
           title: "Vercel",
           image: "/logos/vercel.svg",
+          invert: true
         },
       ],
     },
@@ -1420,7 +1401,7 @@ const projects: ProjectProps[] = [
         {
           id: "2",
           title: "JavaFX",
-          image: "/logos/javafx.svg",
+          image: "/logos/java.svg",
         },
       ],
       backend: [
@@ -1432,10 +1413,9 @@ const projects: ProjectProps[] = [
         {
           id: "4",
           title: "XAMPP",
-          image: "/logos/xampp.svg"
-        }
+          image: "/logos/xampp.svg",
+        },
       ],
-      infrastructure: [],
     },
 
     images: {

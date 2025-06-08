@@ -27,7 +27,7 @@ export default function ProjectCard({
   return (
     <Card
       key={index}
-      className="group relative overflow-hidden transition-all hover:shadow-xl pt-0"
+      className="group relative overflow-hidden transition-all hover:shadow-xl pt-0 hover:-translate-y-2"
     >
       <div className="relative aspect-video overflow-hidden">
         {project.images ? (
@@ -69,7 +69,7 @@ export default function ProjectCard({
         <p className="text-muted-foreground min-h-[72px]">{project.subtitle}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {project.techStack.map((tech, techIndex) => (
+          {project.techStack.frontend.map((tech, techIndex) => (
             <Badge
               key={techIndex}
               variant="outline"
@@ -81,7 +81,7 @@ export default function ProjectCard({
         </div>
       </CardContent>
 
-      <CardFooter className="pt-2">
+      <CardFooter className="mt-auto">
         <Button
           className="w-full gap-2 "
           onClick={() => router.push(`/projects/${project.id}`)}

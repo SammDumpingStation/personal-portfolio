@@ -4,44 +4,44 @@ export const logos: Logo[] = [
   {
     id: "logo-1",
     title: "Next.js",
-    image: "/logos/nextjs-small.svg",
+    image: "/logos/nextjs.svg",
     invert: true,
   },
   {
     id: "logo-2",
     title: "TailwindCSS",
-    image: "/logos/tailwind-small.svg",
+    image: "/logos/tailwind.svg",
   },
   {
     id: "logo-3",
     title: "Typescript",
-    image: "/logos/typescript-small.svg",
+    image: "/logos/typescript.svg",
   },
   {
     id: "logo-4",
     title: "Shadcn UI",
-    image: "/logos/shadcn-ui-small.svg",
+    image: "/logos/shadcn-ui.svg",
     invert: true,
   },
   {
     id: "logo-5",
     title: "Express",
-    image: "/logos/express-small.svg",
+    image: "/logos/express.svg",
     invert: true,
   },
   {
     id: "logo-6",
     title: "Supabase",
-    image: "/logos/supabase-small.svg",
+    image: "/logos/supabase.svg",
   },
   {
     id: "logo-7",
     title: "MongoDB",
-    image: "/logos/mongodb-small.svg",
+    image: "/logos/mongodb.svg",
   },
   {
     id: "logo-8",
     title: "Mongoose",
-    image: "/logos/mongoose-small.svg",
+    image: "/logos/mongoose.svg",
   },
 ];

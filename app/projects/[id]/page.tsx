@@ -5,8 +5,6 @@ import {
   Calendar,
   Check,
   ExternalLink,
-  Github,
-  Globe,
   Palette,
   TrafficCone,
   Users,
@@ -19,6 +17,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import ProjectImageCarousel from "@/features/projects/components/ProjectImageCarousel";
 import CTA from "@/components/CTA";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export default async function Project({
   params,
@@ -210,6 +209,40 @@ export default async function Project({
     );
   };
 
+  const ProjectTechStack = () => {
+    return (
+      <div
+        className={cn("grid grid-cols-2 md:grid-cols-3 gap-4", {
+          "md:grid-cols-2":
+            !project.techStack.backend || !project.techStack.infrastructure,
+        })}
+      >
+        <Card>
+          <CardContent>
+            <h2 className="text-xl font-semibold p-4">Frontend</h2>
+            <HoverEffect items={project.techStack.frontend} />
+          </CardContent>
+        </Card>
+        {project.techStack.backend && (
+          <Card>
+            <CardContent>
+              <h2 className="text-xl font-semibold p-4">Backend</h2>
+              <HoverEffect items={project.techStack.backend} />
+            </CardContent>
+          </Card>
+        )}
+        {project.techStack.infrastructure && (
+          <Card>
+            <CardContent>
+              <h2 className="text-xl font-semibold p-4">Infrastructure</h2>
+              <HoverEffect items={project.techStack.infrastructure} />
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    );
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -222,16 +255,9 @@ export default async function Project({
           {/* Tech Stack */}
           <section className="section-container">
             <SectionHeader title="Technology Stack" />
-            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {project.techStack.map((tech, index) => (
-                <Card key={index}>
-                  <CardContent>
-                    <h2 className="text-xl font-bold">{tech.title}</h2>
-                  </CardContent>
-                </Card>
-              ))}
-            </div> */}
+            <ProjectTechStack />
           </section>
+
           {/* Carousel Screenshots */}
           <section className="section-container">
             <SectionHeader title="Screenshots" />

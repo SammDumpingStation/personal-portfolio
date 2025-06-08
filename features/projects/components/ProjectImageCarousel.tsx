@@ -46,7 +46,7 @@ export default function ProjectImageCarousel({
             <CarouselItem key={index} className={cn("basis-[60%] ", {})}>
               <Card
                 className={cn(
-                  "transition-transform duration-500 p-0 w-[900px] overflow-hidden",
+                  "transition-transform duration-500 p-0  xl:min-w-[900px] overflow-hidden",
                   {
                     "scale-[0.6]": index !== current - 1,
                   }

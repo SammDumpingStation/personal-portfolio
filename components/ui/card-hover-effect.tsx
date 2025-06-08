@@ -1,7 +1,9 @@
+"use client";
 import { Logo } from "@/features/tech-stack/types/logos-type";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { useState } from "react";
 
@@ -13,11 +15,13 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const pathname = usePathname();
 
   return (
     <div
       className={cn(
         "grid grid-cols-2 gap-3 justify-between w-full sm:grid-cols-3 md:grid-cols-4",
+        {"md:grid-cols-2": pathname !== "/"},
         className
       )}
     >
@@ -51,7 +55,7 @@ export const HoverEffect = ({
               alt={`${item.title} Logo`}
               width={200}
               height={48}
-              className={cn("h-12", item.invert && "dark:invert")}
+              className={cn("h-12 mx-auto max-w-fit", item.invert && "dark:invert")}
             />
             <CardTitle className="text-foreground">{item.title}</CardTitle>
             {/* <CardDescription>{item.description}</CardDescription> */}
