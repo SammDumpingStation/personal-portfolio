@@ -7,111 +7,148 @@ import {
   Coffee,
   Camera,
   Music,
-  Gamepad2,
-  Download,
+  Map,
+  Code,
   Mail,
-  ExternalLink,
+  Download,
+  Sparkles,
+  Trophy,
+  Heart,
+  Zap,
 } from "lucide-react";
 import Image from "next/image";
 
 export default function Component() {
-  // Personal information - easily customizable
+  // Personal information - customized to your use case
   const personalInfo = {
-    name: "Alex Johnson",
-    title: "Full-Stack Developer & UI/UX Designer",
-    location: "San Francisco, CA",
-    experience: "3+ Years",
-    education: "Computer Science, UC Berkeley",
-    bio: "I'm a passionate full-stack developer with a keen eye for design and user experience. I love creating digital solutions that not only function flawlessly but also delight users. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or capturing moments through photography.",
+    name: "Your Name", // Replace with your actual name
+    title: "Full-Stack Developer",
+    location: "Philippines",
+    experience: "3 Years",
+    education: "BS Information Technology, [Your University]", // Replace with your university
+    bio: "I'm a passionate full-stack developer who transforms complex challenges into user-friendly web and mobile apps. With a knack for technologies like Next.js, Laravel, and React Native, I build solutions that streamline operations and delight users. My projects, from lending systems to cultural blogs, reflect my commitment to real-world impact.",
     extendedBio:
-      "My journey in tech started during college when I built my first web application for a local nonprofit. Since then, I've worked with startups and established companies, helping them bring their digital visions to life. I believe in writing clean, maintainable code and creating intuitive user interfaces that solve real-world problems.",
+      "My coding journey began three years ago with a simple HTML blog for the Kaamulan festival. Since then, I've built apps for hospitals, catering platforms, and car buyers, earning accolades like 2nd place in a university competition for KOSHI. I thrive on turning client needs into intuitive, efficient solutions, blending technical skill with a passion for problem-solving.",
     interests: [
       "Photography",
       "Coffee Brewing",
-      "Music Production",
-      "Gaming",
+      "Music",
       "Hiking",
-      "Open Source",
+      "Cultural Research",
+      "Tech Exploration",
     ],
     achievements: [
-      "Led development of 5+ web applications",
-      "Contributed to 10+ open-source projects",
-      "Mentored 15+ junior developers",
-      "Speaker at 3 tech conferences",
+      "Developed 8+ impactful web and mobile applications",
+      "Won 2nd place for KOSHI in a university technopreneurship competition",
+      "Digitized hospital operations for NBSC with a Laravel-based system",
+      "Built real-time catering platform Food Sentinel, earning instructor praise",
     ],
   };
 
   const interestIcons = {
     Photography: Camera,
     "Coffee Brewing": Coffee,
-    "Music Production": Music,
-    Gaming: Gamepad2,
-    Hiking: MapPin,
-    "Open Source": ExternalLink,
+    Music: Music,
+    Hiking: Map,
+    "Cultural Research": MapPin,
+    "Tech Exploration": Code,
   };
 
   return (
-    <main className="container mx-auto">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="heading">About Me</h2>
-        <p className="sub-heading">
-         Get to know the person behind the code
+    <main className="container mx-auto px-4 py-8 max-w-7xl">
+      {/* Enhanced Header */}
+      <div className="text-center mb-16 space-y-4">
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <Sparkles className="w-6 h-6 " />
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            About Me
+          </h1>
+          <Sparkles className="w-6 h-6 " />
+        </div>
+        <p className="text-lg md:text-xl  max-w-2xl mx-auto leading-relaxed">
+          Discover the developer behind innovative solutions
         </p>
+        <div className="w-24 h-1 bg-zinc-900 dark:bg-zinc-100 mx-auto rounded-full"></div>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
-        {/* Left Column - Photo and Quick Info */}
+      <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+        {/* Left Column - Enhanced Sticky Profile Card */}
         <div className="lg:col-span-1">
-          <Card className="sticky top-24">
-            <CardContent className="p-6">
-              {/* Profile Photo */}
-              <div className="relative mb-6">
-                <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                  <Image
-                    src="/placeholder.svg?height=192&width=192"
-                    alt={personalInfo.name}
-                    fill
-                    className="w-full h-full rounded-full object-cover bg-white"
-                  />
+          <Card className="sticky top-24   backdrop-blur-sm">
+            <CardContent className="p-8">
+              {/* Enhanced Profile Photo */}
+              <div className="relative mb-8 group">
+                <div className="w-52 h-52 mx-auto rounded-full bg-gradient-to-br from-zinc-400 via-zinc-600 to-zinc-800 p-1">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-zinc-50 dark:bg-zinc-900">
+                    <Image
+                      src="/placeholder.svg?height=200&width=200"
+                      alt={personalInfo.name}
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+                      priority
+                    />
+                  </div>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">👋</span>
-                </div>
-              </div>
-
-              {/* Name and Title */}
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">{personalInfo.name}</h3>
-                <p className="text-muted-foreground mb-4">
-                  {personalInfo.title}
-                </p>
-              </div>
-
-              {/* Quick Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3 text-sm">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span>{personalInfo.location}</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <Calendar className="w-4 h-4 text-muted-foreground" />
-                  <span>{personalInfo.experience} Experience</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <GraduationCap className="w-4 h-4 text-muted-foreground" />
-                  <span>{personalInfo.education}</span>
+                <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-zinc-900 dark:bg-zinc-100 rounded-full border-4 border-white dark:border-zinc-950 flex items-center justify-center shadow-lg animate-bounce">
+                  <span
+                    className="text-white dark:text-zinc-900 text-xl"
+                    role="img"
+                    aria-label="Waving hand"
+                  >
+                    👋
+                  </span>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <Button className="w-full" size="lg">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Get In Touch
+              {/* Enhanced Name and Title */}
+              <div className="text-center mb-8 space-y-2">
+                <h2 className="text-2xl lg:text-3xl font-bold">
+                  {personalInfo.name}
+                </h2>
+                <p className=" font-medium text-lg">{personalInfo.title}</p>
+                <div className="w-16 h-0.5 bg-zinc-400 dark:bg-zinc-600 mx-auto rounded-full"></div>
+              </div>
+
+              {/* Enhanced Quick Info */}
+              <div className="space-y-4 mb-8 p-6 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border">
+                <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
+                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                    <MapPin className="w-4 h-4 " />
+                  </div>
+                  <span className="font-medium">{personalInfo.location}</span>
+                </div>
+                <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
+                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                    <Calendar className="w-4 h-4 " />
+                  </div>
+                  <span className="font-medium">
+                    {personalInfo.experience} Experience
+                  </span>
+                </div>
+                <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
+                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                    <GraduationCap className="w-4 h-4 " />
+                  </div>
+                  <span className="font-medium">{personalInfo.education}</span>
+                </div>
+              </div>
+
+              {/* Enhanced Action Buttons */}
+              <div className="space-y-4">
+                <Button
+                  className="w-full h-12  font-semibold hover transition-all duration-200"
+                  size="lg"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Let's Talk
                 </Button>
-                <Button variant="outline" className="w-full" size="lg">
-                  <Download className="w-4 h-4 mr-2" />
+                <Button
+                  variant="outline"
+                  className="w-full h-12   font-semibold transition-all duration-200"
+                  size="lg"
+                >
+                  <Download className="w-5 h-5 mr-2" />
                   Download Resume
                 </Button>
               </div>
@@ -119,57 +156,78 @@ export default function Component() {
           </Card>
         </div>
 
-        {/* Right Column - Detailed Information */}
+        {/* Right Column - Enhanced Content */}
         <div className="lg:col-span-2 space-y-8">
-          {/* Bio Section */}
-          <Card>
-            <CardContent className="p-8">
-              <h4 className="text-xl font-semibold mb-4">My Story</h4>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>{personalInfo.bio}</p>
-                <p>{personalInfo.extendedBio}</p>
+          {/* Enhanced Bio Section */}
+          <Card className="">
+            <CardContent className="p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <Heart className="w-6 h-6 " />
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold">My Story</h3>
+              </div>
+              <div className="space-y-6  leading-relaxed">
+                <p className="text-base lg:text-lg">{personalInfo.bio}</p>
+                <p className="text-base lg:text-lg">
+                  {personalInfo.extendedBio}
+                </p>
               </div>
             </CardContent>
           </Card>
 
-          {/* Achievements */}
-          <Card>
-            <CardContent className="p-8">
-              <h4 className="text-xl font-semibold mb-6">Key Achievements</h4>
-              <div className="grid sm:grid-cols-2 gap-4">
+          {/* Enhanced Achievements */}
+          <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
+            <CardContent className="p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <Trophy className="w-6 h-6 " />
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold">
+                  Key Achievements
+                </h3>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-6">
                 {personalInfo.achievements.map((achievement, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    className="flex items-start gap-4 p-6 rounded-xl  transition-all duration-200 group"
                   >
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                    <span className="text-sm">{achievement}</span>
+                    <div className="w-3 h-3 rounded-full bg-zinc-400 dark:bg-zinc-600 mt-2 flex-shrink-0 group-hover:bg-zinc-600 dark:group-hover:bg-zinc-400 transition-colors" />
+                    <span className="text-sm lg:text-base  leading-relaxed font-medium">
+                      {achievement}
+                    </span>
                   </div>
                 ))}
               </div>
             </CardContent>
           </Card>
 
-          {/* Interests & Hobbies */}
-          <Card>
-            <CardContent className="p-8">
-              <h4 className="text-xl font-semibold mb-6">
-                When I&apos;m Not Coding
-              </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {/* Enhanced Interests */}
+          <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
+            <CardContent className="p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <Zap className="w-6 h-6 " />
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold">
+                  When I'm Not Coding
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {personalInfo.interests.map((interest, index) => {
                   const IconComponent =
                     interestIcons[interest as keyof typeof interestIcons] ||
-                    Coffee;
+                    Code;
                   return (
                     <div
                       key={index}
-                      className="flex flex-col items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group cursor-default"
+                      className="flex flex-col items-center gap-4 p-6 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border  transition-all duration-300 group cursor-default"
                     >
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <IconComponent className="w-6 h-6 text-white" />
+                      <div className="w-16 h-16 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <IconComponent className="w-8 h-8 text-white dark:text-zinc-900" />
                       </div>
-                      <span className="text-sm font-medium text-center">
+                      <span className="text-sm lg:text-base font-semibold text-center  group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">
                         {interest}
                       </span>
                     </div>
@@ -179,41 +237,46 @@ export default function Component() {
             </CardContent>
           </Card>
 
-          {/* Fun Facts */}
-          <Card>
-            <CardContent className="p-8">
-              <h4 className="text-xl font-semibold mb-6">Fun Facts</h4>
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    500+
+          {/* Enhanced Fun Facts */}
+          <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
+            <CardContent className="p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 " />
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold">Fun Facts</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center group cursor-default">
+                  <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
+                    300+
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    Cups of coffee consumed
+                  <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
+                    Cups of coffee enjoyed
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    50+
+                <div className="text-center group cursor-default">
+                  <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
+                    8
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    Projects completed
+                  <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
+                    Projects delivered
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">
-                    15+
+                <div className="text-center group cursor-default">
+                  <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
+                    10+
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
                     Technologies mastered
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">
-                    3
+                <div className="text-center group cursor-default">
+                  <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
+                    2
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    Countries visited for work
+                  <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
+                    Awards won
                   </div>
                 </div>
               </div>

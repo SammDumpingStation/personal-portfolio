@@ -611,7 +611,7 @@ const projectsCards: ProjectCardProps[] = [
     },
 
     images: {
-      light: "/images/MBS/hero.webp",
+      light: "/images/mbs/hero.webp",
     },
     category: "Web App",
   },
@@ -1419,7 +1419,7 @@ const projects: ProjectProps[] = [
     },
 
     images: {
-      light: "/images/MBS/hero.webp",
+      light: "/images/mbs/hero.webp",
     },
     category: "Desktop App",
     timeline: "September 2023 - December 2023 (4 months)",

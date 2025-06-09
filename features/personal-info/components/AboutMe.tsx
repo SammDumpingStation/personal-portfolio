@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { Users, Rocket, Globe, Award, Cpu } from "lucide-react";
+import { Users, Rocket, Globe, Award, Cpu, Zap } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function AboutMe() {
@@ -7,27 +7,32 @@ export default function AboutMe() {
     {
       icon: Users,
       description:
-        "Started web development over two years ago, building practical, user-friendly apps through school and personal projects.",
+        "Began coding three years ago, creating practical web and mobile apps through academic and personal projects.",
     },
     {
       icon: Rocket,
       description:
-        "Built KOSHI, a React Native app to help users find their ideal car, winning 2nd place in a university competition.",
+        "Developed KOSHI, a React Native app for car buyers, earning 2nd place in a university technopreneurship competition.",
     },
     {
       icon: Globe,
       description:
-        "Helped a university clinic go digital by creating the foundation of their management system with Laravel.",
+        "Digitized NBSC's hospital operations by building a Laravel-based management system with role-based access.",
+    },
+    {
+      icon: Zap,
+      description:
+        "Created Food Sentinel, a real-time catering platform with WebSocket-powered order tracking for web and mobile.",
     },
     {
       icon: Award,
       description:
-        "Led the creation of an Online Catering Reservation System, building web, mobile, and real-time API features.",
+        "Designed Flicks, a movie ticketing system with a ChatGPT-inspired UI, earning praise for its intuitive design.",
     },
     {
       icon: Cpu,
       description:
-        "Working on STELLA, a lending system for AFP retirees, to make a real difference through tech.",
+        "Leading STELLA, a lending system for AFP retirees, to streamline branch operations with a centralized database.",
     },
   ];
 
@@ -35,13 +40,13 @@ export default function AboutMe() {
     <section className="bg-background py-12 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 border-b pb-6 md:grid-cols-2 md:gap-16">
-          <div className="relative flex ">
+          <div className="relative flex">
             {/* Right Column: Image */}
-            <div className="relative flex-1  overflow-hidden rounded-lg">
+            <div className="relative flex-1 overflow-hidden rounded-lg">
               <Skeleton className="w-full h-full" />
               {/* <Image
                 src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                alt="TechNova team collaborating"
+                alt="Developer working on a project"
                 className="object-cover"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -52,30 +57,30 @@ export default function AboutMe() {
                   About Me
                 </span>
                 <span className="max-w-80 text-sm text-muted-foreground sm:text-base">
-                  I turn business challenges into clear, user-friendly web
-                  solutions, specializing in Next.js to build digital
-                  experiences that balance technical quality with real-world
-                  impact.
+                  I craft web and mobile solutions that simplify complex
+                  challenges, using tools like Next.js and Laravel to deliver
+                  impactful, user-friendly experiences.
                 </span>
               </div>
             </div>
           </div>
 
           {/* Left Column: Text and Milestones */}
-          <div className="space-y-8 ">
+          <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 About <span className="text-primary">Me</span>
               </h1>
               <p className="text-base text-muted-foreground sm:text-lg">
-                I&apos;m a Next.js developer with over two years of experience
-                building apps that make a real difference. I love turning
-                complex ideas into simple, efficient web solutions that help
-                businesses grow. By blending my coding skills with an
-                understanding of what businesses need, I create user-friendly
-                applications, often modernizing old processes. What drives me is
-                seeing how the right tech can transform operations and create
-                lasting impact.
+                I'm a full-stack developer with three years of experience
+                building apps that solve real problems. From modernizing
+                hospital systems to creating real-time catering platforms, I
+                turn ideas into efficient, user-friendly solutions. My passion
+                lies in blending technologies like Next.js, React Native, and
+                Laravel with a deep understanding of client needs to deliver
+                results that matter. Whether it's streamlining operations or
+                crafting intuitive interfaces, I'm driven by the impact tech can
+                have on businesses and communities.
               </p>
             </div>
 
@@ -83,8 +88,8 @@ export default function AboutMe() {
               {milestones.map((milestone, index) => (
                 <div key={index} className="relative flex gap-4">
                   <div className="relative group">
-                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden bg-card border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors ">
-                      <milestone.icon className="size-5 text-primary sm:size-6 " />
+                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden bg-card border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors">
+                      <milestone.icon className="size-5 text-primary sm:size-6" />
                     </div>
                     {index !== milestones.length - 1 && (
                       <div className="absolute left-1/2 top-12 h-14 w-px -translate-x-1/2 bg-primary/30 sm:top-12" />
