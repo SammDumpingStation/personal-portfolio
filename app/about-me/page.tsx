@@ -13,6 +13,8 @@ import {
   Zap,
   Check,
   LucideIcon,
+  CodeXml,
+  Copy,
 } from "lucide-react";
 import Image from "next/image";
 import {
@@ -20,6 +22,9 @@ import {
   personalInfo,
 } from "@/features/personal-info/data/personal-info-data";
 import CTA from "@/components/CTA";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { techStack } from "@/features/tech-stack/data/logos-data";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export default function AboutMe() {
   const SectionHeader = ({
@@ -126,7 +131,7 @@ export default function AboutMe() {
 
   const BioSection = () => {
     return (
-      <Card className="p-10">
+      <Card className="p-6 sm:p-10">
         <SectionHeader icon={Heart} title="My Story" />
         <CardContent className="p-0">
           <div className="space-y-6  leading-relaxed">
@@ -138,9 +143,59 @@ export default function AboutMe() {
     );
   };
 
+  const tabs = [
+    {
+      name: "Frontend",
+      value: "frontend",
+    },
+    {
+      name: "Backend",
+      value: "backend",
+    },
+    {
+      name: "Mobile",
+      value: "mobile",
+    },
+    {
+      name: "Infrastructure",
+      value: "infrastructure",
+    },
+  ];
+
+  const TechStack = () => {
+    return (
+      <Card className=" p-6 sm:p-10 overflow-hidden">
+        <SectionHeader icon={CodeXml} title="Tech Stack" />
+        <CardContent className="p-0 ">
+          <Tabs defaultValue={tabs[0].value} className="w-full ">
+            <TabsList className="p-0 h-auto w-full bg-background gap-1 mb-6">
+              {tabs.map((tab) => (
+                <TabsTrigger
+                  key={tab.value}
+                  value={tab.value}
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground cursor-pointer"
+                >
+                  <h3 className="">{tab.name}</h3>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {tabs.map((tab) => (
+              <TabsContent key={tab.value} value={tab.value}>
+                <HoverEffect
+                  items={techStack[tab.value as keyof typeof techStack]}
+                  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+                />
+              </TabsContent>
+            ))}
+          </Tabs>
+        </CardContent>
+      </Card>
+    );
+  };
+
   const Achievements = () => {
     return (
-      <Card className="p-10">
+      <Card className="p-6 sm:p-10">
         <SectionHeader icon={Trophy} title="Key Achievements" />
         <CardContent className="p-0">
           <div className="grid sm:grid-cols-2 gap-6">
@@ -165,7 +220,7 @@ export default function AboutMe() {
 
   const Interests = () => {
     return (
-      <Card className="p-10">
+      <Card className="p-6 sm:p-10">
         <SectionHeader icon={Zap} title="When I'm Not Coding" />
         <CardContent className="p-0">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
@@ -207,7 +262,7 @@ export default function AboutMe() {
 
   const FunFacts = () => {
     return (
-      <Card className="p-10">
+      <Card className="p-6 sm:p-10">
         <SectionHeader icon={Sparkles} title="Fun Facts" />
         <CardContent className="p-0">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -220,8 +275,6 @@ export default function AboutMe() {
       </Card>
     );
   };
-
-
 
   return (
     <main className="container mx-auto px-4">
@@ -242,6 +295,8 @@ export default function AboutMe() {
         {/* Right Column*/}
         <div className="lg:col-span-2 space-y-8">
           <BioSection />
+
+          <TechStack />
 
           <Achievements />
 

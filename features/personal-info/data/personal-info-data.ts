@@ -1,7 +1,18 @@
-import { Camera, Clock, Code, Coffee, Facebook, Github, Instagram, Mail, Map, MapPin, MessageSquare, Music, Phone } from "lucide-react";
+import {
+  BrushCleaning,
+  Clock,
+  Coffee,
+  Handshake,
+  Mail,
+  MapPin,
+  Music,
+  Phone,
+  ScreenShare,
+  Swords,
+} from "lucide-react";
 
 const personalInfo = {
-  name: "Samm Caagbay", // Replace with your actual name
+  name: "Samm Caagbay",
   title: "Full-Stack Web & Mobile Developer",
   location: "Philippines",
   experience: "2+ Years",
@@ -11,12 +22,12 @@ const personalInfo = {
   extendedBio:
     "My coding journey began three years ago with a simple HTML blog for the Kaamulan festival. Since then, I've built apps for hospitals, catering platforms, and car buyers, earning accolades like 2nd place in a university competition for KOSHI. I thrive on turning client needs into intuitive, efficient solutions, blending technical skill with a passion for problem-solving.",
   interests: [
-    "Photography",
+    "Gaming",
     "Coffee Brewing",
     "Music",
-    "Hiking",
-    "Cultural Research",
-    "Tech Exploration",
+    "House Chores",
+    "Volunteer Work",
+    "Watching YouTube",
   ],
   achievements: [
     "Developed 8+ impactful web and mobile applications",
@@ -27,66 +38,66 @@ const personalInfo = {
 };
 
 const interestIcons = {
-  Photography: Camera,
+  Gaming: Swords,
   "Coffee Brewing": Coffee,
   Music: Music,
-  Hiking: Map,
-  "Cultural Research": MapPin,
-  "Tech Exploration": Code,
+  "House Chores": BrushCleaning,
+  "Volunteer Work": Handshake,
+  "Watching YouTube": ScreenShare,
 };
 
-  const socialLinks = [
-    {
-      icon: "/logos/facebook.svg",
-      label: "Facebook",
-      href: "https://facebook.com/yourprofile",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: "/logos/messenger.svg",
-      label: "Messenger",
-      href: "https://m.me/yourprofile",
-      color: "hover:text-green-600",
-    },
-    {
-      icon: "/logos/linkedin.svg",
-      label: "LinkedIn",
-      href: "https://linkedin.com/yourprofile",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: "/logos/github.svg",
-      label: "GitHub",
-      href: "https://github.com/yourprofile",
-      color: "hover:text-gray-800 dark:hover:text-gray-200",
-    },
-  ];
+const socialLinks = [
+  {
+    icon: "/logos/facebook.svg",
+    label: "Facebook",
+    href: "https://facebook.com/yourprofile",
+    color: "hover:text-blue-600",
+  },
+  {
+    icon: "/logos/messenger.svg",
+    label: "Messenger",
+    href: "https://m.me/yourprofile",
+    color: "hover:text-green-600",
+  },
+  {
+    icon: "/logos/linkedin.svg",
+    label: "LinkedIn",
+    href: "https://linkedin.com/yourprofile",
+    color: "hover:text-blue-600",
+  },
+  {
+    icon: "/logos/github.svg",
+    label: "GitHub",
+    href: "https://github.com/yourprofile",
+    color: "hover:text-gray-800 dark:hover:text-gray-200",
+  },
+];
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "sammcaag@gmail.com",
-      description: "Drop me a line anytime",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+63 961 459 6991",
-      description: "Available Mon-Fri, 9AM-6PM",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Cagayan de Oro City, Philippines",
-      description: "Remote work available",
-    },
-    {
-      icon: Clock,
-      label: "Response Time",
-      value: "Within 24 hours",
-      description: "Usually much faster",
-    },
-  ];
+const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "sammcaag@gmail.com",
+    description: "Drop me a line anytime",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+63 961 459 6991",
+    description: "Available Mon-Fri, 9AM-6PM",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Cagayan de Oro City, Philippines",
+    description: "Remote work available",
+  },
+  {
+    icon: Clock,
+    label: "Response Time",
+    value: "Within 24 hours",
+    description: "Usually much faster",
+  },
+];
 
 export { personalInfo, interestIcons, socialLinks, contactInfo };

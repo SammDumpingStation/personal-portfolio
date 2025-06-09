@@ -34,7 +34,12 @@ const projectHighlights: ProjectCardProps[] = [
       "I helped build a lending system for AFP retirees, focusing on a user-friendly interface for fast loan applications.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -79,7 +84,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
         {
           id: "logo-5",
@@ -102,7 +107,12 @@ const projectHighlights: ProjectCardProps[] = [
       "I collaborated on a catering platform, developing real-time order tracking for a smooth user experience.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -141,7 +151,7 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
         {
           id: "logo-5",
@@ -187,9 +197,9 @@ const projectHighlights: ProjectCardProps[] = [
       ],
       backend: [
         {
-          id: "logo-1",
-          title: "Firebase",
-          image: "/logos/firebase.svg",
+          id: "backend-1",
+          title: "Cloud Firestore",
+          image: "/logos/cloud-firestore.svg",
         },
       ],
       infrastructure: [
@@ -197,6 +207,12 @@ const projectHighlights: ProjectCardProps[] = [
           id: "logo-1",
           title: "Expo",
           image: "/logos/expo.svg",
+        },
+
+        {
+          id: "logo-2",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
         },
       ],
     },
@@ -216,7 +232,12 @@ const projectsCards: ProjectCardProps[] = [
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -261,7 +282,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
       ],
       infrastructure: [
@@ -291,7 +312,12 @@ const projectsCards: ProjectCardProps[] = [
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -330,7 +356,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
         {
           id: "logo-5",
@@ -376,9 +402,9 @@ const projectsCards: ProjectCardProps[] = [
       ],
       backend: [
         {
-          id: "logo-1",
-          title: "Firebase",
-          image: "/logos/firebase.svg",
+          id: "backend-1",
+          title: "Cloud Firestore",
+          image: "/logos/cloud-firestore.svg",
         },
       ],
       infrastructure: [
@@ -386,6 +412,12 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-1",
           title: "Expo",
           image: "/logos/expo.svg",
+        },
+
+        {
+          id: "logo-2",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
         },
       ],
     },
@@ -507,7 +539,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "",
           title: "Vercel",
           image: "/logos/vercel.svg",
-          invert: true
+          invert: true,
         },
       ],
     },
@@ -527,7 +559,8 @@ const projectsCards: ProjectCardProps[] = [
         {
           id: "1",
           title: "Next.js",
-          image: "/logos/nextjs.svg", invert: true,
+          image: "/logos/nextjs.svg",
+          invert: true,
         },
         {
           id: "2",
@@ -556,7 +589,7 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-2",
           title: "Vercel",
           image: "/logos/vercel.svg",
-          invert: true
+          invert: true,
         },
       ],
     },
@@ -614,7 +647,12 @@ const projects: ProjectProps[] = [
       "We built a lending system for AFP retirees, making loan applications and benefit payments fast and simple.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -659,7 +697,7 @@ const projects: ProjectProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
       ],
       infrastructure: [
@@ -759,7 +797,12 @@ const projects: ProjectProps[] = [
       "I developed a full-stack catering platform with real-time order tracking and smooth payment processing.",
     techStack: {
       frontend: [
-        { id: "logo-1", title: "Next.js", image: "/logos/nextjs.svg", invert: true },
+        {
+          id: "logo-1",
+          title: "Next.js",
+          image: "/logos/nextjs.svg",
+          invert: true,
+        },
         {
           id: "logo-2",
           title: "TypeScript",
@@ -798,7 +841,7 @@ const projects: ProjectProps[] = [
           id: "logo-4",
           title: "Socket.io",
           image: "/logos/socket-io.svg",
-          invert: true
+          invert: true,
         },
         {
           id: "logo-5",
@@ -911,9 +954,9 @@ const projects: ProjectProps[] = [
       ],
       backend: [
         {
-          id: "logo-1",
-          title: "Firebase",
-          image: "/logos/firebase.svg",
+          id: "backend-1",
+          title: "Cloud Firestore",
+          image: "/logos/cloud-firestore.svg",
         },
       ],
       infrastructure: [
@@ -921,6 +964,11 @@ const projects: ProjectProps[] = [
           id: "logo-1",
           title: "Expo",
           image: "/logos/expo.svg",
+        },
+        {
+          id: "logo-2",
+          title: "Firebase",
+          image: "/logos/firebase.svg",
         },
       ],
     },
@@ -1203,7 +1251,7 @@ const projects: ProjectProps[] = [
           id: "",
           title: "Vercel",
           image: "/logos/vercel.svg",
-          invert: true
+          invert: true,
         },
       ],
     },
@@ -1276,7 +1324,8 @@ const projects: ProjectProps[] = [
         {
           id: "1",
           title: "Next.js",
-          image: "/logos/nextjs.svg", invert: true,
+          image: "/logos/nextjs.svg",
+          invert: true,
         },
         {
           id: "2",
@@ -1305,7 +1354,7 @@ const projects: ProjectProps[] = [
           id: "logo-2",
           title: "Vercel",
           image: "/logos/vercel.svg",
-          invert: true
+          invert: true,
         },
       ],
     },
