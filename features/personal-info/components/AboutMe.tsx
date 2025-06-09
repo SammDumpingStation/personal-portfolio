@@ -44,14 +44,6 @@ export default function AboutMe() {
             {/* Right Column: Image */}
             <div className="relative flex-1 overflow-hidden rounded-lg">
               <Skeleton className="w-full h-full" />
-              {/* <Image
-                src="https://placehold.co/900/EBEDED/C3C9C9?text=O&font=poppins.svg"
-                alt="Developer working on a project"
-                className="object-cover"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              /> */}
               <div className="absolute bottom-4 left-4 flex flex-col rounded-lg bg-background p-4 shadow-lg sm:bottom-6 sm:left-6 sm:p-6">
                 <span className="text-lg font-semibold sm:text-xl">
                   About Me

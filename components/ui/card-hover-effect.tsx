@@ -55,6 +55,7 @@ export const HoverEffect = ({
               alt={`${item.title} Logo`}
               width={200}
               height={48}
+              
               className={cn("h-12 mx-auto max-w-fit", item.invert && "dark:invert")}
             />
             <CardTitle className="text-foreground">{item.title}</CardTitle>

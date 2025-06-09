@@ -15,6 +15,7 @@ import {
   Trophy,
   Heart,
   Zap,
+  Check,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -193,7 +194,9 @@ export default function Component() {
                     key={index}
                     className="flex items-start gap-4 p-6 rounded-xl  transition-all duration-200 group"
                   >
-                    <div className="w-3 h-3 rounded-full bg-zinc-400 dark:bg-zinc-600 mt-2 flex-shrink-0 group-hover:bg-zinc-600 dark:group-hover:bg-zinc-400 transition-colors" />
+                    <div className="p-2 border border-green-500 rounded-full flex items-center justify-center">
+                      <Check className="text-green-500 " />
+                    </div>
                     <span className="text-sm lg:text-base  leading-relaxed font-medium">
                       {achievement}
                     </span>
