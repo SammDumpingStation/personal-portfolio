@@ -79,7 +79,7 @@ export default function NavBar() {
       <div className="flex items-center gap-3">
         {/* Desktop CTA */}
         <Button
-          className="hidden md:flex px-4 py-3 group  "
+          className="hidden md:flex group  px-6 py-2"
           size="custom"
           icon={Send}
           iconPlacement="right"
@@ -87,7 +87,6 @@ export default function NavBar() {
           onClick={() => router.push("/contact")}
         >
           Let&apos;s Talk
-          {/* <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" /> */}
         </Button>
 
         {/* Mobile Menu Button */}
@@ -128,7 +127,7 @@ export default function NavBar() {
               className="mt-4 rounded-full group justify-center"
               onClick={() => router.push("/contact")}
             >
-              Contact Me
+              Let&apos;s Talk
               <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </nav>

@@ -1,4 +1,4 @@
-import { Camera, Code, Coffee, Map, MapPin, Music } from "lucide-react";
+import { Camera, Clock, Code, Coffee, Facebook, Github, Instagram, Mail, Map, MapPin, MessageSquare, Music, Phone } from "lucide-react";
 
 const personalInfo = {
   name: "Samm Caagbay", // Replace with your actual name
@@ -35,4 +35,58 @@ const interestIcons = {
   "Tech Exploration": Code,
 };
 
-export { personalInfo, interestIcons };
+  const socialLinks = [
+    {
+      icon: "/logos/facebook.svg",
+      label: "Facebook",
+      href: "https://facebook.com/yourprofile",
+      color: "hover:text-blue-600",
+    },
+    {
+      icon: "/logos/whatsapp.svg",
+      label: "WhatsApp",
+      href: "https://wa.me/63XXXXXXXXX",
+      color: "hover:text-green-600",
+    },
+    {
+      icon: "/logos/instagram.svg",
+      label: "Instagram",
+      href: "https://instagram.com/yourprofile",
+      color: "hover:text-pink-600",
+    },
+    {
+      icon: "/logos/github.svg",
+      label: "GitHub",
+      href: "https://github.com/yourprofile",
+      color: "hover:text-gray-800 dark:hover:text-gray-200",
+    },
+  ];
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "sammcaag@gmail.com",
+      description: "Drop me a line anytime",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+63 961 459 6991",
+      description: "Available Mon-Fri, 9AM-6PM",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Cagayan de Oro City, Philippines",
+      description: "Remote work available",
+    },
+    {
+      icon: Clock,
+      label: "Response Time",
+      value: "Within 24 hours",
+      description: "Usually much faster",
+    },
+  ];
+
+export { personalInfo, interestIcons, socialLinks, contactInfo };

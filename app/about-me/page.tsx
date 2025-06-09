@@ -14,25 +14,23 @@ import {
   Check,
 } from "lucide-react";
 import Image from "next/image";
-import { interestIcons, personalInfo } from "@/features/personal-info/data/personal-info-data";
+import {
+  interestIcons,
+  personalInfo,
+} from "@/features/personal-info/data/personal-info-data";
+import CTA from "@/components/CTA";
 
 export default function Component() {
- 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-7xl">
+    <main className="container mx-auto px-4">
       {/* Enhanced Header */}
       <div className="text-center mb-16 space-y-4">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <Sparkles className="w-6 h-6 " />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            About Me
-          </h1>
-          <Sparkles className="w-6 h-6 " />
+        <div className="text-center mb-12">
+          <h2 className="heading">About Me</h2>
+          <p className="sub-heading">
+            Discover the developer behind innovative solutions
+          </p>
         </div>
-        <p className="text-lg md:text-xl  max-w-2xl mx-auto leading-relaxed">
-          Discover the developer behind innovative solutions
-        </p>
-        <div className="section-underline"></div>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -55,11 +53,7 @@ export default function Component() {
                   </div>
                 </div>
                 <div className="absolute -bottom-3 -right-3 w-14 h-14 rounded-full border border-card dark:border-muted-foreground flex items-center justify-center shadow-lg animate-bounce">
-                  <span
-                    className="text-xl"
-                    role="img"
-                    aria-label="Waving hand"
-                  >
+                  <span className="text-xl" role="img" aria-label="Waving hand">
                     👋
                   </span>
                 </div>
@@ -104,16 +98,16 @@ export default function Component() {
                   className="w-full h-12  font-semibold hover transition-all duration-200"
                   size="lg"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
                   Let's Talk
+                  <Mail className="w-5 h-5 mr-2" />
                 </Button>
                 <Button
                   variant="outline"
                   className="w-full h-12   font-semibold transition-all duration-200"
                   size="lg"
                 >
+                  Download CVA
                   <Download className="w-5 h-5 mr-2" />
-                  Download Resume
                 </Button>
               </div>
             </CardContent>
@@ -190,7 +184,7 @@ export default function Component() {
                       key={index}
                       className="flex flex-col items-center gap-4 p-6 rounded-xl  border  transition-all duration-300 group cursor-default"
                     >
-                      <div className="btn-style w-16 h-16 rounded-full  flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                      <div className="btn-style w-16 h-16 rounded-full  flex items-center justify-center btn-tilt-group">
                         <IconComponent className="w-8 h-8 text-white dark:text-zinc-900" />
                       </div>
                       <span className="text-sm lg:text-base font-semibold text-center  group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">
@@ -250,6 +244,7 @@ export default function Component() {
           </Card>
         </div>
       </div>
+      <CTA />
     </main>
   );
 }

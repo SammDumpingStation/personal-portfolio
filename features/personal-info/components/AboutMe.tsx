@@ -78,10 +78,10 @@ export default function AboutMe() {
 
             <div className="relative space-y-8">
               {milestones.map((milestone, index) => (
-                <div key={index} className="relative flex gap-4">
-                  <div className="relative group">
-                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden bg-card border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors">
-                      <milestone.icon className="size-5 text-primary sm:size-6" />
+                <div key={index} className="relative flex gap-4 group">
+                  <div className="relative ">
+                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden btn-tilt-group btn-style">
+                      <milestone.icon className="size-5 sm:size-6" />
                     </div>
                     {index !== milestones.length - 1 && (
                       <div className="absolute left-1/2 top-12 h-14 w-px -translate-x-1/2 bg-primary/30 sm:top-12" />

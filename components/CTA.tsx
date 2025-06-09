@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Logo } from "./Logo";
 import { Card } from "./ui/card";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -87,9 +88,9 @@ export default function CTA() {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-4 rounded-lg  p-4 transition-colors  border"
+                  className="flex group items-center gap-4 rounded-lg  p-4 transition-colors  border"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-primary/30 bg-primary/10 text-primary">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full btn-style btn-tilt-group">
                     {item.icon}
                   </span>
                   <span className="text-base font-medium text-foreground">
@@ -105,9 +106,11 @@ export default function CTA() {
             <Card className="border p-10">
               <Logo />
             </Card>
-            <Button className="group !px-8 py-6 text-base font-medium">
-              Let&apos;s Build Your Next Big Idea
-              <ArrowRight className="ml-3 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <Button className="group !px-8 py-6 text-base font-medium" asChild>
+              <Link href={"/contact"}>
+                Let&apos;s Build Your Next Big Idea
+                <ArrowRight className="ml-3 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </Button>
             <p className="text-center text-sm text-muted-foreground lg:text-right">
               Partner with a Developer Trusted by Clients and Teams.

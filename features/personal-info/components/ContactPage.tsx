@@ -1,72 +1,10 @@
 import { Button } from "@/components/ui/button";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  MessageSquare,
-  User,
-  Clock,
-  Facebook,
-  Instagram,
-  Github,
-} from "lucide-react";
+import { Mail, Send, MessageSquare, User, Clock } from "lucide-react";
+import { contactInfo, socialLinks } from "../data/personal-info-data";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactPage() {
-  const socialLinks = [
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/yourprofile",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: MessageSquare,
-      label: "WhatsApp",
-      href: "https://wa.me/63XXXXXXXXX",
-      color: "hover:text-green-600",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      href: "https://instagram.com/yourprofile",
-      color: "hover:text-pink-600",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/yourprofile",
-      color: "hover:text-gray-800 dark:hover:text-gray-200",
-    },
-  ];
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "hello@yourname.com",
-      description: "Drop me a line anytime",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+63 XXX XXX XXXX",
-      description: "Available Mon-Fri, 9AM-6PM",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Zamboanga, Philippines",
-      description: "Remote work available",
-    },
-    {
-      icon: Clock,
-      label: "Response Time",
-      value: "Within 24 hours",
-      description: "Usually much faster",
-    },
-  ];
-
   return (
     <section className="bg-background py-12 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,9 +123,9 @@ export default function ContactPage() {
               <div className="grid gap-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="group relative">
-                    <div className="flex items-start gap-4 rounded-lg border bg-card p-4 transition-all hover:shadow-md hover:border-primary/20">
-                      <div className="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                        <info.icon className="size-5" />
+                    <div className="flex items-start gap-4 rounded-lg border bg-card p-4 ">
+                      <div className="flex size-10 items-center justify-center rounded-full btn-tilt-group btn-style">
+                        <info.icon className="" />
                       </div>
                       <div className="flex-1 space-y-1">
                         <div className="flex items-center justify-between">
@@ -220,16 +158,22 @@ export default function ContactPage() {
 
                   <div className="flex items-center justify-center gap-4">
                     {socialLinks.map((social, index) => (
-                      <a
+                      <Link
                         key={index}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`group flex size-12 items-center justify-center rounded-full bg-background border border-primary/20 text-muted-foreground transition-all hover:scale-110 hover:border-primary/40 hover:shadow-lg ${social.color}`}
+                        className={`group flex size-18 items-center justify-center rounded-full bg-background border border-primary/20 text-muted-foreground transition-all hover:scale-110 hover:border-primary/40 hover:shadow-lg ${social.color}`}
                         aria-label={social.label}
                       >
-                        <social.icon className="size-5 transition-transform group-hover:scale-110" />
-                      </a>
+                        <Image
+                          src={social.icon}
+                          alt={social.label}
+                          width={24}
+                          height={24}
+                          className="size-8 transition-transform group-hover:scale-110"
+                        />
+                      </Link>
                     ))}
                   </div>
 
@@ -250,9 +194,9 @@ export default function ContactPage() {
         {/* Bottom section with additional info */}
         <div className="mt-12 border-t pt-12">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="text-center space-y-2">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Clock className="size-6" />
+            <div className="text-center space-y-2 group">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
+                <Clock className="size-6 " />
               </div>
               <h3 className="font-semibold">Quick Response</h3>
               <p className="text-sm text-muted-foreground">
@@ -260,8 +204,8 @@ export default function ContactPage() {
                 business days.
               </p>
             </div>
-            <div className="text-center space-y-2">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="text-center space-y-2 group">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
                 <MessageSquare className="size-6" />
               </div>
               <h3 className="font-semibold">Free Consultation</h3>
@@ -270,8 +214,8 @@ export default function ContactPage() {
                 achieve your goals.
               </p>
             </div>
-            <div className="text-center space-y-2">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="text-center space-y-2 group">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
                 <User className="size-6" />
               </div>
               <h3 className="font-semibold">Personal Touch</h3>

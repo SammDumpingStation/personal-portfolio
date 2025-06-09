@@ -1,8 +1,9 @@
-import { Phone, ArrowDownToLine, Circle } from "lucide-react";
+import { Phone, ArrowDownToLine, Circle, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import BackgroundLines from "@/components/BackgroundLines";
+import Link from "next/link";
 
 /**
  * Hero component renders a prominent section of a webpage that introduces Samm Caagbay,
@@ -42,13 +43,25 @@ export default function Hero() {
               </p>
             </div>
             <div className="mt-8 flex gap-3">
-              <Button size="lg" effect={'shineHover'} className="gap-2">
-                <ArrowDownToLine className="" />
+              <Button
+                effect={"expandIcon"}
+                icon={ArrowDownToLine}
+                iconPlacement="right"
+                className="gap-2 min-w-52"
+                size={"lg"}
+              >
                 Download CVT
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Phone />
-                Contact Me
+              <Button
+                variant="outline"
+                icon={Send}
+                effect={"expandIcon"}
+                iconPlacement="right"
+                className="gap-2 min-w-52"
+                size={"lg"}
+                asChild
+              >
+                <Link href={"/contact"}>Let&apos;s Talk</Link>
               </Button>
             </div>
           </div>

@@ -43,7 +43,7 @@ const buttonVariants = cva(
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-full gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "min-h-10 rounded-lg px-6 has-[>svg]:px-5 has-[>svg]:h-14 sm:has-[>svg]:min-w-52 min-w-32",
+        lg: "min-h-14 rounded-lg px-6 has-[>svg]:px-5n sm:has-[>svg]:min-w-52 min-w-32",
         icon: "size-9",
         custom: "",
       },
@@ -110,7 +110,7 @@ const Button = React.forwardRef<
         {Icon &&
           iconPlacement === "right" &&
           (effect === "expandIcon" ? (
-            <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
+            <div className="w-0 translate-x-[100%]  pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
               <Icon />
             </div>
           ) : (
