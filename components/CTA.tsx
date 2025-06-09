@@ -3,15 +3,11 @@ import {
   ArrowRight,
   Zap,
   Shield,
-  Globe,
-  Settings,
-  Rocket,
   TrendingUp,
   Code,
   Layout,
   Database,
 } from "lucide-react";
-import Image from "next/image";
 import { Logo } from "./Logo";
 import { Card } from "./ui/card";
 
@@ -110,7 +106,7 @@ export default function CTA() {
               <Logo />
             </Card>
             <Button className="group !px-8 py-6 text-base font-medium">
-              Let's Build Your Next Big Idea
+              Let&apos;s Build Your Next Big Idea
               <ArrowRight className="ml-3 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <p className="text-center text-sm text-muted-foreground lg:text-right">

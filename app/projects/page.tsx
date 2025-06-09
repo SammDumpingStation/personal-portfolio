@@ -1,6 +1,4 @@
 import React from "react";
-import { projectsCards } from "@/features/projects/data/projects-data";
-import ProjectCard from "@/features/projects/components/ProjectCard";
 import ProjectList from "@/features/projects/components/ProjectList";
 
 export default function Projects() {
@@ -12,7 +10,7 @@ export default function Projects() {
           Here are some of the projects I&apos;ve worked on
         </p>
       </div>
-      {/* Category Filter */}
+      {/* Project Category Filter */}
       <ProjectList />
     </main>
   );

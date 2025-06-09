@@ -51,182 +51,176 @@ export default function Component() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-gray-100 dark:from-gray-900 dark:to-slate-800">
-      <div className="container mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get to know the person behind the code
-          </p>
+    <main className="container mx-auto">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h2 className="heading">About Me</h2>
+        <p className="sub-heading">
+         Get to know the person behind the code
+        </p>
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+        {/* Left Column - Photo and Quick Info */}
+        <div className="lg:col-span-1">
+          <Card className="sticky top-24">
+            <CardContent className="p-6">
+              {/* Profile Photo */}
+              <div className="relative mb-6">
+                <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                  <Image
+                    src="/placeholder.svg?height=192&width=192"
+                    alt={personalInfo.name}
+                    fill
+                    className="w-full h-full rounded-full object-cover bg-white"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">👋</span>
+                </div>
+              </div>
+
+              {/* Name and Title */}
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">{personalInfo.name}</h3>
+                <p className="text-muted-foreground mb-4">
+                  {personalInfo.title}
+                </p>
+              </div>
+
+              {/* Quick Info */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3 text-sm">
+                  <MapPin className="w-4 h-4 text-muted-foreground" />
+                  <span>{personalInfo.location}</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Calendar className="w-4 h-4 text-muted-foreground" />
+                  <span>{personalInfo.experience} Experience</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <GraduationCap className="w-4 h-4 text-muted-foreground" />
+                  <span>{personalInfo.education}</span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="space-y-3">
+                <Button className="w-full" size="lg">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Get In Touch
+                </Button>
+                <Button variant="outline" className="w-full" size="lg">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Column - Photo and Quick Info */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-24">
-              <CardContent className="p-6">
-                {/* Profile Photo */}
-                <div className="relative mb-6">
-                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                    <Image
-                      src="/placeholder.svg?height=192&width=192"
-                      alt={personalInfo.name}
-                      fill
-                      className="w-full h-full rounded-full object-cover bg-white"
-                    />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">👋</span>
-                  </div>
-                </div>
+        {/* Right Column - Detailed Information */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Bio Section */}
+          <Card>
+            <CardContent className="p-8">
+              <h4 className="text-xl font-semibold mb-4">My Story</h4>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>{personalInfo.bio}</p>
+                <p>{personalInfo.extendedBio}</p>
+              </div>
+            </CardContent>
+          </Card>
 
-                {/* Name and Title */}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    {personalInfo.name}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {personalInfo.title}
-                  </p>
-                </div>
-
-                {/* Quick Info */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-sm">
-                    <MapPin className="w-4 h-4 text-muted-foreground" />
-                    <span>{personalInfo.location}</span>
+          {/* Achievements */}
+          <Card>
+            <CardContent className="p-8">
+              <h4 className="text-xl font-semibold mb-6">Key Achievements</h4>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {personalInfo.achievements.map((achievement, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                    <span className="text-sm">{achievement}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <Calendar className="w-4 h-4 text-muted-foreground" />
-                    <span>{personalInfo.experience} Experience</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <GraduationCap className="w-4 h-4 text-muted-foreground" />
-                    <span>{personalInfo.education}</span>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-                {/* Action Buttons */}
-                <div className="space-y-3">
-                  <Button className="w-full" size="lg">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Get In Touch
-                  </Button>
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Resume
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Right Column - Detailed Information */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Bio Section */}
-            <Card>
-              <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-4">My Story</h4>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>{personalInfo.bio}</p>
-                  <p>{personalInfo.extendedBio}</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Achievements */}
-            <Card>
-              <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-6">Key Achievements</h4>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {personalInfo.achievements.map((achievement, index) => (
+          {/* Interests & Hobbies */}
+          <Card>
+            <CardContent className="p-8">
+              <h4 className="text-xl font-semibold mb-6">
+                When I&apos;m Not Coding
+              </h4>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {personalInfo.interests.map((interest, index) => {
+                  const IconComponent =
+                    interestIcons[interest as keyof typeof interestIcons] ||
+                    Coffee;
+                  return (
                     <div
                       key={index}
-                      className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                      className="flex flex-col items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group cursor-default"
                     >
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                      <span className="text-sm">{achievement}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Interests & Hobbies */}
-            <Card>
-              <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-6">
-                  When I&apos;m Not Coding
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {personalInfo.interests.map((interest, index) => {
-                    const IconComponent =
-                      interestIcons[interest as keyof typeof interestIcons] ||
-                      Coffee;
-                    return (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group cursor-default"
-                      >
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <IconComponent className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-sm font-medium text-center">
-                          {interest}
-                        </span>
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
+                      <span className="text-sm font-medium text-center">
+                        {interest}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
 
-            {/* Fun Facts */}
-            <Card>
-              <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-6">Fun Facts</h4>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
-                      500+
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      Cups of coffee consumed
-                    </div>
+          {/* Fun Facts */}
+          <Card>
+            <CardContent className="p-8">
+              <h4 className="text-xl font-semibold mb-6">Fun Facts</h4>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    500+
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">
-                      50+
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      Projects completed
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">
-                      15+
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      Technologies mastered
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">
-                      3
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      Countries visited for work
-                    </div>
+                  <div className="text-sm text-muted-foreground">
+                    Cups of coffee consumed
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    50+
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Projects completed
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    15+
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Technologies mastered
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">
+                    3
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Countries visited for work
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
