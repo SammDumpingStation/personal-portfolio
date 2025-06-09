@@ -5,7 +5,7 @@ import Link from "next/link";
 import { navLinks } from "@/data/links";
 import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowRight, Mail, Menu, Send, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function NavBar() {
@@ -81,10 +81,13 @@ export default function NavBar() {
         <Button
           className="hidden md:flex px-4 py-3 group  "
           size="custom"
+          icon={Send}
+          iconPlacement="right"
+          effect="expandIcon"
           onClick={() => router.push("/contact")}
         >
-          Contact Me
-          <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+          Let&apos;s Talk
+          {/* <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" /> */}
         </Button>
 
         {/* Mobile Menu Button */}

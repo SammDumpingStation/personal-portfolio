@@ -4,10 +4,6 @@ import {
   MapPin,
   Calendar,
   GraduationCap,
-  Coffee,
-  Camera,
-  Music,
-  Map,
   Code,
   Mail,
   Download,
@@ -18,43 +14,10 @@ import {
   Check,
 } from "lucide-react";
 import Image from "next/image";
+import { interestIcons, personalInfo } from "@/features/personal-info/data/personal-info-data";
 
 export default function Component() {
-  // Personal information - customized to your use case
-  const personalInfo = {
-    name: "Your Name", // Replace with your actual name
-    title: "Full-Stack Developer",
-    location: "Philippines",
-    experience: "3 Years",
-    education: "BS Information Technology, [Your University]", // Replace with your university
-    bio: "I'm a passionate full-stack developer who transforms complex challenges into user-friendly web and mobile apps. With a knack for technologies like Next.js, Laravel, and React Native, I build solutions that streamline operations and delight users. My projects, from lending systems to cultural blogs, reflect my commitment to real-world impact.",
-    extendedBio:
-      "My coding journey began three years ago with a simple HTML blog for the Kaamulan festival. Since then, I've built apps for hospitals, catering platforms, and car buyers, earning accolades like 2nd place in a university competition for KOSHI. I thrive on turning client needs into intuitive, efficient solutions, blending technical skill with a passion for problem-solving.",
-    interests: [
-      "Photography",
-      "Coffee Brewing",
-      "Music",
-      "Hiking",
-      "Cultural Research",
-      "Tech Exploration",
-    ],
-    achievements: [
-      "Developed 8+ impactful web and mobile applications",
-      "Won 2nd place for KOSHI in a university technopreneurship competition",
-      "Digitized hospital operations for NBSC with a Laravel-based system",
-      "Built real-time catering platform Food Sentinel, earning instructor praise",
-    ],
-  };
-
-  const interestIcons = {
-    Photography: Camera,
-    "Coffee Brewing": Coffee,
-    Music: Music,
-    Hiking: Map,
-    "Cultural Research": MapPin,
-    "Tech Exploration": Code,
-  };
-
+ 
   return (
     <main className="container mx-auto px-4 py-8 max-w-7xl">
       {/* Enhanced Header */}
@@ -69,7 +32,7 @@ export default function Component() {
         <p className="text-lg md:text-xl  max-w-2xl mx-auto leading-relaxed">
           Discover the developer behind innovative solutions
         </p>
-        <div className="w-24 h-1 bg-zinc-900 dark:bg-zinc-100 mx-auto rounded-full"></div>
+        <div className="section-underline"></div>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -91,9 +54,9 @@ export default function Component() {
                     />
                   </div>
                 </div>
-                <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-zinc-900 dark:bg-zinc-100 rounded-full border-4 border-white dark:border-zinc-950 flex items-center justify-center shadow-lg animate-bounce">
+                <div className="absolute -bottom-3 -right-3 w-14 h-14 rounded-full border border-card dark:border-muted-foreground flex items-center justify-center shadow-lg animate-bounce">
                   <span
-                    className="text-white dark:text-zinc-900 text-xl"
+                    className="text-xl"
                     role="img"
                     aria-label="Waving hand"
                   >
@@ -114,13 +77,13 @@ export default function Component() {
               {/* Enhanced Quick Info */}
               <div className="space-y-4 mb-8 p-6 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border">
                 <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                  <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
                     <MapPin className="w-4 h-4 " />
                   </div>
                   <span className="font-medium">{personalInfo.location}</span>
                 </div>
                 <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                  <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
                     <Calendar className="w-4 h-4 " />
                   </div>
                   <span className="font-medium">
@@ -128,7 +91,7 @@ export default function Component() {
                   </span>
                 </div>
                 <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                  <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
+                  <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
                     <GraduationCap className="w-4 h-4 " />
                   </div>
                   <span className="font-medium">{personalInfo.education}</span>
@@ -225,9 +188,9 @@ export default function Component() {
                   return (
                     <div
                       key={index}
-                      className="flex flex-col items-center gap-4 p-6 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border  transition-all duration-300 group cursor-default"
+                      className="flex flex-col items-center gap-4 p-6 rounded-xl  border  transition-all duration-300 group cursor-default"
                     >
-                      <div className="w-16 h-16 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                      <div className="btn-style w-16 h-16 rounded-full  flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                         <IconComponent className="w-8 h-8 text-white dark:text-zinc-900" />
                       </div>
                       <span className="text-sm lg:text-base font-semibold text-center  group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">

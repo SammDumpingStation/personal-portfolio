@@ -134,4 +134,10 @@
   .section-container {
     @apply py-20;
   }
+  .btn-style {
+    @apply text-primary-foreground shadow-xs bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300;
+  }
+  .section-underline {
+    @apply w-24 h-1.5 mx-auto rounded-full shadow-xs bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300;
+  }
 }

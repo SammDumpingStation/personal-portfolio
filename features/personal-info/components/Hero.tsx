@@ -42,7 +42,7 @@ export default function Hero() {
               </p>
             </div>
             <div className="mt-8 flex gap-3">
-              <Button size="lg" className="gap-2">
+              <Button size="lg" effect={'shineHover'} className="gap-2">
                 <ArrowDownToLine className="" />
                 Download CVT
               </Button>

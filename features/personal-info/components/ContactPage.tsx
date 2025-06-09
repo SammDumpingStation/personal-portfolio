@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Mail,
   Phone,
@@ -165,15 +166,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="group relative w-full overflow-hidden rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                size={"custom"}
+                className="w-full px-6 py-3"
               >
-                <div className="flex items-center justify-center gap-2">
-                  <Send className="size-4 transition-transform group-hover:translate-x-1" />
-                  Send Message
-                </div>
-              </button>
+                Send Message
+                <Send className="size-4 transition-transform group-hover:translate-x-1" />
+              </Button>
             </form>
           </div>
 

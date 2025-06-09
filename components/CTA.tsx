@@ -55,7 +55,7 @@ export default function CTA() {
           <div className="space-y-8">
             <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
               Transform Your Vision into Reality
-              <span className="mt-4 block h-1.5 w-16 rounded-full bg-primary"></span>
+              <span className="mt-4 block section-underline mx-0"></span>
             </h3>
 
             <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -87,7 +87,7 @@ export default function CTA() {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-4 rounded-lg bg-muted/50 p-4 transition-colors hover:bg-muted"
+                  className="flex items-center gap-4 rounded-lg  p-4 transition-colors  border"
                 >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-primary/30 bg-primary/10 text-primary">
                     {item.icon}

@@ -129,7 +129,7 @@ export default async function Project({
     return (
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-6">{title}</h2>
-        <div className="w-24 h-1 mx-auto rounded-full bg-primary"></div>
+        <div className="section-underline"/>
       </div>
     );
   };
@@ -192,14 +192,16 @@ export default async function Project({
           })}
         >
           {project.features.map(({ icon: Icon, title, description }, index) => (
-            <Card key={index} className="text-center">
+            <Card key={index} className="">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
-                  <Icon />
+                <div className="flex items-center gap-4">
+                  <div className="btn-style w-12 h-12 rounded-lg flex items-center justify-center">
+                    <Icon />
+                  </div>
+                  <CardTitle className="text-xl">{title}</CardTitle>
                 </div>
-                <CardTitle className="text-xl">{title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="">
                 <p className="">{description}</p>
               </CardContent>
             </Card>
