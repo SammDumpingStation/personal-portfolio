@@ -96,7 +96,7 @@ export default function ProjectImageCarousel({
             key={index}
             onClick={() => api?.scrollTo(index)}
             className={cn("h-10 w-10 rounded-full border-2", {
-              "border-primary": current === index + 1,
+              "!border-foreground": current === index + 1,
             })}
           >
             {index + 1}

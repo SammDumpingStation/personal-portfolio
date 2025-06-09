@@ -3,7 +3,7 @@ import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { navLinks } from "@/data/links";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -12,6 +12,7 @@ export default function NavBar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   // Handle scroll effect
   useEffect(() => {
@@ -76,10 +77,13 @@ export default function NavBar() {
 
       {/* Right Section */}
       <div className="flex items-center gap-3">
-
         {/* Desktop CTA */}
-        <Button className="hidden md:flex rounded-full group px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300">
-          Hire Me
+        <Button
+          className="hidden md:flex px-4 py-3 group  "
+          size="custom"
+          onClick={() => router.push("/contact")}
+        >
+          Contact Me
           <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Button>
 
@@ -117,8 +121,11 @@ export default function NavBar() {
               </Button>
             ))}
 
-            <Button className="mt-4 rounded-full group justify-center">
-              Hire Me
+            <Button
+              className="mt-4 rounded-full group justify-center"
+              onClick={() => router.push("/contact")}
+            >
+              Contact Me
               <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </nav>

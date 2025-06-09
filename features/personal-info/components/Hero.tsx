@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
             <div className="mt-8 flex gap-3">
               <Button size="lg" className="gap-2">
-                <ArrowDownToLine />
+                <ArrowDownToLine className="" />
                 Download CVT
               </Button>
               <Button size="lg" variant="outline" className="gap-2">

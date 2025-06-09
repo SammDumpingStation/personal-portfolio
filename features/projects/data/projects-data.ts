@@ -109,12 +109,6 @@ const projectHighlights: ProjectCardProps[] = [
           image: "/logos/typescript.svg",
         },
         {
-          id: "logo-3",
-          title: "Prisma",
-          image: "/logos/prisma.svg",
-          invert: true,
-        },
-        {
           id: "logo-4",
           title: "TailwindCSS",
           image: "/logos/tailwind.svg",
@@ -302,12 +296,6 @@ const projectsCards: ProjectCardProps[] = [
           id: "logo-2",
           title: "TypeScript",
           image: "/logos/typescript.svg",
-        },
-        {
-          id: "logo-3",
-          title: "Prisma",
-          image: "/logos/prisma.svg",
-          invert: true,
         },
         {
           id: "logo-4",
@@ -776,12 +764,6 @@ const projects: ProjectProps[] = [
           id: "logo-2",
           title: "TypeScript",
           image: "/logos/typescript.svg",
-        },
-        {
-          id: "logo-3",
-          title: "Prisma",
-          image: "/logos/prisma.svg",
-          invert: true,
         },
         {
           id: "logo-4",
