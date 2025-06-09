@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -12,6 +12,7 @@ import {
   Heart,
   Zap,
   Check,
+  LucideIcon,
 } from "lucide-react";
 import Image from "next/image";
 import {
@@ -21,10 +22,27 @@ import {
 import CTA from "@/components/CTA";
 
 export default function AboutMe() {
+  const SectionHeader = ({
+    icon: Icon,
+    title,
+  }: {
+    icon: LucideIcon;
+    title: string;
+  }) => {
+    return (
+      <CardTitle className="flex items-center gap-4 p-0">
+        <div className="w-12 h-12 rounded-full border flex items-center justify-center">
+          <Icon className="w-6 h-6" />
+        </div>
+        <h3 className="text-2xl lg:text-3xl font-bold">{title}</h3>
+      </CardTitle>
+    );
+  };
+
   const StickyProfileCard = () => {
     return (
       <div className="lg:col-span-1">
-        <Card className="sticky top-24   backdrop-blur-sm">
+        <Card className="sticky top-24 backdrop-blur-sm">
           <CardContent className="p-8">
             {/* Enhanced Profile Photo */}
             <div className="relative mb-8 group">
@@ -48,11 +66,13 @@ export default function AboutMe() {
             </div>
 
             {/* Enhanced Name and Title */}
-            <div className="text-center mb-8 space-y-2">
-              <h2 className="text-2xl lg:text-3xl font-bold">
+            <div className=" mb-8 space-y-2">
+              <h2 className="text-2xl lg:text-3xl font-bold text-center">
                 {personalInfo.name}
               </h2>
-              <p className=" font-medium text-lg">{personalInfo.title}</p>
+              <p className=" font-medium text-lg text-center">
+                {personalInfo.title}
+              </p>
               <div className="w-16 h-0.5 bg-zinc-400 dark:bg-zinc-600 mx-auto rounded-full"></div>
             </div>
 
@@ -106,17 +126,12 @@ export default function AboutMe() {
 
   const BioSection = () => {
     return (
-      <Card className="">
-        <CardContent className="p-8 lg:p-10">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center">
-              <Heart className="w-6 h-6 " />
-            </div>
-            <h3 className="text-2xl lg:text-3xl font-bold">My Story</h3>
-          </div>
+      <Card className="p-10">
+        <SectionHeader icon={Heart} title="My Story" />
+        <CardContent className="p-0">
           <div className="space-y-6  leading-relaxed">
-            <p className="text-base lg:text-lg">{personalInfo.bio}</p>
-            <p className="text-base lg:text-lg">{personalInfo.extendedBio}</p>
+            <p className="">{personalInfo.bio}</p>
+            <p className="">{personalInfo.extendedBio}</p>
           </div>
         </CardContent>
       </Card>
@@ -125,19 +140,14 @@ export default function AboutMe() {
 
   const Achievements = () => {
     return (
-      <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
-        <CardContent className="p-8 lg:p-10">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center">
-              <Trophy className="w-6 h-6 " />
-            </div>
-            <h3 className="text-2xl lg:text-3xl font-bold">Key Achievements</h3>
-          </div>
+      <Card className="p-10">
+        <SectionHeader icon={Trophy} title="Key Achievements" />
+        <CardContent className="p-0">
           <div className="grid sm:grid-cols-2 gap-6">
             {personalInfo.achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 rounded-xl  transition-all duration-200 group"
+                className="flex items-start gap-4 rounded-xl  transition-all duration-200 group"
               >
                 <div className="p-2 border border-green-500 rounded-full flex items-center justify-center">
                   <Check className="text-green-500 " />
@@ -155,16 +165,9 @@ export default function AboutMe() {
 
   const Interests = () => {
     return (
-      <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
-        <CardContent className="p-8 lg:p-10">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center">
-              <Zap className="w-6 h-6 " />
-            </div>
-            <h3 className="text-2xl lg:text-3xl font-bold">
-              When I'm Not Coding
-            </h3>
-          </div>
+      <Card className="p-10">
+        <SectionHeader icon={Zap} title="When I'm Not Coding" />
+        <CardContent className="p-0">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
             {personalInfo.interests.map((interest, index) => {
               const IconComponent =
@@ -189,54 +192,36 @@ export default function AboutMe() {
     );
   };
 
+  const FunFact = ({ number, title }: { number: string; title: string }) => {
+    return (
+      <div className="text-center group cursor-default">
+        <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
+          {number}
+        </div>
+        <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
+          {title}
+        </div>
+      </div>
+    );
+  };
+
   const FunFacts = () => {
     return (
-      <Card className=" hover: transition-all duration-300 backdrop-blur-sm">
-        <CardContent className="p-8 lg:p-10">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center">
-              <Sparkles className="w-6 h-6 " />
-            </div>
-            <h3 className="text-2xl lg:text-3xl font-bold">Fun Facts</h3>
-          </div>
+      <Card className="p-10">
+        <SectionHeader icon={Sparkles} title="Fun Facts" />
+        <CardContent className="p-0">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group cursor-default">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
-                300+
-              </div>
-              <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
-                Cups of coffee enjoyed
-              </div>
-            </div>
-            <div className="text-center group cursor-default">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
-                8
-              </div>
-              <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
-                Projects delivered
-              </div>
-            </div>
-            <div className="text-center group cursor-default">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
-                10+
-              </div>
-              <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
-                Technologies mastered
-              </div>
-            </div>
-            <div className="text-center group cursor-default">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-200">
-                2
-              </div>
-              <div className="text-sm lg:text-base  font-medium group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
-                Awards won
-              </div>
-            </div>
+            <FunFact number="300+" title="Cups of coffee enjoyed" />
+            <FunFact number="8+" title="Projects delivered" />
+            <FunFact number="10+" title="Technologies mastered" />
+            <FunFact number="2" title="Awards won" />
           </div>
         </CardContent>
       </Card>
     );
   };
+
+
 
   return (
     <main className="container mx-auto px-4">
