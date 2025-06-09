@@ -57,22 +57,22 @@ export default async function Project({
           <Button
             size="lg"
             variant={project.liveDemoLink ? "default" : "secondary"}
-            disabled={!project.liveDemoLink}
             className={cn("gap-2 cursor-pointer", {
               "cursor-not-allowed": !project.liveDemoLink,
             })}
+            icon={project.liveDemoLink ? ExternalLink : TrafficCone}
+            iconPlacement="right"
+            effect={"expandIcon"}
             asChild={!!project.liveDemoLink}
           >
             {project.liveDemoLink ? (
               <Link href={project.liveDemoLink} target="_blank">
-                <ExternalLink className="h-4 w-4" />
                 View Live Demo
               </Link>
             ) : (
-              <>
-                <TrafficCone className="h-4 w-4" />
+              <span>
                 Live Demo Coming Soon
-              </>
+              </span>
             )}
           </Button>
         </div>

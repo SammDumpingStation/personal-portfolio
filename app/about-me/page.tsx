@@ -15,6 +15,7 @@ import {
   LucideIcon,
   CodeXml,
   Copy,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 import {
@@ -82,7 +83,7 @@ export default function AboutMe() {
             </div>
 
             {/* Enhanced Quick Info */}
-            <div className="space-y-4 mb-8 p-6 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border">
+            <div className="space-y-4 mb-8 p-6 ">
               <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
                 <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
                   <MapPin className="w-4 h-4 " />
@@ -110,17 +111,21 @@ export default function AboutMe() {
               <Button
                 className="w-full h-12  font-semibold hover transition-all duration-200"
                 size="lg"
+                icon={Send}
+                iconPlacement="right"
+                effect={"expandIcon"}
               >
                 Let's Talk
-                <Mail className="w-5 h-5 mr-2" />
               </Button>
               <Button
                 variant="outline"
                 className="w-full h-12   font-semibold transition-all duration-200"
                 size="lg"
+                icon={Download}
+                iconPlacement="right"
+                effect={"expandIcon"}
               >
                 Download CVA
-                <Download className="w-5 h-5 mr-2" />
               </Button>
             </div>
           </CardContent>

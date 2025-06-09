@@ -108,9 +108,11 @@ export default function ContactPage() {
                 type="submit"
                 size={"custom"}
                 className="w-full px-6 py-3"
+                icon={Send}
+                iconPlacement="right"
+                effect={"expandIcon"}
               >
                 Send Message
-                <Send className="size-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </form>
           </div>
@@ -199,7 +201,7 @@ export default function ContactPage() {
                 <Clock className="size-6 " />
               </div>
               <h3 className="font-semibold">Quick Response</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 I typically respond to messages within a few hours during
                 business days.
               </p>
@@ -209,7 +211,7 @@ export default function ContactPage() {
                 <MessageSquare className="size-6" />
               </div>
               <h3 className="font-semibold">Free Consultation</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 Let's discuss your project requirements and how I can help you
                 achieve your goals.
               </p>
@@ -219,7 +221,7 @@ export default function ContactPage() {
                 <User className="size-6" />
               </div>
               <h3 className="font-semibold">Personal Touch</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 Every project gets my full attention and dedication to deliver
                 exceptional results.
               </p>

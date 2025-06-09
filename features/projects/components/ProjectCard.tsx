@@ -89,10 +89,12 @@ export default function ProjectCard({
       <CardFooter className="mt-auto">
         <Button
           className="w-full gap-2 "
+          icon={ArrowRight}
+          iconPlacement="right"
+          effect={"expandIcon"}
           onClick={() => router.push(`/projects/${project.id}`)}
         >
           View Details
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Button>
       </CardFooter>
     </Card>

@@ -44,48 +44,6 @@ const logos: Logo[] = [
     title: "Mongoose",
     image: "/logos/mongoose.svg",
   },
-  {
-    id: "logo-9",
-    title: "Prisma",
-    image: "/logos/prisma.svg",
-    invert: true,
-  },
-  {
-    id: "logo-10",
-    title: "Socket.io",
-    image: "/logos/socket-io.svg",
-    invert: true,
-  },
-  {
-    id: "logo-11",
-    title: "Node.js",
-    image: "/logos/node-js.svg",
-  },
-  {
-    id: "logo-12",
-    title: "React Native",
-    image: "/logos/reactjs.svg",
-  },
-  {
-    id: "logo-13",
-    title: "React Native Reusables",
-    image: "/logos/react-native-reusables.png",
-  },
-  {
-    id: "logo-14",
-    title: "NativewindCSS",
-    image: "https://v2.nativewind.dev/img/logo.svg",
-  },
-  {
-    id: "logo-15",
-    title: "Firebase",
-    image: "/logos/firebase.svg",
-  },
-  {
-    id: "logo-16",
-    title: "Expo",
-    image: "/logos/expo.svg",
-  },
 ];
 
 type TechStackProps = {
@@ -119,12 +77,6 @@ const techStack: TechStackProps = {
       image: "/logos/shadcn-ui.svg",
       invert: true,
     },
-    {
-      id: "logo-9",
-      title: "Prisma",
-      image: "/logos/prisma.svg",
-      invert: true,
-    },
   ],
   backend: [
     {
@@ -137,6 +89,12 @@ const techStack: TechStackProps = {
       id: "logo-6",
       title: "Supabase",
       image: "/logos/supabase.svg",
+    },
+    {
+      id: "logo-9",
+      title: "Prisma",
+      image: "/logos/prisma.svg",
+      invert: true,
     },
     {
       id: "logo-7",

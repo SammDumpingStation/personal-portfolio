@@ -106,10 +106,15 @@ export default function CTA() {
             <Card className="border p-10">
               <Logo />
             </Card>
-            <Button className="group !px-8 py-6 text-base font-medium" asChild>
+            <Button
+              className="group !px-8 py-6 text-base font-medium"
+              asChild
+              icon={ArrowRight}
+              iconPlacement="right"
+              effect={"expandIcon"}
+            >
               <Link href={"/contact"}>
                 Let&apos;s Build Your Next Big Idea
-                <ArrowRight className="ml-3 size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
             <p className="text-center text-sm text-muted-foreground lg:text-right">
