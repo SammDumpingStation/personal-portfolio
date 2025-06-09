@@ -43,16 +43,16 @@ const interestIcons = {
       color: "hover:text-blue-600",
     },
     {
-      icon: "/logos/whatsapp.svg",
-      label: "WhatsApp",
-      href: "https://wa.me/63XXXXXXXXX",
+      icon: "/logos/messenger.svg",
+      label: "Messenger",
+      href: "https://m.me/yourprofile",
       color: "hover:text-green-600",
     },
     {
-      icon: "/logos/instagram.svg",
-      label: "Instagram",
-      href: "https://instagram.com/yourprofile",
-      color: "hover:text-pink-600",
+      icon: "/logos/linkedin.svg",
+      label: "LinkedIn",
+      href: "https://linkedin.com/yourprofile",
+      color: "hover:text-blue-600",
     },
     {
       icon: "/logos/github.svg",

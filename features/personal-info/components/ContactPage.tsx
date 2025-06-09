@@ -171,7 +171,7 @@ export default function ContactPage() {
                           alt={social.label}
                           width={24}
                           height={24}
-                          className="size-8 transition-transform group-hover:scale-110"
+                          className="size-8 transition-transform group-hover:scale-110 dark:invert"
                         />
                       </Link>
                     ))}
