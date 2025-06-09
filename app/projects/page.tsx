@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectList from "@/features/projects/components/ProjectList";
+import CTA from "@/components/CTA";
 
 export default function Projects() {
   return (
@@ -12,6 +13,7 @@ export default function Projects() {
       </div>
       {/* Project Category Filter */}
       <ProjectList />
+      <CTA />
     </main>
   );
 }

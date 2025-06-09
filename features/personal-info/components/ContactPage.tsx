@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function ContactPage() {
   return (
-    <section className="bg-background py-12 md:py-24">
+    <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           {/* Left Column: Contact Form */}
@@ -124,7 +124,7 @@ export default function ContactPage() {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="group relative">
                     <div className="flex items-start gap-4 rounded-lg border bg-card p-4 ">
-                      <div className="flex size-10 items-center justify-center rounded-full btn-tilt-group btn-style">
+                      <div className="flex size-10 items-center justify-center rounded-full btn-tilt-group ">
                         <info.icon className="" />
                       </div>
                       <div className="flex-1 space-y-1">
@@ -195,7 +195,7 @@ export default function ContactPage() {
         <div className="mt-12 border-t pt-12">
           <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center space-y-2 group">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group ">
                 <Clock className="size-6 " />
               </div>
               <h3 className="font-semibold">Quick Response</h3>
@@ -205,7 +205,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="text-center space-y-2 group">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group ">
                 <MessageSquare className="size-6" />
               </div>
               <h3 className="font-semibold">Free Consultation</h3>
@@ -215,7 +215,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="text-center space-y-2 group">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group btn-style">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full btn-tilt-group ">
                 <User className="size-6" />
               </div>
               <h3 className="font-semibold">Personal Touch</h3>

@@ -4,13 +4,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Calendar,
   Check,
+  ChevronRight,
   ExternalLink,
   Palette,
   TrafficCone,
   Users,
   Zap,
 } from "lucide-react";
-import { projects } from "@/features/projects/data/projects-data";
+import {
+  projects,
+  projectsCards,
+} from "@/features/projects/data/projects-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -18,6 +22,7 @@ import Link from "next/link";
 import ProjectImageCarousel from "@/features/projects/components/ProjectImageCarousel";
 import CTA from "@/components/CTA";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import ProjectCard from "@/features/projects/components/ProjectCard";
 
 export default async function Project({
   params,
@@ -27,6 +32,10 @@ export default async function Project({
   const { id } = await params;
 
   const project = projects.find((project) => project.id === id);
+  const otherProjects = projectsCards
+    .filter((project) => project.id !== id)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
 
   if (!project) {
     return notFound();
@@ -42,7 +51,7 @@ export default async function Project({
           </Badge>
         )}
         <h1 className="heading">{project?.title}</h1>
-        <p className="sub-heading">{project?.subtitle}</p>
+        <p className="sub-heading text-center">{project?.subtitle}</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center my-12">
           <Button
@@ -129,7 +138,7 @@ export default async function Project({
     return (
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-6">{title}</h2>
-        <div className="section-underline"/>
+        <div className="section-underline" />
       </div>
     );
   };
@@ -170,7 +179,7 @@ export default async function Project({
             </Card>
             <Card className="flex-1">
               <CardContent>
-                <h2 className="mb-4 text-2xl font-bold">The challenge</h2>
+                <h2 className="mb-4 text-2xl font-bold">The Challenge</h2>
                 <p className="text-muted-foreground">
                   {project.overview.challenge}
                 </p>
@@ -192,17 +201,20 @@ export default async function Project({
           })}
         >
           {project.features.map(({ icon: Icon, title, description }, index) => (
-            <Card key={index} className="">
+            <Card key={index} className="group">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="btn-style w-12 h-12 rounded-lg flex items-center justify-center">
+                  <div className="btn-tilt-group btn-style w-12 h-12 rounded-lg flex items-center justify-center">
                     <Icon />
                   </div>
-                  <CardTitle className="text-xl">{title}</CardTitle>
+                  <CardTitle className="text-xl"> {title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="">
-                <p className="">{description}</p>
+                <p className="flex gap-2">
+                  <ChevronRight />
+                  {description}
+                </p>
               </CardContent>
             </Card>
           ))}
@@ -214,8 +226,8 @@ export default async function Project({
   const ProjectTechStack = () => {
     return (
       <div
-        className={cn("grid grid-cols-2 md:grid-cols-3 gap-4", {
-          "md:grid-cols-2":
+        className={cn("grid  md:grid-cols-2 lg:grid-cols-3 gap-4", {
+          "lg:grid-cols-2":
             !project.techStack.backend || !project.techStack.infrastructure,
         })}
       >
@@ -245,6 +257,24 @@ export default async function Project({
     );
   };
 
+  const OtherProjects = () => {
+    return (
+      <section className="section-container">
+        <SectionHeader title="Other Projects You May Like" />
+        <div className="flex max-md:flex-col gap-6 md:overflow-x-scroll">
+          {otherProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              index={index}
+              classname="md:min-w-[470px]"
+            />
+          ))}
+        </div>
+      </section>
+    );
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -265,6 +295,9 @@ export default async function Project({
             <SectionHeader title="Screenshots" />
             <ProjectImageCarousel gallery={project.gallery} />
           </section>
+
+          {/* Project Recommendations */}
+          <OtherProjects />
 
           {/* CTA */}
           <CTA />

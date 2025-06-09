@@ -2,6 +2,7 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { Button } from "@/components/ui/button";
 import { CodeXml } from "lucide-react";
 import { logos } from "@/features/tech-stack/data/logos-data";
+import Link from "next/link";
 
 export default function MainSkills() {
   return (
@@ -15,9 +16,8 @@ export default function MainSkills() {
             <p className="mt-2 text-muted-foreground min-w-max">
               Technologies I&apos;m currently working with
             </p>
-            <Button variant="outline" className="mt-6 !w-full" size={"lg"}>
-              View All
-              <CodeXml className="h-4 w-4" />
+            <Button variant="outline" className="mt-6 !w-full" size={"lg"} icon={CodeXml} iconPlacement="right" effect={'expandIcon'}>
+              <Link href="/about-me">View All</Link>
             </Button>
           </div>
           <HoverEffect items={logos} />

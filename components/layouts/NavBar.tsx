@@ -48,7 +48,7 @@ export default function NavBar() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-1">
+      <nav className="hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:flex items-center gap-1">
         {navLinks.map((link) => (
           <Button
             asChild
@@ -79,7 +79,7 @@ export default function NavBar() {
       <div className="flex items-center gap-3">
         {/* Desktop CTA */}
         <Button
-          className="hidden md:flex group  px-6 py-2"
+          className="hidden md:flex group  px-7 py-[10px]"
           size="custom"
           icon={Send}
           iconPlacement="right"

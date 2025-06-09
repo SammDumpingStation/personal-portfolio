@@ -19,15 +19,20 @@ import { useRouter } from "next/navigation";
 export default function ProjectCard({
   project,
   index,
+  classname
 }: {
   project: ProjectCardProps;
   index: number;
+  classname?: string;
 }) {
   const router = useRouter();
   return (
     <Card
       key={index}
-      className="group relative overflow-hidden transition-all hover:shadow-xl pt-0 hover:-translate-y-2"
+      className={cn(
+        "group relative overflow-hidden transition-all hover:shadow-xl pt-0 hover:-translate-y-2",
+        classname
+      )}
     >
       <div className="relative aspect-video overflow-hidden">
         {project.images ? (
