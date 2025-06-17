@@ -15,7 +15,7 @@ const personalInfo = {
   name: "Samm Caagbay",
   title: "Full-Stack Web & Mobile Developer",
   imageUrl: "/images/profile.webp",
-  location: "Philippines",
+  location: "Alae, Manolo Fortich, Bukidnon, Philippines",
   experience: "2+ Years",
   education:
     "BS Information Technology, University of Science and Technology of Southern Philippines",
@@ -36,6 +36,15 @@ const personalInfo = {
     "Digitized hospital operations for NBSC with a Laravel-based system",
     "Built real-time catering platform Food Sentinel, earning instructor praise",
   ],
+  links: {
+    gmaps:
+      "https://www.google.com/maps/place/Alae,+Manolo+Fortich,+Bukidnon,+Philippines",
+    facebook: "https://www.facebook.com/yourprofile",
+    linkedin: "https://www.linkedin.com/yourprofile",
+    github: "https://www.github.com/yourprofile",
+    messenger: "https://m.me/yourprofile",
+    school: "https://www.ustp.edu.ph/",
+  },
 };
 
 const interestIcons = {

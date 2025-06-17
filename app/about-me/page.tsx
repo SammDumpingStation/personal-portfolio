@@ -24,6 +24,8 @@ import CTA from "@/components/CTA";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { techStack } from "@/features/tech-stack/data/logos-data";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import IconEffects from "@/components/IconEffects";
+import Link from "next/link";
 
 export default function AboutMe() {
   const SectionHeader = ({
@@ -43,12 +45,38 @@ export default function AboutMe() {
     );
   };
 
+  const QuickInfo = ({
+    icon: Icon,
+    title,
+    link,
+  }: {
+    icon: LucideIcon;
+    title: string;
+    link: string;
+  }) => {
+    return (
+      <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
+        <IconEffects
+          icon={Icon}
+          className="min-h-10 min-w-10"
+          iconSize="sm:size-5"
+        />
+        <Link
+          href={link}
+          className="group-hover:underline group-hover:font-medium"
+        >
+          {title}
+        </Link>
+      </div>
+    );
+  };
+
   const StickyProfileCard = () => {
     return (
       <div className="lg:col-span-1">
         <Card className="sticky top-24 backdrop-blur-sm">
           <CardContent className="p-8">
-            {/* Enhanced Profile Photo */}
+            {/*  Profile Photo */}
             <div className="relative mb-8 group">
               <div className="w-52 h-52 mx-auto rounded-full bg-gradient-to-br from-zinc-400 via-zinc-600 to-zinc-800 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-zinc-50 dark:bg-zinc-900">
@@ -69,7 +97,7 @@ export default function AboutMe() {
               </div>
             </div>
 
-            {/* Enhanced Name and Title */}
+            {/*  Name and Title */}
             <div className=" mb-8 space-y-2">
               <h2 className="text-2xl lg:text-3xl font-bold text-center">
                 {personalInfo.name}
@@ -80,31 +108,26 @@ export default function AboutMe() {
               <div className="w-16 h-0.5 bg-zinc-400 dark:bg-zinc-600 mx-auto rounded-full"></div>
             </div>
 
-            {/* Enhanced Quick Info */}
+            {/*  Quick Info */}
             <div className="space-y-4 mb-8 p-6 ">
-              <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
-                  <MapPin className="w-4 h-4 " />
-                </div>
-                <span className="font-medium">{personalInfo.location}</span>
-              </div>
-              <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
-                  <Calendar className="w-4 h-4 " />
-                </div>
-                <span className="font-medium">
-                  {personalInfo.experience} Experience
-                </span>
-              </div>
-              <div className="flex items-center gap-4 text-sm group hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-default">
-                <div className="btn-style w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 transition-colors">
-                  <GraduationCap className="w-4 h-4 " />
-                </div>
-                <span className="font-medium">{personalInfo.education}</span>
-              </div>
+              <QuickInfo
+                icon={MapPin}
+                title={personalInfo.location}
+                link={personalInfo.links.gmaps}
+              />
+              <QuickInfo
+                icon={Calendar}
+                title={personalInfo.experience}
+                link={personalInfo.links.github}
+              />
+              <QuickInfo
+                icon={GraduationCap}
+                title={personalInfo.education}
+                link={personalInfo.links.school}
+              />
             </div>
 
-            {/* Enhanced Action Buttons */}
+            {/*  Action Buttons */}
             <div className="space-y-4">
               <Button
                 className="w-full h-12  font-semibold hover transition-all duration-200"
@@ -235,9 +258,12 @@ export default function AboutMe() {
                   key={index}
                   className="flex flex-col items-center gap-4 p-6 rounded-xl  border  transition-all duration-300 group cursor-default"
                 >
-                  <div className="btn-style w-16 h-16 rounded-full  flex items-center justify-center btn-tilt-group">
-                    <IconComponent className="w-8 h-8 text-white dark:text-zinc-900" />
-                  </div>
+                  <IconEffects
+                    icon={IconComponent}
+                    iconSize="sm:size-8"
+                    className="min-w-16 min-h-16"
+                  />
+                  {/* <HoverEffect items={personalInfo.interests} /> */}
                   <span className="text-sm lg:text-base font-semibold text-center  group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">
                     {interest}
                   </span>
@@ -269,10 +295,10 @@ export default function AboutMe() {
         <SectionHeader icon={Sparkles} title="Fun Facts" />
         <CardContent className="p-0">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FunFact number="300+" title="Cups of coffee enjoyed" />
+            <FunFact number="100+" title="Cups of coffee enjoyed" />
             <FunFact number="8+" title="Projects delivered" />
             <FunFact number="10+" title="Technologies mastered" />
-            <FunFact number="2" title="Awards won" />
+            <FunFact number="50+" title="Anime watched" />
           </div>
         </CardContent>
       </Card>
@@ -281,7 +307,7 @@ export default function AboutMe() {
 
   return (
     <main className="container mx-auto px-4">
-      {/* Enhanced Header */}
+      {/*  Header */}
       <div className="text-center mb-16 space-y-4">
         <div className="text-center mb-12">
           <h2 className="heading">About Me</h2>
@@ -303,10 +329,10 @@ export default function AboutMe() {
 
           <Achievements />
 
-          {/* Enhanced Interests */}
+          {/*  Interests */}
           <Interests />
 
-          {/* Enhanced Fun Facts */}
+          {/*  Fun Facts */}
           <FunFacts />
         </div>
       </div>

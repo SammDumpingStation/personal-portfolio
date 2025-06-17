@@ -1,18 +1,11 @@
-import { Phone, ArrowDownToLine, Circle, Send } from "lucide-react";
+import { ArrowDownToLine, Circle, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import BackgroundLines from "@/components/BackgroundLines";
 import Link from "next/link";
 import { personalInfo } from "../data/personal-info-data";
 import Image from "next/image";
 
-/**
- * Hero component renders a prominent section of a webpage that introduces Samm Caagbay,
- * a software engineer. It includes a brief personal introduction, a badge indicating
- * availability for work, and buttons for downloading a CV and contacting Samm.
- * The component also features a placeholder for an image or visual representation.
- */
 export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex">
