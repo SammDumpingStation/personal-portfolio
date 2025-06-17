@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "@/features/personal-info/components/ContactForm";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import IconEffects from "@/components/IconEffects";
 import { CardTitle } from "@/components/ui/card-hover-effect";
 
@@ -51,7 +51,7 @@ const SocialMediaLinks = () => {
       <div className="relative flex h-full items-center justify-center p-8">
         <div className="text-center space-y-6">
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold">Let's Connect</h3>
+            <h3 className="text-lg font-semibold">Let&apos;s Connect</h3>
             <p className="text-sm text-muted-foreground max-w-xs text-center">
               Follow me on social media or check out my work on GitHub
             </p>
