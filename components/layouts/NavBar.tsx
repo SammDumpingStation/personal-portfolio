@@ -5,7 +5,7 @@ import Link from "next/link";
 import { navLinks } from "@/data/links";
 import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Mail, Menu, Send, X } from "lucide-react";
+import { ArrowRight, Menu, Send, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function NavBar() {

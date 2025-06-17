@@ -19,7 +19,7 @@ const Feature = () => {
             Crafting Digital Solutions
             <span className="text-primary block"> That Deliver Impact</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground text-center">
             Building practical, user-focused applications that solve real
             business challenges with modern technology
           </p>

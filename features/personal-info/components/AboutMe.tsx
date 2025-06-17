@@ -1,6 +1,7 @@
 // import Image from "next/image";
+import IconEffects from "@/components/IconEffects";
 import { Users, Rocket, Globe, Award, Cpu, Zap } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
 
 export default function AboutMe() {
   const milestones = [
@@ -43,7 +44,14 @@ export default function AboutMe() {
           <div className="relative flex">
             {/* Right Column: Image */}
             <div className="relative flex-1 overflow-hidden rounded-lg">
-              <Skeleton className="w-full h-full" />
+              <Image
+                src="/images/about-me.webp"
+                alt="About Me"
+                width={1000}
+                height={1000}
+                className="w-full h-full object-cover"
+                priority
+              />
               <div className="absolute bottom-4 left-4 flex flex-col rounded-lg bg-background p-4 shadow-lg sm:bottom-6 sm:left-6 sm:p-6">
                 <span className="text-lg font-semibold sm:text-xl">
                   About Me
@@ -64,31 +72,29 @@ export default function AboutMe() {
                 About <span className="text-primary">Me</span>
               </h1>
               <p className="text-base text-muted-foreground sm:text-lg">
-                I'm a full-stack developer with three years of experience
-                building apps that solve real problems. From modernizing
-                hospital systems to creating real-time catering platforms, I
-                turn ideas into efficient, user-friendly solutions. My passion
-                lies in blending technologies like Next.js, React Native, and
-                Laravel with a deep understanding of client needs to deliver
-                results that matter. Whether it's streamlining operations or
-                crafting intuitive interfaces, I'm driven by the impact tech can
-                have on businesses and communities.
+                I'm a full-stack developer with 2+ years of experience building
+                apps that solve real problems. From modernizing hospital systems
+                to creating real-time catering platforms, I turn ideas into
+                efficient, user-friendly solutions. My passion lies in blending
+                technologies like Next.js, React Native, and Laravel with a deep
+                understanding of client needs to deliver results that matter.
+                Whether it's streamlining operations or crafting intuitive
+                interfaces, I'm driven by the impact tech can have on businesses
+                and communities.
               </p>
             </div>
 
             <div className="relative space-y-8">
               {milestones.map((milestone, index) => (
-                <div key={index} className="relative flex gap-4 group">
+                <div key={index} className="relative flex gap-4 group ">
                   <div className="relative ">
-                    <div className="flex size-10 items-center justify-center border-primary/30 sm:size-12 rounded-full h-full w-full overflow-hidden btn-tilt-group btn-style">
-                      <milestone.icon className="size-5 sm:size-6" />
-                    </div>
+                    <IconEffects icon={milestone.icon} />
                     {index !== milestones.length - 1 && (
                       <div className="absolute left-1/2 top-12 h-14 w-px -translate-x-1/2 bg-primary/30 sm:top-12" />
                     )}
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-muted-foreground sm:text-base min-h-[72px]">
+                    <p className="text-sm text-muted-foreground sm:text-base min-h-[72px] group-hover:underline group-hover:text-primary transition-colors">
                       {milestone.description}
                     </p>
                   </div>

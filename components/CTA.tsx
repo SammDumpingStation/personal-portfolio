@@ -11,6 +11,7 @@ import {
 import { Logo } from "./Logo";
 import { Card } from "./ui/card";
 import Link from "next/link";
+import IconEffects from "./IconEffects";
 
 export default function CTA() {
   return (
@@ -62,27 +63,27 @@ export default function CTA() {
             <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {[
                 {
-                  icon: <Code className="size-5" />,
+                  icon: Code,
                   text: "Full-Stack Development",
                 },
                 {
-                  icon: <Zap className="size-5" />,
+                  icon: Zap,
                   text: "Real-Time Solutions",
                 },
                 {
-                  icon: <Shield className="size-5" />,
+                  icon: Shield,
                   text: "Secure Systems",
                 },
                 {
-                  icon: <Layout className="size-5" />,
+                  icon: Layout,
                   text: "User-Centric Design",
                 },
                 {
-                  icon: <Database className="size-5" />,
+                  icon: Database,
                   text: "Efficient Data Management",
                 },
                 {
-                  icon: <TrendingUp className="size-5" />,
+                  icon: TrendingUp,
                   text: "Continuous Growth and Improvement",
                 },
               ].map((item, index) => (
@@ -90,9 +91,7 @@ export default function CTA() {
                   key={index}
                   className="flex group items-center gap-4 rounded-lg  p-4 transition-colors  border"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full btn-style btn-tilt-group">
-                    {item.icon}
-                  </span>
+                  <IconEffects icon={item.icon} />
                   <span className="text-base font-medium text-foreground">
                     {item.text}
                   </span>
@@ -113,9 +112,7 @@ export default function CTA() {
               iconPlacement="right"
               effect={"expandIcon"}
             >
-              <Link href={"/contact"}>
-                Let&apos;s Build Your Next Big Idea
-              </Link>
+              <Link href={"/contact"}>Let&apos;s Build Your Next Big Idea</Link>
             </Button>
             <p className="text-center text-sm text-muted-foreground lg:text-right">
               Partner with a Developer Trusted by Clients and Teams.

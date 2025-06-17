@@ -5,7 +5,6 @@ import {
   Calendar,
   GraduationCap,
   Code,
-  Mail,
   Download,
   Sparkles,
   Trophy,
@@ -14,7 +13,6 @@ import {
   Check,
   LucideIcon,
   CodeXml,
-  Copy,
   Send,
 } from "lucide-react";
 import Image from "next/image";
@@ -55,7 +53,7 @@ export default function AboutMe() {
               <div className="w-52 h-52 mx-auto rounded-full bg-gradient-to-br from-zinc-400 via-zinc-600 to-zinc-800 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-zinc-50 dark:bg-zinc-900">
                   <Image
-                    src="/placeholder.svg?height=200&width=200"
+                    src={personalInfo.imageUrl}
                     alt={personalInfo.name}
                     width={200}
                     height={200}
@@ -115,7 +113,7 @@ export default function AboutMe() {
                 iconPlacement="right"
                 effect={"expandIcon"}
               >
-                Let's Talk
+                Let&apos;s Talk
               </Button>
               <Button
                 variant="outline"

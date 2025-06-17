@@ -14,6 +14,7 @@ import {
 const personalInfo = {
   name: "Samm Caagbay",
   title: "Full-Stack Web & Mobile Developer",
+  imageUrl: "/images/profile.webp",
   location: "Philippines",
   experience: "2+ Years",
   education:

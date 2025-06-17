@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import BackgroundLines from "@/components/BackgroundLines";
 import Link from "next/link";
+import { personalInfo } from "../data/personal-info-data";
+import Image from "next/image";
 
 /**
  * Hero component renders a prominent section of a webpage that introduces Samm Caagbay,
@@ -69,7 +71,15 @@ export default function Hero() {
         <div className="flex items-center justify-center">
           <div className="relative w-full max-w-md">
             <div className="aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
-              <Skeleton className="w-full h-[600px] " />
+              {/* <Skeleton className="w-full h-[600px] " /> */}
+              <Image
+                src={personalInfo.imageUrl}
+                alt={personalInfo.name}
+                width={200}
+                height={200}
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+                priority
+              />
             </div>
           </div>
         </div>

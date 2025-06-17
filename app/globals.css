@@ -141,7 +141,7 @@
     @apply text-primary-foreground shadow-xs bg-gradient-to-r from-primary to-primary/80  hover:from-primary/90 hover:to-primary/70 transition-all duration-300;
   }
   .btn-tilt-group {
-    @apply group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border
+    @apply group-hover:scale-110  border group-hover:text-primary-foreground group-hover:shadow-xs transition-all duration-300;
   }
   .section-underline {
     @apply w-24 h-1.5 mx-auto rounded-full shadow-xs bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300;
