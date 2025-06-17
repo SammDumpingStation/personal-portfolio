@@ -2,11 +2,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  AlertTriangle,
   Calendar,
   Check,
   ChevronRight,
   ExternalLink,
+  FileText,
+  History,
+  LucideIcon,
   Palette,
+  Target,
   TrafficCone,
   Users,
   Zap,
@@ -23,6 +28,7 @@ import ProjectImageCarousel from "@/features/projects/components/ProjectImageCar
 import CTA from "@/components/CTA";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import ProjectCard from "@/features/projects/components/ProjectCard";
+import IconEffects from "@/components/IconEffects";
 
 export default async function Project({
   params,
@@ -70,9 +76,7 @@ export default async function Project({
                 View Live Demo
               </Link>
             ) : (
-              <span>
-                Live Demo Coming Soon
-              </span>
+              <span>Live Demo Coming Soon</span>
             )}
           </Button>
         </div>
@@ -143,6 +147,23 @@ export default async function Project({
     );
   };
 
+  const ProjectDetailsTitle = ({
+    title,
+    icon: Icon,
+  }: {
+    title: string;
+    icon: LucideIcon;
+  }) => {
+    return (
+      <div className="flex items-center gap-2 mb-6">
+        <div className="w-10 h-10 rounded-full border flex items-center justify-center">
+          <Icon className="h-5 w-5" />
+        </div>
+        <h2 className="text-2xl font-semibold">{title}</h2>
+      </div>
+    );
+  };
+
   const ProjectDetails = () => {
     return (
       <section className="section-container">
@@ -150,12 +171,12 @@ export default async function Project({
         <div className="grid gap-12 md:grid-cols-2">
           <Card>
             <CardContent>
-              <h2 className="mb-6 text-2xl font-bold">Overview</h2>
+              <ProjectDetailsTitle title="Overview" icon={FileText} />
               <p className="mb-8 text-muted-foreground">
                 {project.overview.description}
               </p>
               <div className="">
-                <h2 className="mb-6 text-2xl font-bold">Project Goals</h2>
+                <ProjectDetailsTitle title="Project Goals" icon={Target} />
                 <div className="grid gap-4 sm:grid-cols-2">
                   {project.overview.goal.map((goal, index) => (
                     <div key={index} className="flex items-center gap-3">
@@ -171,7 +192,7 @@ export default async function Project({
           <section className="space-y-8 flex flex-col">
             <Card className="flex-1">
               <CardContent>
-                <h2 className="mb-4 text-2xl font-bold">Background</h2>
+                <ProjectDetailsTitle title="Background" icon={History} />
                 <p className="text-muted-foreground">
                   {project.overview.background}
                 </p>
@@ -179,7 +200,7 @@ export default async function Project({
             </Card>
             <Card className="flex-1">
               <CardContent>
-                <h2 className="mb-4 text-2xl font-bold">The Challenge</h2>
+                <ProjectDetailsTitle title="The Challenge" icon={AlertTriangle} />
                 <p className="text-muted-foreground">
                   {project.overview.challenge}
                 </p>
@@ -204,9 +225,7 @@ export default async function Project({
             <Card key={index} className="group">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="btn-tilt-group btn-style w-12 h-12 rounded-lg flex items-center justify-center">
-                    <Icon />
-                  </div>
+                  <IconEffects icon={Icon} className="rounded-xl" />
                   <CardTitle className="text-xl"> {title}</CardTitle>
                 </div>
               </CardHeader>
@@ -260,8 +279,8 @@ export default async function Project({
   const OtherProjects = () => {
     return (
       <section className="section-container">
-        <SectionHeader title="Other Projects You May Like" />
-        <div className="flex max-md:flex-col gap-6 md:overflow-x-scroll">
+        <SectionHeader title="Other Projects I Built" />
+        <div className="flex max-md:flex-col gap-6 md:overflow-x-scroll py-6">
           {otherProjects.map((project, index) => (
             <ProjectCard
               key={index}

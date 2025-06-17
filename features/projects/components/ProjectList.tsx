@@ -53,7 +53,7 @@ export default function ProjectList() {
           );
         })}
       </div>
-      <div className="mt-12 grid gap-8 sm:mt-16 md:grid-cols-2 lg:grid-cols-3  min-h-[50vh]">
+      <div className="mt-12 pb-8 grid gap-8 sm:mt-16 md:grid-cols-2 lg:grid-cols-3  min-h-[50vh]">
         {filteredProjects.length < 1 ? (
           <div className="md:col-span-2 lg:col-span-3 row-span-2 text-center my-auto">
             <Logo className="mx-auto mb-8" />
