@@ -39,10 +39,10 @@ const personalInfo = {
   links: {
     gmaps:
       "https://www.google.com/maps/place/Alae,+Manolo+Fortich,+Bukidnon,+Philippines",
-    facebook: "https://www.facebook.com/yourprofile",
-    linkedin: "https://www.linkedin.com/yourprofile",
-    github: "https://www.github.com/yourprofile",
-    messenger: "https://m.me/yourprofile",
+    facebook: "https://www.facebook.com/sammcaagz.7",
+    linkedin: "www.linkedin.com/in/samm-reyven-joey-caagbay-7b7445339",
+    github: "https://github.com/sammcaag?tab=repositories",
+    messenger: "https://m.me/sammcaagz.7",
     school: "https://www.ustp.edu.ph/",
   },
 };
@@ -60,25 +60,25 @@ const socialLinks = [
   {
     icon: "/logos/facebook.svg",
     label: "Facebook",
-    href: "https://facebook.com/yourprofile",
+    href: "https://facebook.com/sammcaagz.7",
     color: "hover:text-blue-600",
   },
   {
     icon: "/logos/messenger.svg",
     label: "Messenger",
-    href: "https://m.me/yourprofile",
+    href: "https://m.me/sammcaagz.7",
     color: "hover:text-green-600",
   },
   {
     icon: "/logos/linkedin.svg",
     label: "LinkedIn",
-    href: "https://linkedin.com/yourprofile",
+    href: "https://linkedin.com/in/samm-reyven-joey-caagbay-7b7445339",
     color: "hover:text-blue-600",
   },
   {
     icon: "/logos/github.svg",
     label: "GitHub",
-    href: "https://github.com/yourprofile",
+    href: "https://github.com/sammcaag",
     color: "hover:text-gray-800 dark:hover:text-gray-200",
   },
 ];
@@ -99,7 +99,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Cagayan de Oro City, Philippines",
+    value: "Alae, Manolo Fortich, Bukidnon",
     description: "Remote work available",
   },
   {
